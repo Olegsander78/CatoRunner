@@ -30,7 +30,7 @@ public class Level : MonoBehaviour
             if (pos.x < _minCoordLevelSegX)
             {
                 pos.x = _maxCoordLevelSegX - (_minCoordLevelSegX - pos.x) + LENGHT_SEGMENT;
-                segment.RollVariant();
+                segment.RollVariantLevelSegment();
             }
             segment.transform.position = pos;
         }

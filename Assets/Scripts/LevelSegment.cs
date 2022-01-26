@@ -4,28 +4,30 @@ using UnityEngine;
 
 public class LevelSegment : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> _variantLevelSegment;
-    [SerializeField] private int _defaultVariant;
+    [SerializeField] private List<GameObject> _variantsLevelSegment;
+    [SerializeField] private int _defaultVariantLeveSegment;
+    [SerializeField] private List<CreateScoreItems> _createScoreItemsList;
 
     private void Start()
     {
-        for (int i = 0; i < _variantLevelSegment.Count; i++)
+        for (int i = 0; i < _variantsLevelSegment.Count; i++)
         {
-            _variantLevelSegment[i].SetActive(false);
+            _variantsLevelSegment[i].SetActive(false);
         }
-        _variantLevelSegment[_defaultVariant].SetActive(true);
+        _variantsLevelSegment[_defaultVariantLeveSegment].SetActive(true);
+        _variantsLevelSegment[_defaultVariantLeveSegment].GetComponentInChildren<CreateScoreItems>().RollVariantSpawnScoreItems();
+        //_createScoreItemsList[0].RollVariantSpawnScoreItems();
     }
 
-    public void RollVariant()
+    public void RollVariantLevelSegment()
     {
-        for (int i = 0; i < _variantLevelSegment.Count; i++)
+        for (int i = 0; i < _variantsLevelSegment.Count; i++)
         {
-            _variantLevelSegment[i].SetActive(false);
+            _variantsLevelSegment[i].SetActive(false);
         }
-        _variantLevelSegment[Random.Range(0, _variantLevelSegment.Count)].SetActive(true);
+        int numberVariantLS = Random.Range(0, _variantsLevelSegment.Count);
+        _variantsLevelSegment[numberVariantLS].SetActive(true);
+        _variantsLevelSegment[numberVariantLS].GetComponentInChildren<CreateScoreItems>().RollVariantSpawnScoreItems();
+        //_createScoreItems.RollVariantSpawnScoreItems();
     }
-
-
-
-
 }
