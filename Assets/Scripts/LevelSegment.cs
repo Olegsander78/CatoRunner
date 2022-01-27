@@ -15,7 +15,7 @@ public class LevelSegment : MonoBehaviour
             _variants[i].SetActive(false);
         }
         _variants[_defaultVariantLeveSegment].SetActive(true);
-        _variantsScriptsVariants[_defaultVariantLeveSegment].RollVariantSpawnScoreItems();
+        //_variantsScriptsVariants[_defaultVariantLeveSegment].RollVariantSpawnsScoreItems();
     }
 
     public void RollVariantLevelSegment()
@@ -26,7 +26,7 @@ public class LevelSegment : MonoBehaviour
         }
         int numberVariantLS = Random.Range(0, _variants.Count);
         _variants[numberVariantLS].SetActive(true);
-        _variantsScriptsVariants[numberVariantLS].RollVariantSpawnScoreItems();
+        _variantsScriptsVariants[numberVariantLS].RollVariantSpawnsScoreItems();
     }
 
    

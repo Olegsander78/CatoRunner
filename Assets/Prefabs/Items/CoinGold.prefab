@@ -292,5 +292,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreValue: 5
-  _speedLevel: 0.01
+  _speedLevel: 0.007
   PickUpSound: {fileID: 5062845949148272349}
