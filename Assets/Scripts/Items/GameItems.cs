@@ -13,7 +13,8 @@ public class GameItems : MonoBehaviour
 
     private void Update()
     {
-            transform.Translate(Vector2.left * _speedLevel);
+        transform.Translate(Vector2.left * _speedLevel);
+        AutoDestroy();
     }
 
     protected void OnTriggerEnter2D(Collider2D collision)
@@ -21,9 +22,17 @@ public class GameItems : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<PlayerCharacter>().AddScore(ScoreValue);
-            GameObject newSound= Instantiate(PickUpSound);
+            GameObject newSound = Instantiate(PickUpSound);
             newSound.GetComponent<AudioSource>().Play();
             Destroy(newSound, 1f);
+            Destroy(gameObject);
+        }
+    }
+
+    public void AutoDestroy()
+    {
+        if (transform.position.x < -50f)
+        {
             Destroy(gameObject);
         }
     }

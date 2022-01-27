@@ -293,4 +293,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScoreValue: 5
   _speedLevel: 0.01
-  CoinPickUpSound: {fileID: 5062845949148272349}
+  PickUpSound: {fileID: 5062845949148272349}
