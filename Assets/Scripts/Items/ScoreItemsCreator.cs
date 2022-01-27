@@ -32,7 +32,7 @@ public class CreateScoreItems : MonoBehaviour
         {
             Vector3 nextSpawnPositionItem = Spawn.localPosition;
             GameObject prefScoreItem = Instantiate(_prefabScoreItems[indexPrefab], nextSpawnPositionItem, Spawn.rotation);
-            //nextSpawnPositionItem.x += 1f;
+            nextSpawnPositionItem.x += 1f;
         }
     }
 }
