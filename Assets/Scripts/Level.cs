@@ -13,16 +13,19 @@ public class Level : MonoBehaviour
 
     private void Start()
     {
-        for (int i = 0; i < _levelSegments.Count; i++)
+        _minCoordLevelSegX = _levelSegments[0].transform.position.x;
+        _maxCoordLevelSegX = _levelSegments[0].transform.position.x;
+
+        for (int i = 1; i < _levelSegments.Count; i++)
         {
-            
-            //todo  
-            // Реализовать мин и макс иксовые координаты , вначале. стартовые коорд.
+            if (_minCoordLevelSegX > _levelSegments[i].transform.position.x) _minCoordLevelSegX = _levelSegments[i].transform.position.x;
+            if (_maxCoordLevelSegX < _levelSegments[i].transform.position.x) _maxCoordLevelSegX = _levelSegments[i].transform.position.x;
         }
     }
     private void Update()
     {
         float displacement = _speedLevel * Time.deltaTime;
+
         foreach (var segment in _levelSegments)
         {
             var pos = segment.transform.position;

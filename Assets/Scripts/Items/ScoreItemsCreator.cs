@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ScoreItemsCreator : MonoBehaviour
 {
-    private const int MIN__SCORE_ITEMS = 5;
-    private const int MAX__SCORE_ITEMS = 10;
+    private const int MIN__SCORE_ITEMS = 7;
+    private const int MAX__SCORE_ITEMS = 15;
 
     public Transform Spawn;
 

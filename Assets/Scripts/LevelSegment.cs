@@ -15,7 +15,6 @@ public class LevelSegment : MonoBehaviour
             _variants[i].SetActive(false);
         }
         _variants[_defaultVariantLeveSegment].SetActive(true);
-        //_variantsScriptsVariants[_defaultVariantLeveSegment].RollVariantSpawnsScoreItems();
     }
 
     public void RollVariantLevelSegment()

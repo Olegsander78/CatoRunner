@@ -7,12 +7,10 @@ public class PlayerCharacter : MonoBehaviour
 {    
     public float JumpForce;
     public Rigidbody2D Rig;
-    public int Score;
-
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+        if (Input.GetKey(KeyCode.Space) && IsGrounded())
         {
             Rig.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
         }
@@ -22,18 +20,12 @@ public class PlayerCharacter : MonoBehaviour
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position + new Vector3(0f, -1f, 0f),
             Vector2.down, 0.2f);
-        return hit.collider != null;
+        return hit.collider != CompareTag("Ground");
     }
 
     public void GameOver()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-
-    public void AddScore(int amount)
-    {
-        Score += amount;
-    }
-
+    }  
 
 }

@@ -10,6 +10,13 @@ public class GameItems : MonoBehaviour
 
     public GameObject PickUpSound;
 
+    public HUDManager HUDManager;
+
+    private void Start()
+    {
+        HUDManager = FindObjectOfType<HUDManager>();
+    }
+
 
     private void Update()
     {
@@ -21,7 +28,7 @@ public class GameItems : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerCharacter>().AddScore(ScoreValue);
+            HUDManager.AddScore(ScoreValue);
             GameObject newSound = Instantiate(PickUpSound);
             newSound.GetComponent<AudioSource>().Play();
             Destroy(newSound, 1f);
