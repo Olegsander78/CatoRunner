@@ -9,16 +9,6 @@ public class VariantsLevelSegment : MonoBehaviour
     [SerializeField] private List<GameObject> _variantsSpawnsScoreItems;
     [SerializeField] private int _defaultVariantSpawnsScoreItems;
 
-    //private void Start()
-    //{
-    //    for (int i = 0; i < _variantsSpawnsScoreItems.Count; i++)
-    //    {
-    //        _variantsSpawnsScoreItems[i].SetActive(false);
-    //    }
-    //    _variantsSpawnsScoreItems[_defaultVariantSpawnsScoreItems].SetActive(true);
-    //    //_variantsScoreItemsCreator[_defaultVariantSpawnsScoreItems].GenerateScoreItems();
-    //}
-
     public void RollVariantSpawnsScoreItems()
     {
         for (int i = 0; i < _variantsSpawnsScoreItems.Count; i++)
@@ -29,11 +19,4 @@ public class VariantsLevelSegment : MonoBehaviour
         _variantsSpawnsScoreItems[numberVariantSpawn].SetActive(true);
         _variantsScoreItemsCreator[numberVariantSpawn].GenerateScoreItems();
     }
-
-
-    //public void RollVariantSpawnScoreItems()
-    //{
-    //    int variantSpawn = Random.Range(0, _variantsScoreItemsCreator.Count);
-    //    _variantsScoreItemsCreator[variantSpawn].GenerateScoreItems();
-    //}
 }

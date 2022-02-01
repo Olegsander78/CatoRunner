@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class GameItems : MonoBehaviour
 {
+    private const float LEFT_LENGTH_AUTODESTROY = -60f;
+
     public int ScoreValue = 1;
 
-    [SerializeField] private float _speedLevel = 0.005f;
+    [SerializeField] private float _speedLevel = 1.5f;
 
     public GameObject PickUpSound;
 
@@ -20,7 +22,7 @@ public class GameItems : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(Vector2.left * _speedLevel);
+        transform.Translate(Vector2.left * _speedLevel * Time.deltaTime);
         AutoDestroy();
     }
 
@@ -38,7 +40,7 @@ public class GameItems : MonoBehaviour
 
     public void AutoDestroy()
     {
-        if (transform.position.x < -50f)
+        if (transform.position.x < LEFT_LENGTH_AUTODESTROY)
         {
             Destroy(gameObject);
         }

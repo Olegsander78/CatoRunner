@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(Vector2.left * _speedEnemy);
+        transform.Translate(Vector2.left * _speedEnemy * Time.deltaTime);
         AutoDestroy();
     }
 

@@ -190,8 +190,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreValue: 50
-  _speedLevel: 0.007
+  _speedLevel: 3
   PickUpSound: {fileID: 3614887396304891461}
+  HUDManager: {fileID: 0}
 --- !u!1 &6437865780421859861
 GameObject:
   m_ObjectHideFlags: 0
