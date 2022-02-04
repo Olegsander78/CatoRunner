@@ -27,12 +27,12 @@ public class PlayerCharacter : MonoBehaviour
         }
         
     }
-    bool IsGrounded()
-    {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position + new Vector3(0f, -1f, 0f),
-            Vector2.down, 0.2f);
-        return hit.collider != CompareTag("Ground");
-    }
+    //bool IsGrounded()
+    //{
+    //    RaycastHit2D hit = Physics2D.Raycast(transform.position + new Vector3(0f, -1f, 0f),
+    //        Vector2.down, 0.2f);
+    //    return hit.collider != CompareTag("Ground");
+    //}
 
     private void OnCollisionStay2D(Collision2D collision)
     {

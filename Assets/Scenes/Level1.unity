@@ -350,6 +350,10 @@ PrefabInstance:
       propertyPath: JumpForce
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9004401872830432135, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
+      propertyPath: JumpSpeed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 9148902242600683022, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
       propertyPath: m_Name
       value: _Player
@@ -416,7 +420,7 @@ ConstantForce2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1270468008}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Force: {x: 0, y: -25}
   m_RelativeForce: {x: 0, y: 0}
   m_Torque: 0
