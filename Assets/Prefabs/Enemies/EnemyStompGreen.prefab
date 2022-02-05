@@ -69,8 +69,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1672382699
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 64764171c23cbf04da2e92e5e26cfb54, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -114,6 +114,8 @@ GameObject:
   - component: {fileID: 2883297004583529485}
   - component: {fileID: 2883297004583529484}
   - component: {fileID: 2883297004583529487}
+  - component: {fileID: 3448860227091438132}
+  - component: {fileID: 7116866131800540520}
   m_Layer: 0
   m_Name: EnemyStompGreen
   m_TagString: Untagged
@@ -188,9 +190,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speedEnemy: 2
   _healthEnemy: 1
-  _scoreForEnemy: 100
+  _scorePerEnemy: 100
   StampSound: {fileID: 2949811128615637978}
   Animator: {fileID: 2883297004123075175}
+--- !u!114 &3448860227091438132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2883297004583529486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e83799fc6d02b7d4c8323ee59e2b203c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damageToPlayer: 1
+  _IsUnstumtable: 0
+--- !u!114 &7116866131800540520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2883297004583529486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eacdd9e8616cb7408868943cd635c00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2949811128615637978
 GameObject:
   m_ObjectHideFlags: 0

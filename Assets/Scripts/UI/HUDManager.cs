@@ -5,47 +5,19 @@ using TMPro;
 
 public class HUDManager : MonoBehaviour
 {
-    [SerializeField] private int _scoreTotal;
-
+    
     public TextMeshProUGUI ScoreText;
+    public TextMeshProUGUI PlayerHealthText;
 
 
-    private void Start()
+    public void UpdateScoreText(int currentScore)
     {
-        UpdateScoreText();
-        UpdateHealthView();
+        ScoreText.text = " Score: " + currentScore.ToString();
     }
 
-    public void AddScore(int amount)
+    public void UpdateHealthView(int playerHealth)
     {
-        _scoreTotal += amount;
-        UpdateScoreText();
-    }
-
-    public void AddHealth(int amount)
-    {
-        
-        UpdateHealthView();
-    }
-
-    public void AddSpeedUp()
-    {
-
-    }
-
-    public void AddInvulnerability()
-    {
-
-    }
-
-    public void UpdateScoreText()
-    {
-        ScoreText.text = _scoreTotal.ToString();
-    }
-
-    public void UpdateHealthView()
-    {
-
+        PlayerHealthText.text = " Health: " + playerHealth.ToString();
     }
 
 }

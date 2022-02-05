@@ -240,6 +240,7 @@ GameObject:
   - component: {fileID: 8579930617550800152}
   - component: {fileID: 8579930617550800155}
   - component: {fileID: 1577288293880727456}
+  - component: {fileID: 6694040748532015454}
   m_Layer: 0
   m_Name: CoinGold
   m_TagString: ScoreItems
@@ -294,4 +295,15 @@ MonoBehaviour:
   ScoreValue: 5
   _speedLevel: 3
   PickUpSound: {fileID: 5062845949148272349}
-  HUDManager: {fileID: 0}
+--- !u!114 &6694040748532015454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8579930617550800154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eacdd9e8616cb7408868943cd635c00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

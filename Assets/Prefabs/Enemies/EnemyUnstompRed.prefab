@@ -99,8 +99,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1672382699
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9f1617cd9a0115c438b73e01bb350395, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -144,6 +144,8 @@ GameObject:
   - component: {fileID: 4220727603948609958}
   - component: {fileID: 4220727603948609959}
   - component: {fileID: 4220727603948609957}
+  - component: {fileID: 7516075045892853974}
+  - component: {fileID: 3750952774863188379}
   m_Layer: 0
   m_Name: EnemyUnstompRed
   m_TagString: Untagged
@@ -218,6 +220,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speedEnemy: 2
   _healthEnemy: 1
-  _scoreForEnemy: 300
+  _scorePerEnemy: 100
   StampSound: {fileID: 3220433664862339863}
   Animator: {fileID: 4220727603579606817}
+--- !u!114 &7516075045892853974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4220727603948609953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e83799fc6d02b7d4c8323ee59e2b203c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damageToPlayer: 2
+  _IsUnstumtable: 1
+--- !u!114 &3750952774863188379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4220727603948609953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eacdd9e8616cb7408868943cd635c00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
