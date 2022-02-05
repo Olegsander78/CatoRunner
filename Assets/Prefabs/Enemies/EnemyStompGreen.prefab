@@ -93,7 +93,7 @@ Animator:
   m_GameObject: {fileID: 2883297004123075177}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fb09e5a3ec42ea749a61e7f99c15918e, type: 2}
+  m_Controller: {fileID: 9100000, guid: b7760e7f5fd61524a89f2f4aa718a64b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -115,7 +115,9 @@ GameObject:
   - component: {fileID: 2883297004583529484}
   - component: {fileID: 2883297004583529487}
   - component: {fileID: 3448860227091438132}
+  - component: {fileID: 2503111129181452872}
   - component: {fileID: 7116866131800540520}
+  - component: {fileID: 2207902658539095637}
   m_Layer: 0
   m_Name: EnemyStompGreen
   m_TagString: Untagged
@@ -188,9 +190,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c70f9d544660d74aa935613357d63be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedEnemy: 2
+  _speedEnemy: 0
   _healthEnemy: 1
   _scorePerEnemy: 100
+  _IsUnstumtable: 0
   StampSound: {fileID: 2949811128615637978}
   Animator: {fileID: 2883297004123075175}
 --- !u!114 &3448860227091438132
@@ -206,7 +209,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageToPlayer: 1
-  _IsUnstumtable: 0
+--- !u!114 &2503111129181452872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2883297004583529486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0a7fb7acd93e18418ff63321182dd66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damageToEnemy: 1
 --- !u!114 &7116866131800540520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,6 +234,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eacdd9e8616cb7408868943cd635c00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2207902658539095637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2883297004583529486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 208bd1dacf6bc244c880d80f5df14625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetPosition: {x: 0, y: 0, z: 0}
+  MoveSpeed: 0
 --- !u!1 &2949811128615637978
 GameObject:
   m_ObjectHideFlags: 0

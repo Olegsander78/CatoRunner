@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 4220727603948609957}
   - component: {fileID: 7516075045892853974}
   - component: {fileID: 3750952774863188379}
+  - component: {fileID: 1244797216372876504}
   m_Layer: 0
   m_Name: EnemyUnstompRed
   m_TagString: Untagged
@@ -218,9 +219,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d1e52d5021bea64492ad677ddf49a89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedEnemy: 2
+  _speedEnemy: 0
   _healthEnemy: 1
   _scorePerEnemy: 100
+  _IsUnstumtable: 1
   StampSound: {fileID: 3220433664862339863}
   Animator: {fileID: 4220727603579606817}
 --- !u!114 &7516075045892853974
@@ -236,7 +238,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageToPlayer: 2
-  _IsUnstumtable: 1
 --- !u!114 &3750952774863188379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,3 +250,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eacdd9e8616cb7408868943cd635c00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1244797216372876504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4220727603948609953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 208bd1dacf6bc244c880d80f5df14625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetPosition: {x: 0, y: 0, z: 0}
+  MoveSpeed: 0

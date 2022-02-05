@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7905365686087683055}
   - component: {fileID: 5675560593551068497}
   - component: {fileID: 8631943379119873989}
+  - component: {fileID: 3999820342845570870}
   m_Layer: 0
   m_Name: ObstacleSaw
   m_TagString: Untagged
@@ -65,7 +66,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad21737b84ea13449a7b94e2f0ecbce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedObstacle: 2
+  _speedObstacle: 0
   SawSound: {fileID: 7905365686812831886}
   SawingPlayerSound: {fileID: 7905365687638431095}
   Animator: {fileID: 7905365686299937629}
@@ -94,6 +95,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eacdd9e8616cb7408868943cd635c00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3999820342845570870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7905365686087683054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 208bd1dacf6bc244c880d80f5df14625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetPosition: {x: 0, y: 0, z: 0}
+  MoveSpeed: 0
 --- !u!1 &7905365686299937631
 GameObject:
   m_ObjectHideFlags: 0

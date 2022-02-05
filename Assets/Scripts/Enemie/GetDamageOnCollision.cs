@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MakeDamageOnCollision : MonoBehaviour
+public class GetDamageOnCollision : MonoBehaviour
 {
-    [SerializeField] private int _damageToPlayer = 1;
+    [SerializeField] private int _damageToEnemy = 1;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -16,16 +16,12 @@ public class MakeDamageOnCollision : MonoBehaviour
                 {
                     float dot = Vector2.Dot(collision.contacts[0].normal, Vector2.down);
 
-                    if (dot < 0.4f)
+                    if (dot > 0.4f)
                     {
-                        collision.rigidbody.GetComponent<PlayerCharacter>().TakeDamage(_damageToPlayer);
+                        GetComponent<Enemy>().GetDamage(_damageToEnemy);
                     }
+                    Debug.Log("dot = "+ dot);
                 }
-                else
-                {
-                    collision.rigidbody.GetComponent<PlayerCharacter>().TakeDamage(_damageToPlayer);
-                }
-                //ToDo Оттолкнуть игрока или добавить блинк?
             }
         }
     }
