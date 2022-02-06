@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class AutoDestroyByDistance : MonoBehaviour
 {
-    private const float LEFT_LENGTH_AUTODESTROY = -50f;
-    private const float RIGHT_LENGTH_AUTODESTROY = 80f;
-    private const float DOWN_LENGTH_AUTODESTROY = -20f;
+    private const float LEFT_LENGTH_AUTODESTROY = -100f;
+    private const float RIGHT_LENGTH_AUTODESTROY = 100f;
+    private const float DOWN_LENGTH_AUTODESTROY = -30f;
 
 
     private void Update()
