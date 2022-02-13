@@ -13,7 +13,7 @@ public class GameItems : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(Vector2.left * _speedLevel * Time.deltaTime);
+        //transform.Translate(Vector2.left * _speedLevel * Time.deltaTime);
     }
 
     protected void OnTriggerEnter2D(Collider2D collision)

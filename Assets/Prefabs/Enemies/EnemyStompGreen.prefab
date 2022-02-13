@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2883297004123075174}
   - component: {fileID: 2883297004123075172}
   - component: {fileID: 2883297004123075175}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 2503111129181452872}
   - component: {fileID: 7116866131800540520}
   - component: {fileID: 2207902658539095637}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EnemyStompGreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,7 +190,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c70f9d544660d74aa935613357d63be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedEnemy: 0
   _healthEnemy: 1
   _scorePerEnemy: 100
   _IsUnstumtable: 0
@@ -257,7 +256,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6309020099074184686}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: StumpSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}

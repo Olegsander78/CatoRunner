@@ -16,10 +16,11 @@ public class ScoreItemsCreator : MonoBehaviour
     public void GenerateScoreItems()
     {
         int indexPrefab = Random.Range(0, _prefabScoreItems.Count);
-        Vector3 nextSpawnPositionItem = Spawn.localPosition;
+        Vector3 nextSpawnPositionItem = Spawn.position;
         for (int i = 0; i < Random.Range(MIN__SCORE_ITEMS, MAX__SCORE_ITEMS); i++)
         {            
             GameObject prefScoreItem = Instantiate(_prefabScoreItems[indexPrefab], nextSpawnPositionItem, Spawn.rotation);
+            prefScoreItem.transform.parent = transform;
             nextSpawnPositionItem.x += 1f;
         }
     }

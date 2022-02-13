@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4960093472985299802}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: StampSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 4220727603579606818}
   - component: {fileID: 4220727603579606816}
   - component: {fileID: 4220727603579606817}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 7516075045892853974}
   - component: {fileID: 3750952774863188379}
   - component: {fileID: 1244797216372876504}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EnemyUnstompRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,7 +219,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d1e52d5021bea64492ad677ddf49a89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedEnemy: 0
   _healthEnemy: 1
   _scorePerEnemy: 100
   _IsUnstumtable: 1

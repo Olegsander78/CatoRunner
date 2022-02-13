@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 2300354013249116332}
   - component: {fileID: 2300354013249116338}
   - component: {fileID: 2300354013249116333}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: flying ground 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -351,7 +351,7 @@ GameObject:
   - component: {fileID: 2300354013748683741}
   - component: {fileID: 2300354013748683683}
   - component: {fileID: 2300354013748683682}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: flying ground 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -459,7 +459,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2300354013995492183}
   - component: {fileID: 2300354013995492180}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GroundCollider
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -598,6 +598,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2300354014733262353}
   - component: {fileID: 1576260660005685300}
+  - component: {fileID: 9103112867539644704}
   m_Layer: 0
   m_Name: LevelSegment
   m_TagString: Untagged
@@ -637,6 +638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5c1fe95d975b2d40bed4ce4751a17ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 9103112867539644704}
   _variants:
   - {fileID: 2606320971893857396}
   - {fileID: 3385965201615103294}
@@ -646,6 +648,27 @@ MonoBehaviour:
   - {fileID: 2642856367008587291}
   - {fileID: 8600474693576495926}
   - {fileID: 7800361028628686162}
+--- !u!50 &9103112867539644704
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2300354014733262352}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 6
 --- !u!1 &2300354015111056741
 GameObject:
   m_ObjectHideFlags: 0
@@ -657,7 +680,7 @@ GameObject:
   - component: {fileID: 2300354015111056746}
   - component: {fileID: 2300354015111056744}
   - component: {fileID: 2300354015111056747}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: flying ground 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1070,7 +1093,7 @@ GameObject:
   - component: {fileID: 5530429108524916178}
   - component: {fileID: 6718899038127308187}
   - component: {fileID: 9077457515797904612}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: flying ground 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

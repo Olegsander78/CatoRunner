@@ -681,22 +681,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5661904941617696621, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
-      propertyPath: JumpSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6973177234835062266, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6973177234835062266, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1672382699
-      objectReference: {fileID: 0}
-    - target: {fileID: 7749344144039800647, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
-      propertyPath: m_Force.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9004401872830432135, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
       propertyPath: HUDview
       value: 

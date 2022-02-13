@@ -22,7 +22,7 @@ public class Level : MonoBehaviour
             if (_maxCoordLevelSegX < _levelSegments[i].transform.position.x) _maxCoordLevelSegX = _levelSegments[i].transform.position.x;
         }
     }
-    private void Update()
+    private void FixedUpdate()
     {
         float displacement = _speedLevel * Time.deltaTime;
 
@@ -35,7 +35,7 @@ public class Level : MonoBehaviour
                 pos.x = _maxCoordLevelSegX - (_minCoordLevelSegX - pos.x) + LENGHT_SEGMENT;
                 segment.RollVariantLevelSegment();
             }
-            segment.transform.position = pos;
+            segment.Rigidbody.MovePosition(pos);
         }
         //
 

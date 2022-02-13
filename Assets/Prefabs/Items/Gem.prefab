@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3876979904273928066}
   - component: {fileID: 7825536308050608159}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CoinSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 6437865778795449657}
   - component: {fileID: 6437865778795449656}
   - component: {fileID: 7771101275256160773}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gem
   m_TagString: ScoreItems
   m_Icon: {fileID: 0}
@@ -215,7 +215,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6437865780421859862}
   - component: {fileID: 6437865780421859863}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Diamond
   m_TagString: Untagged
   m_Icon: {fileID: 0}

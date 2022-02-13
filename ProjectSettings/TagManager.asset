@@ -14,11 +14,11 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Enemies
+  - Platforms
+  - Collectables
+  - JumpHelpers
   - 
   - 
   - 

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LevelSegment : MonoBehaviour
 {
+    [SerializeField] private Rigidbody2D _rb;
+    public Rigidbody2D Rigidbody => _rb;
     [SerializeField] private List<GameObject> _variants;
     [SerializeField] private int _defaultVariantLeveSegment;
     [SerializeField] private List<VariantsLevelSegment> _variantsScriptsVariants;
