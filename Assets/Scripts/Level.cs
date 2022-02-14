@@ -37,7 +37,5 @@ public class Level : MonoBehaviour
             }
             segment.Rigidbody.MovePosition(pos);
         }
-        //
-
     }
 }

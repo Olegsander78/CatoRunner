@@ -66,7 +66,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad21737b84ea13449a7b94e2f0ecbce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedObstacle: 0
   SawSound: {fileID: 7905365686812831886}
   SawingPlayerSound: {fileID: 7905365687638431095}
   Animator: {fileID: 7905365686299937629}
@@ -102,13 +101,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7905365686087683054}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 208bd1dacf6bc244c880d80f5df14625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetPosition: {x: 0, y: 0, z: 0}
-  MoveSpeed: 0
+  TargetPosition: {x: -5, y: 2, z: 0}
+  MoveSpeed: 1
 --- !u!1 &7905365686299937631
 GameObject:
   m_ObjectHideFlags: 0

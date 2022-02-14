@@ -6,15 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    private const int MAX_PLAYER_HEALTH = 3;
+    private const int MAX_PLAYER_HEALTH = 5;
     private const float DURATION_INVUL_AFTER_DAMAGE = 3f;
 
-    [SerializeField] private int _currentPlayerHealth = 3;
+    [SerializeField] private int _currentPlayerHealth;
     [SerializeField] private bool _isInvulnerability = false;
  
     public HUDManager HUDview;
 
-    public UnityEvent EventOntakeDamage;
+    public UnityEvent EventOnTakeDamage;
 
     private void Start()
     {
@@ -24,9 +24,11 @@ public class PlayerHealth : MonoBehaviour
 
     public void AddHealth(int amount)
     {
-        if (_currentPlayerHealth < MAX_PLAYER_HEALTH)
+        _currentPlayerHealth += amount;
+
+        if (_currentPlayerHealth > MAX_PLAYER_HEALTH)
         {
-            _currentPlayerHealth += amount;
+            _currentPlayerHealth = MAX_PLAYER_HEALTH;
         }
         HUDview.UpdateHealthView(_currentPlayerHealth);
     }
@@ -42,19 +44,11 @@ public class PlayerHealth : MonoBehaviour
                 GameOver();
             }
             _isInvulnerability = true;
-
-            //Invoke("StopInvulnerability", DURATION_INVUL_AFTER_DAMAGE);
             StartInvulnerable();
             HUDview.UpdateHealthView(_currentPlayerHealth);
-            EventOntakeDamage.Invoke();
+            EventOnTakeDamage.Invoke();
         }
     }
-
-    //private void StopInvulnerability()
-    //{
-    //    _isInvulnerability = false;
-    //}
-
     public void StartInvulnerable()
     {
         StartCoroutine(InvulnerableState(DURATION_INVUL_AFTER_DAMAGE));

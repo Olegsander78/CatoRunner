@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Blink : MonoBehaviour
 {
-    private const int NUM_BLINKS = 6;
+    private const int NUM_BLINKS = 10;
     private const float DURATION_BLINK = 0.1f;
     
     public SpriteRenderer SpriteRenderer;
