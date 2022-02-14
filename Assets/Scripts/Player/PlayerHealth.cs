@@ -1,30 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
-public class PlayerCharacter : MonoBehaviour
+public class PlayerHealth : MonoBehaviour
 {
     private const int MAX_PLAYER_HEALTH = 3;
     private const float DURATION_INVUL_AFTER_DAMAGE = 3f;
+
     [SerializeField] private int _currentPlayerHealth = 3;
     [SerializeField] private bool _isInvulnerability = false;
-    [SerializeField] private int _score = 0;
  
     public HUDManager HUDview;
+
+    public UnityEvent EventOntakeDamage;
 
     private void Start()
     {
         _currentPlayerHealth = MAX_PLAYER_HEALTH;
-        HUDview.UpdateScoreText(_score);
         HUDview.UpdateHealthView(_currentPlayerHealth);
-    }
-    
-    public void AddScore(int amount)
-    {
-        _score += amount;
-        HUDview.UpdateScoreText(_score);
-    }
+    }    
 
     public void AddHealth(int amount)
     {
@@ -46,35 +42,29 @@ public class PlayerCharacter : MonoBehaviour
                 GameOver();
             }
             _isInvulnerability = true;
-            Invoke("StopInvulnerability", DURATION_INVUL_AFTER_DAMAGE);
-            //AddInvulnerability(DURATION_INVUL_AFTER_DAMAGE);
+
+            //Invoke("StopInvulnerability", DURATION_INVUL_AFTER_DAMAGE);
+            StartInvulnerable();
+            HUDview.UpdateHealthView(_currentPlayerHealth);
+            EventOntakeDamage.Invoke();
         }
-        HUDview.UpdateHealthView(_currentPlayerHealth);
     }
 
-    private void StopInvulnerability()
-    {
-        _isInvulnerability = false;
-    }
-
-    //ToDo Сделать вввиде корутины включение неуязвимости при подборе айтема Неузявимость.
-    
-    //public void AddInvulnerability(float duration)
+    //private void StopInvulnerability()
     //{
-    //    _isInvulnerability = true;
-    //    float timer = Time.time;
-    //    if (timer > duration)
-    //    {
-    //        _isInvulnerability = false;
-    //    }
+    //    _isInvulnerability = false;
     //}
 
-
-
-    //Сделать ускорение уровня  2х при подборе айтема Ускорение
-    public void AddSpeedUp()
+    public void StartInvulnerable()
     {
-
+        StartCoroutine(InvulnerableState(DURATION_INVUL_AFTER_DAMAGE));
+    }
+    
+    public IEnumerator InvulnerableState(float duration)
+    {
+        _isInvulnerability = true;
+        yield return new WaitForSeconds(duration);
+        _isInvulnerability = false;
     }
 
     public void GameOver()

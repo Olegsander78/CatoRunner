@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &34938704 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7779973246684213115, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
+  m_PrefabInstance: {fileID: 1109900289}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5abf14cac37793345b63ed31e098235e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &88200353
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,10 +692,66 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7779973246684213115, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
+      propertyPath: ColorBlink.b
+      value: 0.077162705
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779973246684213115, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
+      propertyPath: ColorBlink.g
+      value: 0.077162705
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779973246684213115, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
+      propertyPath: ColorBlink.r
+      value: 0.9622642
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779973246684213115, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
+      propertyPath: ColorOrigin.b
+      value: 0.990566
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779973246684213115, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
+      propertyPath: ColorOrigin.g
+      value: 0.990566
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779973246684213115, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
+      propertyPath: ColorOrigin.r
+      value: 0.990566
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779973246684213115, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
+      propertyPath: SpriteRenderer
+      value: 
+      objectReference: {fileID: 2142282471}
+    - target: {fileID: 7779973246684213115, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
+      propertyPath: SpriteRenderers
+      value: 
+      objectReference: {fileID: 2142282471}
+    - target: {fileID: 7779973246684213115, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
+      propertyPath: SpriteRenderers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779973246684213115, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
+      propertyPath: SpriteRenderers.Array.data[0]
+      value: 
+      objectReference: {fileID: 2142282471}
+    - target: {fileID: 7999454577656923021, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
+      propertyPath: HUDview
+      value: 
+      objectReference: {fileID: 1076880582}
+    - target: {fileID: 7999454577656923021, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
+      propertyPath: EventOntakeDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 34938704}
+    - target: {fileID: 7999454577656923021, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
+      propertyPath: EventOntakeDamage.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartBlink
+      objectReference: {fileID: 0}
     - target: {fileID: 9004401872830432135, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
       propertyPath: HUDview
       value: 
       objectReference: {fileID: 1076880582}
+    - target: {fileID: 9148902241034824953, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9148902242600683022, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
       propertyPath: m_Name
       value: _Player
@@ -986,6 +1053,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5c1fe95d975b2d40bed4ce4751a17ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!212 &2142282471 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 9148902241034824953, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
+  m_PrefabInstance: {fileID: 1109900289}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2300354014843765602
 PrefabInstance:
   m_ObjectHideFlags: 0

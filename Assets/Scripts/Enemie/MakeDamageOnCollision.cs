@@ -10,7 +10,7 @@ public class MakeDamageOnCollision : MonoBehaviour
     {
         if (collision.rigidbody)
         {
-            if (collision.rigidbody.GetComponent<PlayerCharacter>())
+            if (collision.rigidbody.GetComponent<PlayerHealth>())
             {
                 if (!GetComponent<Enemy>().IsUnstumtable)
                 {
@@ -18,14 +18,13 @@ public class MakeDamageOnCollision : MonoBehaviour
 
                     if (dot < 0.4f)
                     {
-                        collision.rigidbody.GetComponent<PlayerCharacter>().TakeDamage(_damageToPlayer);
+                        collision.rigidbody.GetComponent<PlayerHealth>().TakeDamage(_damageToPlayer);
                     }
                 }
                 else
                 {
-                    collision.rigidbody.GetComponent<PlayerCharacter>().TakeDamage(_damageToPlayer);
+                    collision.rigidbody.GetComponent<PlayerHealth>().TakeDamage(_damageToPlayer);
                 }
-                //ToDo Оттолкнуть игрока или добавить блинк?
             }
         }
     }

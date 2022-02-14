@@ -10,10 +10,9 @@ public class MakeDamageOnTrigger : MonoBehaviour
     {
         if (collision.attachedRigidbody)
         {
-            if (collision.attachedRigidbody.GetComponent<PlayerCharacter>())
+            if (collision.attachedRigidbody.GetComponent<PlayerHealth>())
             {
-                collision.attachedRigidbody.GetComponent<PlayerCharacter>().TakeDamage(_damageToPlayer);
-                //ToDo Оттолкнуть игрока или добавить блинк?
+                collision.attachedRigidbody.GetComponent<PlayerHealth>().TakeDamage(_damageToPlayer);
             }
         }
     }
