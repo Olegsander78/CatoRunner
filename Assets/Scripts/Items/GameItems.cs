@@ -6,7 +6,7 @@ public class GameItems : MonoBehaviour
 {
     public int ScoreValue = 1;
 
-    [SerializeField] private float _speedLevel = 1.5f;
+    //[SerializeField] private float _speedLevel = 1.5f;
 
     public GameObject PickUpSound;
     
