@@ -11,11 +11,11 @@ public class EnemyMove : MonoBehaviour
     public float MoveSpeed;
     private bool _movingToTargetPos;
 
-    private void Start()
-    {
-        _startPosition = transform.position;
-        _movingToTargetPos = true;
-    }
+    //private void Start()
+    //{
+    //    _startPosition = transform.position;
+    //    _movingToTargetPos = true;
+    //}
 
     /*private IEnumerator GhostBlinkRoutine()
     {
@@ -55,23 +55,23 @@ public class EnemyMove : MonoBehaviour
     }*/
 
 
-    private void Update()
-    {
-        if (_movingToTargetPos == true)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, TargetPosition, MoveSpeed * Time.deltaTime);
-            if (transform.position == TargetPosition)
-            {
-                _movingToTargetPos = false;
-            }
-        }
-        else
-        {
-            transform.position = Vector3.MoveTowards(transform.position, _startPosition, MoveSpeed * Time.deltaTime);
-            if (transform.position == _startPosition)
-            {
-                _movingToTargetPos = true;
-            }
-        }
-    }
+    //private void Update()
+    //{
+    //    if (_movingToTargetPos == true)
+    //    {
+    //        transform.position = Vector3.MoveTowards(transform.position, TargetPosition, MoveSpeed * Time.deltaTime);
+    //        if (transform.position == TargetPosition)
+    //        {
+    //            _movingToTargetPos = false;
+    //        }
+    //    }
+    //    else
+    //    {
+    //        transform.position = Vector3.MoveTowards(transform.position, _startPosition, MoveSpeed * Time.deltaTime);
+    //        if (transform.position == _startPosition)
+    //        {
+    //            _movingToTargetPos = true;
+    //        }
+    //    }
+    //}
 }

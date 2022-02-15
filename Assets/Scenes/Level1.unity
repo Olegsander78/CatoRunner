@@ -176,6 +176,17 @@ MonoBehaviour:
   _speedLevel: 3
   _minCoordLevelSegX: 0
   _maxCoordLevelSegX: 0
+--- !u!114 &140108407 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7999454577656923021, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
+  m_PrefabInstance: {fileID: 1109900289}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69c41d44d7aefd9458e7f1a47ad0201f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &146249602
 GameObject:
   m_ObjectHideFlags: 0
@@ -685,6 +696,58 @@ PrefabInstance:
       propertyPath: HUDview
       value: 
       objectReference: {fileID: 1076880582}
+    - target: {fileID: 7999454577656923021, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
+      propertyPath: EventOnTakeDamage.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7999454577656923021, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
+      propertyPath: EventOnTakeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7999454577656923021, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
+      propertyPath: EventOnTakeDamage.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7999454577656923021, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
+      propertyPath: EventOnTakeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 140108407}
+    - target: {fileID: 7999454577656923021, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
+      propertyPath: EventOnTakeDamage.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 140108407}
+    - target: {fileID: 7999454577656923021, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
+      propertyPath: EventOnTakeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7999454577656923021, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
+      propertyPath: EventOnTakeDamage.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7999454577656923021, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
+      propertyPath: EventOnTakeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: StartInvulnerable
+      objectReference: {fileID: 0}
+    - target: {fileID: 7999454577656923021, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
+      propertyPath: EventOnTakeDamage.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: StartInvulnerable
+      objectReference: {fileID: 0}
+    - target: {fileID: 7999454577656923021, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
+      propertyPath: EventOnTakeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: PlayerHealth, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7999454577656923021, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
+      propertyPath: EventOnTakeDamage.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: PlayerHealth, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7999454577656923021, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
+      propertyPath: EventOnTakeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7999454577656923021, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
+      propertyPath: EventOnTakeDamage.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 9004401872830432135, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
       propertyPath: HUDview
       value: 
