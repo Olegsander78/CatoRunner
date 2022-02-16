@@ -27,6 +27,7 @@ public class LevelSegment : MonoBehaviour
         int numberVariantLS = Random.Range(0, _variants.Count);
         _variants[numberVariantLS].SetActive(true);
         _variants[numberVariantLS].GetComponent<VariantsLevelSegment>().RollVariantSpawnsScoreItems();
+        _variants[numberVariantLS].GetComponent<VariantsLevelSegment>().RollVariantSpawnsObstacles();
     }
 
    

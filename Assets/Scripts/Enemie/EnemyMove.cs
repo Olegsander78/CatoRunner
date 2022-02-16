@@ -16,13 +16,13 @@ public class EnemyMove : MonoBehaviour
 
     private void Start()
     {
-        EnemyRig = GetComponent<Rigidbody2D>();
-        TargetPosition.parent = null;
-        _movingToTargetPos = true;
+        //EnemyRig = GetComponent<Rigidbody2D>();
+        //TargetPosition.parent = null;
+        //_movingToTargetPos = true;
 
         //_distanceToTargetPosition = Mathf.Abs(transform.position.x - TargetPosition.position.x);
         _distanceToTargetPosition = Vector3.Distance(transform.position, TargetPosition.position);
-        Debug.LogWarning(_distanceToTargetPosition);
+        //Debug.LogWarning(_distanceToTargetPosition);
     }
 
     //private void Start()
@@ -89,34 +89,34 @@ public class EnemyMove : MonoBehaviour
     //    }
     //}
 
-    private void FixedUpdate()
-    {
-        if (EnemyRig)
-        {
-            if (_movingToTargetPos == true)
-            {
-                float timer = 0f;
-                timer += Time.deltaTime;
-                EnemyRig.velocity = -transform.right * MoveSpeed;
-                float distance = EnemyRig.velocity.magnitude * timer;
-                //Debug.Log(distance);
-                if (distance > _distanceToTargetPosition)
-                {
-                    _movingToTargetPos = false;
-                }
-            }
-            else
-            {
-                float timer = 0f;
-                timer += Time.deltaTime;
-                EnemyRig.velocity = transform.right * MoveSpeed;
-                float distance = EnemyRig.velocity.magnitude * timer;
-                if (distance > _distanceToTargetPosition)
-                {
-                    _movingToTargetPos = true;
-                }
-            }
-        }
-    }
+    //private void FixedUpdate()
+    //{
+    //    if (EnemyRig)
+    //    {
+    //        if (_movingToTargetPos == true)
+    //        {
+    //            float timer = 0f;
+    //            timer += Time.deltaTime;
+    //            EnemyRig.velocity = -transform.right * MoveSpeed;
+    //            float distance = EnemyRig.velocity.magnitude * timer;
+    //            //Debug.Log(distance);
+    //            if (distance > _distanceToTargetPosition)
+    //            {
+    //                _movingToTargetPos = false;
+    //            }
+    //        }
+    //        else
+    //        {
+    //            float timer = 0f;
+    //            timer += Time.deltaTime;
+    //            EnemyRig.velocity = transform.right * MoveSpeed;
+    //            float distance = EnemyRig.velocity.magnitude * timer;
+    //            if (distance > _distanceToTargetPosition)
+    //            {
+    //                _movingToTargetPos = true;
+    //            }
+    //        }
+    //    }
+    //}
 
 }

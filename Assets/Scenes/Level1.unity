@@ -963,6 +963,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4193922130681976320, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: SpeedToLeft
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266596509460222940, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: SpeedToLeft
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5285986040623040284, guid: ed5247e374d47b242aad656191652187, type: 3}
       propertyPath: MoveSpeed
       value: 3
@@ -970,6 +978,10 @@ PrefabInstance:
     - target: {fileID: 5727857161527576473, guid: ed5247e374d47b242aad656191652187, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7567194218192423683, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: SpeedToLeft
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed5247e374d47b242aad656191652187, type: 3}
@@ -1042,6 +1054,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2300354014733262353, guid: ed5247e374d47b242aad656191652187, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4193922130681976320, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: SpeedToLeft
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266596509460222940, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: SpeedToLeft
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7567194218192423683, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: SpeedToLeft
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1121,6 +1145,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3385965201615103294, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4193922130681976320, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: SpeedToLeft
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266596509460222940, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: SpeedToLeft
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4533247082898892034, guid: ed5247e374d47b242aad656191652187, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1128,6 +1164,10 @@ PrefabInstance:
     - target: {fileID: 5285986040623040284, guid: ed5247e374d47b242aad656191652187, type: 3}
       propertyPath: MoveSpeed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512379395420384701, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: StopTime
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6512379395420384701, guid: ed5247e374d47b242aad656191652187, type: 3}
       propertyPath: LeftSpeed
@@ -1138,9 +1178,33 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6512379395420384701, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: SpeedPoints
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512379395420384701, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: SpeedToLeft
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512379395420384701, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: CurrentDirection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512379395420384701, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: _parentForPoints
+      value: 
+      objectReference: {fileID: 1605400314}
+    - target: {fileID: 6512379395420384701, guid: ed5247e374d47b242aad656191652187, type: 3}
       propertyPath: _parentForTarget
       value: 
       objectReference: {fileID: 1605400314}
+    - target: {fileID: 7567194218192423683, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: SpeedToLeft
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8600474693576495926, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: _variantsSpawnObstacles.Array.data[1]
+      value: 
+      objectReference: {fileID: 6437865778795449655, guid: 60fb9586415e0c74aa2aafbefe6f4a76, type: 3}
     - target: {fileID: 8808783370871349666, guid: ed5247e374d47b242aad656191652187, type: 3}
       propertyPath: MoveSpeed
       value: 2

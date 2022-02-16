@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {    
-    [SerializeField] private float _speedEnemy = 0.005f;
+    //[SerializeField] private float _speedEnemy = 0.005f;
     [SerializeField] private int _healthEnemy = 1;    
     [SerializeField] private int _scorePerEnemy = 100;
     [SerializeField] private bool _IsUnstumtable = false;
@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(Vector2.left * _speedEnemy * Time.deltaTime);
+        //transform.Translate(Vector2.left * _speedEnemy * Time.deltaTime);
     }
 
     public void GetDamage(int damageValue)
