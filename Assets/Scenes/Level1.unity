@@ -903,6 +903,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!4 &1605400314 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2023739126787561487, guid: ed5247e374d47b242aad656191652187, type: 3}
+  m_PrefabInstance: {fileID: 2300354014843765602}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1800787643
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1124,6 +1129,18 @@ PrefabInstance:
       propertyPath: MoveSpeed
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6512379395420384701, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: LeftSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512379395420384701, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: RightSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512379395420384701, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: _parentForTarget
+      value: 
+      objectReference: {fileID: 1605400314}
     - target: {fileID: 8808783370871349666, guid: ed5247e374d47b242aad656191652187, type: 3}
       propertyPath: MoveSpeed
       value: 2
