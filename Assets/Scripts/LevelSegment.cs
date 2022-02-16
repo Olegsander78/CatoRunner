@@ -8,7 +8,6 @@ public class LevelSegment : MonoBehaviour
     public Rigidbody2D Rigidbody => _rb;
     [SerializeField] private List<GameObject> _variants;
     [SerializeField] private int _defaultVariantLeveSegment;
-    [SerializeField] private List<VariantsLevelSegment> _variantsScriptsVariants;
 
     private void Start()
     {
@@ -27,7 +26,7 @@ public class LevelSegment : MonoBehaviour
         }
         int numberVariantLS = Random.Range(0, _variants.Count);
         _variants[numberVariantLS].SetActive(true);
-        _variantsScriptsVariants[numberVariantLS].RollVariantSpawnsScoreItems();
+        _variants[numberVariantLS].GetComponent<VariantsLevelSegment>().RollVariantSpawnsScoreItems();
     }
 
    
