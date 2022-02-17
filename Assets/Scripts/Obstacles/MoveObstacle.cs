@@ -32,6 +32,8 @@ public class MoveObstacle : MonoBehaviour
 
     public Rigidbody2D ObstacleRig;
 
+    public ObstacleCreator ObstacleCreator;
+
     private void Start()
     {
         ObstacleRig = GetComponent<Rigidbody2D>();
@@ -41,10 +43,10 @@ public class MoveObstacle : MonoBehaviour
         //RightPoint.parent = null;
     }
 
-    private void Update()
-    {
-        MoveTargetPoints();
-    }
+    //private void Update()
+    //{
+    //   MoveTargetPoints();
+    //}
 
     private void FixedUpdate()
     {
@@ -53,8 +55,9 @@ public class MoveObstacle : MonoBehaviour
 
     private void MoveTargetPoints()
     {
-        LeftPoint.transform.position += SpeedPoints * Time.deltaTime * transform.right;
-        RightPoint.transform.position += SpeedPoints * Time.deltaTime * transform.right;
+        LeftPoint.transform.position -= SpeedPoints * Time.deltaTime * transform.right;
+        RightPoint.transform.position -= SpeedPoints * Time.deltaTime * transform.right;
+
         if (LeftPoint.transform.position.x < LEFT_LENGTH_AUTODESTROY || LeftPoint.transform.position.x > RIGHT_LENGTH_AUTODESTROY || LeftPoint.transform.position.y < DOWN_LENGTH_AUTODESTROY)
         {
             Destroy(gameObject);
@@ -77,7 +80,7 @@ public class MoveObstacle : MonoBehaviour
             if (CurrentDirection == Direction.Left)
             {
                 ObstacleRig.velocity = -transform.right * SpeedToLeft;
-                if (transform.position.x < LeftPoint.position.x)
+                if (transform.localPosition.x < LeftPoint.localPosition.x)
                 {
                     CurrentDirection = Direction.Right;
                     yield return new WaitForSeconds(StopTime);
@@ -86,7 +89,7 @@ public class MoveObstacle : MonoBehaviour
             else
             {
                 ObstacleRig.velocity = transform.right * SpeedToRight;
-                if (transform.position.x > RightPoint.position.x)
+                if (transform.localPosition.x > RightPoint.localPosition.x)
                 {
                     CurrentDirection = Direction.Left;
                     yield return new WaitForSeconds(StopTime);

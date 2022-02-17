@@ -26,7 +26,7 @@ public class MoveItem : MonoBehaviour
     {
         transform.localPosition = new Vector3(transform.localPosition.x, (Mathf.Sin(Time.time * PositionFrequency) * PositionAmplitude), transform.localPosition.z);
         transform.localScale = _startScale * Mathf.Clamp((Mathf.Sin(Time.time * ScaleFrequency) * ScaleAmplitude + Scale), 0.7f, 1.2f);
-        Debug.Log((Mathf.Sin(Time.time * ScaleFrequency) * ScaleAmplitude) + Scale);
+        
         yield return new WaitForSeconds(0.3f);
     }
 }

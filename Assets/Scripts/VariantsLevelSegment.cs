@@ -26,8 +26,7 @@ public class VariantsLevelSegment : MonoBehaviour
         _variantsSpawnObstacles[_defaultVariantSpawn].GetComponent<ObstacleCreator>().GenerateObstacles();
     }
     public void RollVariantSpawnsScoreItems()
-    {
-        
+    {        
         for (int i = 0; i < _variantsSpawnsScoreItems.Count; i++)
         {
             _variantsSpawnsScoreItems[i].SetActive(false);
@@ -39,7 +38,6 @@ public class VariantsLevelSegment : MonoBehaviour
 
     public void RollVariantSpawnsObstacles()
     {
-
         for (int i = 0; i < _variantsSpawnObstacles.Count; i++)
         {
             _variantsSpawnObstacles[i].SetActive(false);

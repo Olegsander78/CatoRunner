@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ObstacleCreator : MonoBehaviour
 {
@@ -10,17 +11,20 @@ public class ObstacleCreator : MonoBehaviour
 
     public Transform Spawn;
 
-    [SerializeField] private List<GameObject> _prefabObstacles;
+    public List<GameObject> PrefabObstacles;
+
+    public UnityEvent OnCreateObstacle;
 
     [ContextMenu("GenObstacles")]
     public void GenerateObstacles()
     {
-        int indexPrefab = Random.Range(0, _prefabObstacles.Count);
+        int indexPrefab = Random.Range(0, PrefabObstacles.Count);
         Vector3 nextSpawnPositionItem = Spawn.position;
         for (int i = 0; i < Random.Range(MIN_SCORE_ITEMS, MAX_SCORE_ITEMS); i++)
         {
-            GameObject prefObstacle = Instantiate(_prefabObstacles[indexPrefab], nextSpawnPositionItem, Quaternion.identity);
+            GameObject prefObstacle = Instantiate(PrefabObstacles[indexPrefab], nextSpawnPositionItem, Quaternion.identity);
             prefObstacle.transform.parent = Spawn;
+            OnCreateObstacle.Invoke();
             nextSpawnPositionItem += new Vector3(DISTANCE_BETWEEN_ITEMS, 0f, 0f);
         }
     }

@@ -915,6 +915,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 88200354}
     m_Modifications:
+    - target: {fileID: 1129550680377969693, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2300354014733262352, guid: ed5247e374d47b242aad656191652187, type: 3}
       propertyPath: m_Name
       value: LevelSegment (1)
@@ -971,17 +975,49 @@ PrefabInstance:
       propertyPath: SpeedToLeft
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4961243456782782811, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5285986040623040284, guid: ed5247e374d47b242aad656191652187, type: 3}
       propertyPath: MoveSpeed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5403752454224485253, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5727857161527576473, guid: ed5247e374d47b242aad656191652187, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6239954708493273289, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6676257662215337042, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: OnCreateObstacle.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6676257662215337042, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: OnCreateObstacle.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6676257662215337042, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: OnCreateObstacle.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7567194218192423683, guid: ed5247e374d47b242aad656191652187, type: 3}
       propertyPath: SpeedToLeft
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8187614835276908012, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585957177293891558, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed5247e374d47b242aad656191652187, type: 3}
@@ -1008,6 +1044,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 88200354}
     m_Modifications:
+    - target: {fileID: 1129550680377969693, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2300354014733262352, guid: ed5247e374d47b242aad656191652187, type: 3}
       propertyPath: m_Name
       value: LevelSegment (2)
@@ -1064,9 +1104,29 @@ PrefabInstance:
       propertyPath: SpeedToLeft
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4961243456782782811, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5403752454224485253, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239954708493273289, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7567194218192423683, guid: ed5247e374d47b242aad656191652187, type: 3}
       propertyPath: SpeedToLeft
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8187614835276908012, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585957177293891558, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed5247e374d47b242aad656191652187, type: 3}
@@ -1093,6 +1153,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 88200354}
     m_Modifications:
+    - target: {fileID: 1129550680377969693, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2300354014733262352, guid: ed5247e374d47b242aad656191652187, type: 3}
       propertyPath: m_Name
       value: LevelSegment
@@ -1161,9 +1225,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4961243456782782811, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5285986040623040284, guid: ed5247e374d47b242aad656191652187, type: 3}
       propertyPath: MoveSpeed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5403752454224485253, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239954708493273289, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6512379395420384701, guid: ed5247e374d47b242aad656191652187, type: 3}
       propertyPath: StopTime
@@ -1200,6 +1276,14 @@ PrefabInstance:
     - target: {fileID: 7567194218192423683, guid: ed5247e374d47b242aad656191652187, type: 3}
       propertyPath: SpeedToLeft
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8187614835276908012, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585957177293891558, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8600474693576495926, guid: ed5247e374d47b242aad656191652187, type: 3}
       propertyPath: _variantsSpawnObstacles.Array.data[1]
