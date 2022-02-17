@@ -16,8 +16,12 @@ public class ScoreItemsCreator : MonoBehaviour
     public void GenerateScoreItems()
     {
         int indexPrefab = Random.Range(0, _prefabScoreItems.Count);
+
         Vector3 nextSpawnPositionItem = Spawn.position;
-        for (int i = 0; i < Random.Range(MIN_SCORE_ITEMS, MAX_SCORE_ITEMS); i++)
+
+        int amountScoreItems = Random.Range(MIN_SCORE_ITEMS, MAX_SCORE_ITEMS);
+
+        for (int i = 0; i < amountScoreItems; i++)
         {
             GameObject prefScoreItem = Instantiate(_prefabScoreItems[indexPrefab], nextSpawnPositionItem, Quaternion.identity);
             prefScoreItem.transform.parent = Spawn;

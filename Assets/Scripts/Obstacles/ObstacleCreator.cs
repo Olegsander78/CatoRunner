@@ -7,7 +7,7 @@ public class ObstacleCreator : MonoBehaviour
 {
     private const int MIN_SCORE_ITEMS = 1;
     private const int MAX_SCORE_ITEMS = 4;
-    private const float DISTANCE_BETWEEN_ITEMS = 2f;
+    private const float DISTANCE_BETWEEN_ITEMS = 1.4f;
 
     public Transform Spawn;
 
@@ -22,7 +22,9 @@ public class ObstacleCreator : MonoBehaviour
 
         Vector3 nextSpawnPositionItem = Spawn.position;
 
-        for (int i = 0; i < Random.Range(MIN_SCORE_ITEMS, MAX_SCORE_ITEMS); i++)
+        int amountObstacles = Random.Range(MIN_SCORE_ITEMS, MAX_SCORE_ITEMS);
+
+        for (int i = 0; i < amountObstacles; i++)
         {
             GameObject prefObstacle = Instantiate(PrefabObstacles[indexPrefab], nextSpawnPositionItem, Quaternion.identity);
             prefObstacle.transform.parent = Spawn;
