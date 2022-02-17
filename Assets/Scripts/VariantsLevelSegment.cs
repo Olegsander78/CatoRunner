@@ -32,8 +32,14 @@ public class VariantsLevelSegment : MonoBehaviour
             _variantsSpawnsScoreItems[i].SetActive(false);
         }
         int numberVariantSpawn = Random.Range(0, _variantsSpawnsScoreItems.Count);
-        _variantsSpawnsScoreItems[numberVariantSpawn].SetActive(true);
-        _variantsSpawnsScoreItems[numberVariantSpawn].GetComponent<ScoreItemsCreator>().GenerateScoreItems();
+        if (_variantsSpawnsScoreItems[numberVariantSpawn] != null)
+        {
+            _variantsSpawnsScoreItems[numberVariantSpawn].SetActive(true);
+            if (_variantsSpawnsScoreItems[numberVariantSpawn].GetComponent<ScoreItemsCreator>())
+            {
+                _variantsSpawnsScoreItems[numberVariantSpawn].GetComponent<ScoreItemsCreator>().GenerateScoreItems();
+            }
+        }
     }
 
     public void RollVariantSpawnsObstacles()
@@ -43,7 +49,15 @@ public class VariantsLevelSegment : MonoBehaviour
             _variantsSpawnObstacles[i].SetActive(false);
         }
         int numberVariantSpawn = Random.Range(0, _variantsSpawnObstacles.Count);
-        _variantsSpawnObstacles[numberVariantSpawn].SetActive(true);        
-        _variantsSpawnObstacles[numberVariantSpawn].GetComponent<ObstacleCreator>().GenerateObstacles();
+
+        if (_variantsSpawnObstacles[numberVariantSpawn] != null)
+        {
+            _variantsSpawnObstacles[numberVariantSpawn].SetActive(true);
+
+            if (_variantsSpawnObstacles[numberVariantSpawn].GetComponent<ObstacleCreator>())
+            {
+                _variantsSpawnObstacles[numberVariantSpawn].GetComponent<ObstacleCreator>().GenerateObstacles();
+            }
+        }
     }
 }
