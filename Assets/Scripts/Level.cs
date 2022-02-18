@@ -15,12 +15,16 @@ public class Level : MonoBehaviour
     {
         _minCoordLevelSegX = _levelSegments[0].transform.position.x;
         _maxCoordLevelSegX = _levelSegments[0].transform.position.x;
+        Debug.Log(_minCoordLevelSegX);
+        Debug.Log(_maxCoordLevelSegX);
 
         for (int i = 1; i < _levelSegments.Count; i++)
         {
             if (_minCoordLevelSegX > _levelSegments[i].transform.position.x) _minCoordLevelSegX = _levelSegments[i].transform.position.x;
             if (_maxCoordLevelSegX < _levelSegments[i].transform.position.x) _maxCoordLevelSegX = _levelSegments[i].transform.position.x;
         }
+        Debug.Log(_minCoordLevelSegX);
+        Debug.Log(_maxCoordLevelSegX);
     }
     private void FixedUpdate()
     {
@@ -29,6 +33,7 @@ public class Level : MonoBehaviour
         foreach (var segment in _levelSegments)
         {
             var pos = segment.transform.position;
+            Debug.Log(pos);
             pos.x -= displacement;
             if (pos.x < _minCoordLevelSegX)
             {

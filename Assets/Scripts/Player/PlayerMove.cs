@@ -3,29 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
-{
-    //public float JumpForce;
-    public float JumpSpeed;
+{    
+    public float JumpForce;
     public Rigidbody2D Rig;  
 
     [SerializeField] private bool _isGrounded;
 
     private void FixedUpdate()
-    {
-        //if (Input.GetKey(KeyCode.Space) && IsGrounded())
-        //{
-        //    Rig.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
-        //}
-
-        if (Input.GetKey(KeyCode.Space))
+    { 
+        if(Input.GetKey(KeyCode.Space))
         {
             if (_isGrounded)
             {
-                // Rig.velocity += new Vector2(0f, JumpSpeed);
-                Rig.AddForce(Vector2.up * JumpSpeed, ForceMode2D.Impulse);
+                Jump();
             }
         }
+    }
 
+    public void Jump()
+    {
+        Rig.velocity += new Vector2(0f, JumpForce);
+        //Rig.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
     }
     
 
@@ -41,13 +39,4 @@ public class PlayerMove : MonoBehaviour
     {
         _isGrounded = false;
     }
-
-
-    //Проверка на приземление через Raycast
-    //bool IsGrounded()
-    //{
-    //    RaycastHit2D hit = Physics2D.Raycast(transform.position + new Vector3(0f, -1f, 0f),
-    //        Vector2.down, 0.2f);
-    //    return hit.collider != CompareTag("Ground");
-    //}
 }

@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9fe10d9ec959964fa9e155804be97f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpSpeed: 5
+  JumpForce: 5
   Rig: {fileID: 9148902242600683023}
   _isGrounded: 0
 --- !u!70 &5062327141997235216
