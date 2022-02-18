@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveItem : MonoBehaviour
+public class SwingItem : MonoBehaviour
 {
     public float ScaleFrequency = 2f;
     public float PositionFrequency = 500f;

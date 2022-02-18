@@ -8,18 +8,22 @@ public class SimpleMove : MonoBehaviour
     ////Pattern creating Apple
     //public GameObject applePrefab;
         
-    public float speed = 1f;
+    //public float speed = 1f;
     
-    public float leftAndRightEdge = 2f;
+    //public float leftAndRightEdge = 2f;
     //public float chanceToChangeDirection = 0.1f;
 
     ////The frequency at which the apples are instantiated.
     //public float secondsBetweenAppleDrops = 1f;
 
-    public Rigidbody2D ObstacleRig;
+    [SerializeField] private Rigidbody2D ObstacleRig;
+
+    [SerializeField] private Level Level;
 
     private void Start()
     {
+        Level = FindObjectOfType<Level>().gameObject.GetComponent<Level>();
+
         ObstacleRig = GetComponent<Rigidbody2D>();
     }
 
@@ -40,9 +44,9 @@ public class SimpleMove : MonoBehaviour
     void Update()
     {
         //Simple moving        
-        ObstacleRig.velocity = transform.right * -speed;
-        float posX = transform.position.x;
-        Debug.Log(transform.right);
+       
+        //float posX = transform.position.x;
+        //Debug.Log(transform.right);
         ////Change of direction
         //if (posX < -leftAndRightEdge)
         //{
@@ -59,6 +63,8 @@ public class SimpleMove : MonoBehaviour
 
     void FixedUpdate()
     {
+
+        ObstacleRig.velocity = transform.right * -Level.SpeedLevel;
         //if (Random.value < chanceToChangeDirection)
         //{
         //    speed *= -1;

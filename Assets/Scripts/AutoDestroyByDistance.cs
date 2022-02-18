@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class AutoDestroyByDistance : MonoBehaviour
 {
-    private const float LEFT_LENGTH_AUTODESTROY = -200f;
-    private const float RIGHT_LENGTH_AUTODESTROY = 200f;
-    private const float DOWN_LENGTH_AUTODESTROY = -30f;
+    //private const float LEFT_LENGTH_AUTODESTROY = -200f;
+    //private const float RIGHT_LENGTH_AUTODESTROY = 200f;
+    //private const float DOWN_LENGTH_AUTODESTROY = -30f;
 
+    public Level Level;
+
+    private void Awake()
+    {
+        Level = FindObjectOfType<Level>().gameObject.GetComponent<Level>();
+    }
 
     private void Update()
     {
@@ -15,7 +21,7 @@ public class AutoDestroyByDistance : MonoBehaviour
     }
     private void DestroyByDistance()
     {
-        if (transform.position.x < LEFT_LENGTH_AUTODESTROY || transform.position.x > RIGHT_LENGTH_AUTODESTROY || transform.position.y < DOWN_LENGTH_AUTODESTROY)
+        if (transform.position.x < Level.MinCoordLevelSegX)
         {
             Destroy(gameObject);
         }
