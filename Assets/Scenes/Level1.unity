@@ -640,6 +640,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &728469366 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2840449248524675881, guid: ed5247e374d47b242aad656191652187, type: 3}
+  m_PrefabInstance: {fileID: 2300354014843765602}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1076880580
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,6 +920,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 88200354}
     m_Modifications:
+    - target: {fileID: 514682081408202874, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: _prefabScoreItems.Array.data[1]
+      value: 
+      objectReference: {fileID: 5679617143359374549, guid: 04084c022dd6a4e4982f793e8399e053, type: 3}
     - target: {fileID: 1129550680377969693, guid: ed5247e374d47b242aad656191652187, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1044,6 +1053,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 88200354}
     m_Modifications:
+    - target: {fileID: 514682081408202874, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: _prefabScoreItems.Array.data[1]
+      value: 
+      objectReference: {fileID: 5679617143359374549, guid: 04084c022dd6a4e4982f793e8399e053, type: 3}
     - target: {fileID: 1129550680377969693, guid: ed5247e374d47b242aad656191652187, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1153,6 +1166,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 88200354}
     m_Modifications:
+    - target: {fileID: 514682081408202874, guid: ed5247e374d47b242aad656191652187, type: 3}
+      propertyPath: _prefabScoreItems.Array.data[1]
+      value: 
+      objectReference: {fileID: 5679617143359374549, guid: 04084c022dd6a4e4982f793e8399e053, type: 3}
     - target: {fileID: 1129550680377969693, guid: ed5247e374d47b242aad656191652187, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1288,7 +1305,7 @@ PrefabInstance:
     - target: {fileID: 8600474693576495926, guid: ed5247e374d47b242aad656191652187, type: 3}
       propertyPath: _variantsSpawnObstacles.Array.data[1]
       value: 
-      objectReference: {fileID: 6437865778795449655, guid: 60fb9586415e0c74aa2aafbefe6f4a76, type: 3}
+      objectReference: {fileID: 728469366}
     - target: {fileID: 8808783370871349666, guid: ed5247e374d47b242aad656191652187, type: 3}
       propertyPath: MoveSpeed
       value: 2
