@@ -5,25 +5,20 @@ using UnityEngine;
 public class VariantsLevelSegment : MonoBehaviour
 {
     [SerializeField] private List<GameObject> _variantsSpawnsScoreItems;
+    //[SerializeField] private List<GameObject> _variantsSpawnsStateItems;
     [SerializeField] private List<GameObject> _variantsSpawnObstacles;
-    [SerializeField] private int _defaultVariantSpawn = 0;
 
     private void Start()
     {
         for (int i = 0; i < _variantsSpawnsScoreItems.Count; i++)
         {
-            _variantsSpawnsScoreItems[i].SetActive(false);            
+            _variantsSpawnsScoreItems[i].SetActive(false);
         }
 
         for (int i = 0; i < _variantsSpawnObstacles.Count; i++)
         {
             _variantsSpawnObstacles[i].SetActive(false);
         }
-        
-        _variantsSpawnsScoreItems[_defaultVariantSpawn].SetActive(true);
-        _variantsSpawnObstacles[_defaultVariantSpawn].SetActive(true);
-        _variantsSpawnsScoreItems[_defaultVariantSpawn].GetComponent<ScoreItemsCreator>().GenerateScoreItems();
-        _variantsSpawnObstacles[_defaultVariantSpawn].GetComponent<ObstacleCreator>().GenerateObstacles();
     }
     public void RollVariantSpawnsScoreItems()
     {        

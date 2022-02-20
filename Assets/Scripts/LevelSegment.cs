@@ -26,9 +26,19 @@ public class LevelSegment : MonoBehaviour
         }
         int numberVariantLS = Random.Range(0, _variants.Count);
         _variants[numberVariantLS].SetActive(true);
-        _variants[numberVariantLS].GetComponent<VariantsLevelSegment>().RollVariantSpawnsScoreItems();
-        _variants[numberVariantLS].GetComponent<VariantsLevelSegment>().RollVariantSpawnsObstacles();
+        RollLevelObjects(numberVariantLS);
     }
 
+    private void RollLevelObjects(int numberVariant)
+    {
+        StartCoroutine(RollObjects(numberVariant));
+    }
+
+    private IEnumerator RollObjects(int numberVariant)
+    {
+        yield return new WaitForSeconds(0.2f);
+        _variants[numberVariant].GetComponent<VariantsLevelSegment>().RollVariantSpawnsScoreItems();
+        _variants[numberVariant].GetComponent<VariantsLevelSegment>().RollVariantSpawnsObstacles();
+    }
    
 }

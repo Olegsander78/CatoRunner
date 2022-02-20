@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class ObstacleCreator : MonoBehaviour
 {
     private const int MIN_OBSTACLES = 1;
-    private const int MAX_OBSTACLES = 4;
+    private const int MAX_OBSTACLES = 3;
     private const float DISTANCE_BETWEEN_OBSTACLES = 1.4f;
 
     public Transform Spawn;
