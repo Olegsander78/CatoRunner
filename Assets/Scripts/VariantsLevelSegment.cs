@@ -11,7 +11,7 @@ public class VariantsLevelSegment : MonoBehaviour
 
     private void Start()
     {
-        SwitchOffVariantsSpawns();
+        //SwitchOffVariantsSpawns();
     }
 
     private void SwitchOffVariantsSpawns()

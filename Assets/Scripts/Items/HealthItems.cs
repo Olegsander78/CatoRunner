@@ -6,12 +6,19 @@ public class HealthItems : GameItems
 {
     public int Health = 1;
 
-    public Collider2D Collider2D;
+    //public Collider2D Collider2D;
 
     public override void OnTriggerEnter2D(Collider2D collision)
     {
-        base.OnTriggerEnter2D(collision);
-        collision.GetComponent<PlayerHealth>().AddHealth(Health);
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.GetComponent<PlayerHealth>().AddHealth(Health);
+            GameObject newSound = Instantiate(PickUpSoundPrefab);
+            newSound.GetComponent<AudioSource>().Play();
+            Destroy(newSound, 1f);
+            Destroy(gameObject);
+        }
+        
     }
 
 

@@ -20,7 +20,7 @@ public class GetDamageOnCollision : MonoBehaviour
                     {
                         GetComponent<Enemy>().GetDamage(_damageToEnemy);
                     }
-                    Debug.Log("dot = "+ dot);
+                    //Debug.Log("dot = "+ dot);
                 }
             }
         }

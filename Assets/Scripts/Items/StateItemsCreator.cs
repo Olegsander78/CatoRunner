@@ -11,7 +11,7 @@ public class StateItemsCreator : MonoBehaviour
     [ContextMenu("GenStateItems")]
     public void GenerateStateItems()
     {
-        int indexPrefab = Random.Range(0, _prefabStateItems.Count-1);
+        int indexPrefab = Random.Range(0, _prefabStateItems.Count);
 
         Vector3 nextSpawnPositionItem = Spawn.position;
 

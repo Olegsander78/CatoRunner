@@ -154,7 +154,7 @@ MonoBehaviour:
   Spawn: {fileID: 4788967924958280143}
   _prefabScoreItems:
   - {fileID: 8579930617550800154, guid: ceb775302b650da4282e368b1318f2e0, type: 3}
-  - {fileID: 6437865778795449655, guid: 60fb9586415e0c74aa2aafbefe6f4a76, type: 3}
+  - {fileID: 5679617143359374549, guid: 04084c022dd6a4e4982f793e8399e053, type: 3}
   - {fileID: 6437865778795449655, guid: 60fb9586415e0c74aa2aafbefe6f4a76, type: 3}
 --- !u!1 &410759546715764008
 GameObject:
@@ -1167,7 +1167,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Spawn: {fileID: 8451264563416488121}
-  _prefabStateItems: []
+  _prefabStateItems:
+  - {fileID: 65833270153372801, guid: 82b1cf023c8486b42bf8c59913fcb9a0, type: 3}
+  - {fileID: 5558583420142538681, guid: e068277c1ac18214aaea73199cd8847e, type: 3}
+  - {fileID: 5451985308753880214, guid: 3cb15a49f435bc44a843f6446c335981, type: 3}
+  - {fileID: 3245062092105097324, guid: 38ed53d051d06704fb81eccc1b8b14c7, type: 3}
 --- !u!1 &2439537719313560616
 GameObject:
   m_ObjectHideFlags: 0

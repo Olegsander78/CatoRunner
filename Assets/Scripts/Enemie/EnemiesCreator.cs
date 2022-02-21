@@ -11,7 +11,7 @@ public class EnemiesCreator : MonoBehaviour
     [ContextMenu("GenEnemy")]
     public void GenerateEnemy()
     {
-        int indexPrefab = Random.Range(0, PrefabEnemies.Count - 1);
+        int indexPrefab = Random.Range(0, PrefabEnemies.Count);
 
         Vector3 nextSpawnPositionItem = Spawn.position;
 
