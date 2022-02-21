@@ -39,6 +39,8 @@ public class LevelSegment : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         _variants[numberVariant].GetComponent<VariantsLevelSegment>().RollVariantSpawnsScoreItems();
         _variants[numberVariant].GetComponent<VariantsLevelSegment>().RollVariantSpawnsObstacles();
+        _variants[numberVariant].GetComponent<VariantsLevelSegment>().RollVariantSpawnsEnemies();
+        _variants[numberVariant].GetComponent<VariantsLevelSegment>().RollVariantSpawnsStateItems();
     }
    
 }

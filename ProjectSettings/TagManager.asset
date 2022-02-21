@@ -7,6 +7,7 @@ TagManager:
   - ScoreItems
   - Ground
   - Obstacles
+  - Enemy
   layers:
   - Default
   - TransparentFX

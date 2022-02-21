@@ -116,11 +116,11 @@ GameObject:
   - component: {fileID: 2883297004583529487}
   - component: {fileID: 3448860227091438132}
   - component: {fileID: 2503111129181452872}
+  - component: {fileID: 3749370174407370454}
   - component: {fileID: 7116866131800540520}
-  - component: {fileID: 2207902658539095637}
   m_Layer: 7
   m_Name: EnemyStompGreen
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -221,6 +221,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageToEnemy: 1
+--- !u!114 &3749370174407370454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2883297004583529486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1411f6d3b00e724d863841a95426c17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObstacleRig: {fileID: 2883297004583529484}
+  Level: {fileID: 0}
 --- !u!114 &7116866131800540520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,23 +248,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Level: {fileID: 0}
---- !u!114 &2207902658539095637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2883297004583529486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 208bd1dacf6bc244c880d80f5df14625, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TargetPosition: {fileID: 0}
-  _movingToTargetPos: 0
-  _distanceToTargetPosition: 0
-  MoveSpeed: 0
-  EnemyRig: {fileID: 0}
 --- !u!1 &2949811128615637978
 GameObject:
   m_ObjectHideFlags: 0

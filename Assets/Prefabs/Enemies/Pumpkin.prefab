@@ -143,14 +143,14 @@ GameObject:
   - component: {fileID: 5291469214022848010}
   - component: {fileID: 5291469214022848011}
   - component: {fileID: 5291469214022848008}
+  - component: {fileID: 4531618390892919}
   - component: {fileID: 5291469214022848009}
   - component: {fileID: 5291469214022848014}
   - component: {fileID: 5291469214022848015}
   - component: {fileID: 5291469214022848012}
-  - component: {fileID: 4531618390892919}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pumpkin
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -208,6 +208,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &4531618390892919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5291469214022848013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2e6fb33c9bb10e4e9d2d4789905b2b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _healthEnemy: 1
+  _scorePerEnemy: 150
+  _IsUnstumtable: 0
+  StampSound: {fileID: 5291469212481067087}
+  Animator: {fileID: 5291469213992197327}
 --- !u!114 &5291469214022848009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,20 +278,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObstacleRig: {fileID: 5291469214022848008}
   Level: {fileID: 0}
---- !u!114 &4531618390892919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5291469214022848013}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2e6fb33c9bb10e4e9d2d4789905b2b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _healthEnemy: 1
-  _scorePerEnemy: 150
-  _IsUnstumtable: 0
-  StampSound: {fileID: 5291469212481067087}
-  Animator: {fileID: 5291469213992197327}

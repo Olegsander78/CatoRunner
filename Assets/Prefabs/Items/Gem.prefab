@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3876979904273928066}
   - component: {fileID: 7825536308050608159}
   m_Layer: 9
-  m_Name: CoinSound
+  m_Name: PickUpGemSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -191,8 +191,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69fa309db9ec006418e5dac98a6f1eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PickUpSoundPrefab: {fileID: 3614887396304891461}
   ScoreValue: 50
-  PickUpSound: {fileID: 3614887396304891461}
 --- !u!114 &575833550918598740
 MonoBehaviour:
   m_ObjectHideFlags: 0

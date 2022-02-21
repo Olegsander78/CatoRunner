@@ -145,11 +145,11 @@ GameObject:
   - component: {fileID: 4220727603948609959}
   - component: {fileID: 4220727603948609957}
   - component: {fileID: 7516075045892853974}
+  - component: {fileID: 8083699243645926228}
   - component: {fileID: 3750952774863188379}
-  - component: {fileID: 1244797216372876504}
   m_Layer: 7
   m_Name: EnemyUnstompRed
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -237,6 +237,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageToPlayer: 2
+--- !u!114 &8083699243645926228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4220727603948609953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1411f6d3b00e724d863841a95426c17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObstacleRig: {fileID: 4220727603948609959}
+  Level: {fileID: 0}
 --- !u!114 &3750952774863188379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,20 +264,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Level: {fileID: 0}
---- !u!114 &1244797216372876504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4220727603948609953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 208bd1dacf6bc244c880d80f5df14625, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TargetPosition: {fileID: 0}
-  _movingToTargetPos: 0
-  _distanceToTargetPosition: 0
-  MoveSpeed: -2
-  EnemyRig: {fileID: 0}
