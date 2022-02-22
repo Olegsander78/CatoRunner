@@ -11,6 +11,8 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] private int _currentPlayerHealth;
     [SerializeField] private bool _isInvulnerability = false;
+
+    public bool CheatMode;
  
     public HUDManager HUDview;
 
@@ -41,7 +43,7 @@ public class PlayerHealth : MonoBehaviour
             if (_currentPlayerHealth <= 0)
             {
                 _currentPlayerHealth = 0;
-                GameOver();
+                if(!CheatMode) GameOver();
             }
             _isInvulnerability = true;
             StartInvulnerable();
