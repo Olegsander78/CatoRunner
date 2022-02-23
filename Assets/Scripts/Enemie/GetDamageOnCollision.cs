@@ -5,7 +5,7 @@ using UnityEngine;
 public class GetDamageOnCollision : MonoBehaviour
 {
     [SerializeField] private int _damageToEnemy = 1;
-
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.rigidbody)

@@ -29,11 +29,13 @@ public class PlayerMove : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        float dot = Vector2.Dot(collision.contacts[0].normal, Vector2.up);
-        if (dot > 0.5f)
-        {
-            _isGrounded = true;
-        }
+        _isGrounded = true;
+
+        //float dot = Vector2.Dot(collision.contacts[0].normal, Vector2.up);
+        //if (dot > 0.5f)
+        //{
+        //    _isGrounded = true;
+        //}
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
