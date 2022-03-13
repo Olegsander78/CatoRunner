@@ -55,7 +55,7 @@ public class LocalMoveObstacle : MonoBehaviour
             if (CurrentDirection == LocalDirection.Left)
             {
                 ObstacleRig.velocity = -transform.right * SpeedToLeft;
-                if (transform.localPosition.x < LeftPoint.localPosition.x)
+                if (transform.position.x < LeftPoint.position.x)
                 {
                     CurrentDirection = LocalDirection.Right;
                     yield return new WaitForSeconds(StopTime);
@@ -64,7 +64,7 @@ public class LocalMoveObstacle : MonoBehaviour
             else
             {
                 ObstacleRig.velocity = transform.right * SpeedToRight;
-                if (transform.localPosition.x > RightPoint.localPosition.x)
+                if (transform.position.x > RightPoint.position.x)
                 {
                     CurrentDirection = LocalDirection.Left;
                     yield return new WaitForSeconds(StopTime);

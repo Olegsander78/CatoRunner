@@ -484,6 +484,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _score: 0
   HUDview: {fileID: 0}
+  _playerHealth: {fileID: 7999454577656923021}
 --- !u!114 &7999454577656923021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -498,6 +499,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentPlayerHealth: 3
   _isInvulnerability: 0
+  CheatMode: 0
   HUDview: {fileID: 0}
   EventOnTakeDamage:
     m_PersistentCalls:

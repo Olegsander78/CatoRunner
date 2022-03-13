@@ -176,6 +176,7 @@ MonoBehaviour:
   _speedLevel: 3
   _minCoordLevelSegX: 0
   _maxCoordLevelSegX: 0
+  _playerCharacter: {fileID: 1109900290}
 --- !u!114 &140108407 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7999454577656923021, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
@@ -1275,6 +1276,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
+--- !u!114 &1109900290 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9004401872830432135, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
+  m_PrefabInstance: {fileID: 1109900289}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37f1207483f14734d8be3364400b899c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1226745452
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,7 +10,8 @@ public class MoveWithLevel : MonoBehaviour
 
     private void Start()
     {
-        Level = FindObjectOfType<Level>().gameObject.GetComponent<Level>();
+        //Level = FindObjectOfType<Level>().gameObject.GetComponent<Level>();
+        Level = GameController.Instance.LevelController.Level;
 
         ObstacleRig = GetComponent<Rigidbody2D>();
     }

@@ -18,11 +18,11 @@ public class PlayerHealth : MonoBehaviour
 
     public UnityEvent EventOnTakeDamage;
 
-    private void Start()
-    {
-        _currentPlayerHealth = MAX_PLAYER_HEALTH;
-        HUDview.UpdateHealthView(_currentPlayerHealth);
-    }    
+    //private void Start()
+    //{
+    //    _currentPlayerHealth = MAX_PLAYER_HEALTH;
+    //    HUDview.UpdateHealthView(_currentPlayerHealth);
+    //}    
 
     public void AddHealth(int amount)
     {
@@ -32,6 +32,12 @@ public class PlayerHealth : MonoBehaviour
         {
             _currentPlayerHealth = MAX_PLAYER_HEALTH;
         }
+        HUDview.UpdateHealthView(_currentPlayerHealth);
+    }
+
+    public void SetHealth(int amount)
+    {
+        _currentPlayerHealth = amount;
         HUDview.UpdateHealthView(_currentPlayerHealth);
     }
 
