@@ -21,7 +21,7 @@ public class AutoDestroyByDistance : MonoBehaviour
     }
     private void DestroyByDistance()
     {
-        if (transform.position.x < Level.MinCoordLevelSegX)
+        if (transform.position.x < (Level.MinCoordLevelSegX + Level.LENGHT_SEGMENT / 2))
         {
             Destroy(gameObject);
         }

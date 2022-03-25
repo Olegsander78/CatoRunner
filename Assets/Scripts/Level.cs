@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Level : MonoBehaviour
 {
-    private const float LENGHT_SEGMENT = 30.7f;
+    public const float LENGHT_SEGMENT = 30.7f;
     [SerializeField] private List<LevelSegment> _levelSegments = new List<LevelSegment>();
     [SerializeField] private float _speedLevel = 3f;
     [SerializeField] private float _minCoordLevelSegX;
