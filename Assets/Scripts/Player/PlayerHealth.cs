@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    private const int MAX_PLAYER_HEALTH = 5;
+    //private const int MAX_PLAYER_HEALTH = 5;
     private const float DURATION_INVUL_AFTER_DAMAGE = 3f;
 
     [SerializeField] private int _currentPlayerHealth;
@@ -18,19 +18,18 @@ public class PlayerHealth : MonoBehaviour
 
     public UnityEvent EventOnTakeDamage;
 
-    //private void Start()
-    //{
-    //    _currentPlayerHealth = MAX_PLAYER_HEALTH;
-    //    HUDview.UpdateHealthView(_currentPlayerHealth);
-    //}    
+    private void Start()
+    {
+        HUDview.UpdateHealthView(_currentPlayerHealth);
+    }
 
     public void AddHealth(int amount)
     {
         _currentPlayerHealth += amount;
 
-        if (_currentPlayerHealth > MAX_PLAYER_HEALTH)
+        if (_currentPlayerHealth > GameController.Instance.PlayerProfile.MaxHealth)
         {
-            _currentPlayerHealth = MAX_PLAYER_HEALTH;
+            _currentPlayerHealth = GameController.Instance.PlayerProfile.MaxHealth;
         }
         HUDview.UpdateHealthView(_currentPlayerHealth);
     }

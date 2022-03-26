@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PickUpSoundPrefab: {fileID: 3245062092332589940}
-  Health: 5
+  Health: 10
 --- !u!114 &1427503728284546264
 MonoBehaviour:
   m_ObjectHideFlags: 0

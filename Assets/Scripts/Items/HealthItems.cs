@@ -17,7 +17,6 @@ public class HealthItems : GameItems
             newSound.GetComponent<AudioSource>().Play();
             Destroy(newSound, 1f);
             Destroy(gameObject);
-        }
-        
+        }        
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelController : MonoBehaviour
 {
     [SerializeField] private Level _currentLevel;
-    public Level Level => _currentLevel;
+    public Level CurrentLevel => _currentLevel;
 
     public void LoadLevel(int level)
     {
