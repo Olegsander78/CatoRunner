@@ -55,6 +55,6 @@ public class ScreenController : MonoBehaviour
                 return screen;
             }
         }
-        throw new Exception("Screen not found");
+        throw new Exception("Screen not found!");
     }
 }
