@@ -1,8 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PauseScreen : Screen
 {
-    
+    [SerializeField] public Button _resumeBtn;
+    [SerializeField] public Button _replayBtn;
+    [SerializeField] public Button _exitBtn;
+
+
+    private void Start()
+    {
+        _resumeBtn.onClick.AddListener(Resume);
+        _resumeBtn.onClick.AddListener(ReplayLevel);
+        _exitBtn.onClick.AddListener(GoBackMainMenu);
+    }
+
+    public void Resume()
+    {
+        Time.timeScale = 1f;
+        GameController.Instance.ScreenController.PopScreen();
+    }
+
+    public void ReplayLevel()
+    {
+        Time.timeScale = 1f;
+        GameController.Instance.ScreenController.PopScreen();
+        GameController.Instance.LoadLevel(SceneManager.GetActiveScene().buildIndex);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void GoBackMainMenu()
+    {
+        GameController.Instance.ScreenController.PushScreen<MainMenuScreen>();
+    }
 }
