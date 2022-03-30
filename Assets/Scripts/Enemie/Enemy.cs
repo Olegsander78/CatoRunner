@@ -8,17 +8,11 @@ public class Enemy : MonoBehaviour
     [SerializeField] private int _healthEnemy = 1;    
     [SerializeField] private int _scorePerEnemy = 100;
     [SerializeField] private bool _IsUnstumtable = false;
+    public bool IsUnstumtable { get => _IsUnstumtable; set => _IsUnstumtable = value; }
 
     public GameObject StampSound;
 
     public Animator Animator;
-
-    public bool IsUnstumtable { get => _IsUnstumtable; set => _IsUnstumtable = value; }
-
-    private void Update()
-    {
-        //transform.Translate(Vector2.left * _speedEnemy * Time.deltaTime);
-    }
 
     public void GetDamage(int damageValue)
     {
@@ -32,7 +26,7 @@ public class Enemy : MonoBehaviour
     public void DieEnemy(int scorePerEnemy)
     {
         GameController.Instance.PlayerProfile.AddScore(scorePerEnemy);
-        Animator.SetTrigger("Death");
+       // Animator.SetTrigger("Death");
         Destroy(gameObject, 0.5f);
     }  
 }

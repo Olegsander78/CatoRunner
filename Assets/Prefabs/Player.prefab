@@ -482,8 +482,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f1207483f14734d8be3364400b899c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _score: 0
-  HUDScreen: {fileID: 6199981336895305483, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
   _playerHealth: {fileID: 7999454577656923021}
 --- !u!114 &7999454577656923021
 MonoBehaviour:
@@ -497,10 +495,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69c41d44d7aefd9458e7f1a47ad0201f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentPlayerHealth: 10
+  _currentPlayerHealth: 1
   _isInvulnerability: 0
   CheatMode: 0
-  HUDScreen: {fileID: 6199981336895305483, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
   EventOnTakeDamage:
     m_PersistentCalls:
       m_Calls:

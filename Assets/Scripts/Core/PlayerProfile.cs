@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerProfile : MonoBehaviour
 {
-    public int MaxHealth = 10;
+    public int MaxHealth = 5;
     public int Score = 0;
  
     public HUDScreen HUDScreen;

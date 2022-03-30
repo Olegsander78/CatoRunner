@@ -6,13 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    //private const int MAX_PLAYER_HEALTH = 5;
     private const float DURATION_INVUL_AFTER_DAMAGE = 3f;
 
     [SerializeField] private int _currentPlayerHealth;
     [SerializeField] private bool _isInvulnerability = false;
 
-    public bool CheatMode;
+    public bool CheatMode = false;
 
     public UnityEvent EventOnTakeDamage;
 
@@ -21,7 +20,6 @@ public class PlayerHealth : MonoBehaviour
         
         _currentPlayerHealth = GameController.Instance.PlayerProfile.MaxHealth;
         GameController.Instance.PlayerProfile.HUDScreen.UpdateHealthView(_currentPlayerHealth);
-        Debug.Log(_currentPlayerHealth);
     }
 
     public void AddHealth(int amount)
@@ -47,17 +45,23 @@ public class PlayerHealth : MonoBehaviour
         if (!_isInvulnerability)
         {
             _currentPlayerHealth -= damage;
+            GameController.Instance.PlayerProfile.HUDScreen.UpdateHealthView(_currentPlayerHealth);
             if (_currentPlayerHealth <= 0)
             {
                 _currentPlayerHealth = 0;
-                if(!CheatMode) GameOver();
+                GameController.Instance.PlayerProfile.HUDScreen.UpdateHealthView(_currentPlayerHealth);
+                GameOver();
+                if (!CheatMode)
+                {
+                    GameOver();
+                }
             }
             _isInvulnerability = true;
-            StartInvulnerable();
-            GameController.Instance.PlayerProfile.HUDScreen.UpdateHealthView(_currentPlayerHealth);
+
+            StartInvulnerable();            
+
             EventOnTakeDamage.Invoke();
         }
-        Debug.Log(_currentPlayerHealth);
     }
     public void StartInvulnerable()
     {
@@ -73,8 +77,8 @@ public class PlayerHealth : MonoBehaviour
 
     public void GameOver()
     {
-        Debug.LogWarning("Player Die!!!");
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        GameController.Instance.ScreenController.PushScreen<GameOverScreen>();
+        Time.timeScale = 0f;
     }  
 
 }

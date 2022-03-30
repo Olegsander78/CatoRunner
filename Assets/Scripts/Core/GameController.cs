@@ -17,12 +17,16 @@ public class GameController : MonoBehaviour
     {
         Instance = this;
         DontDestroyOnLoad(this);
-        //LoadLevel(1);
     }
 
     public void LoadLevel(int level)
     {
         LevelController.LoadLevel(level);
+    }
+
+    public void ResetLevel(int level)
+    {
+        LevelController.ResetLevel(level);
     }
 
 }

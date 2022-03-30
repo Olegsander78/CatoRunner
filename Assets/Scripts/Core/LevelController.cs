@@ -15,9 +15,19 @@ public class LevelController : MonoBehaviour
         Time.timeScale = 1f;
     }
 
+    public void ResetLevel(int level)
+    {
+        SceneManager.LoadScene(level);
+        GameController.Instance.ScreenController.PushScreen<HUDScreen>();
+        _currentLevel.PlayerCharacter.PlayerHealth.SetHealth(GameController.Instance.PlayerProfile.MaxHealth);
+        GameController.Instance.PlayerProfile.Score = 0;
+        Time.timeScale = 1f;
+    }
+
     public void SetLevel(Level level)
     {
         _currentLevel = level;
         _currentLevel.PlayerCharacter.PlayerHealth.SetHealth(GameController.Instance.PlayerProfile.MaxHealth);
+        GameController.Instance.PlayerProfile.Score = 0;
     }
 }
