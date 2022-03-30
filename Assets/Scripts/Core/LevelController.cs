@@ -11,6 +11,8 @@ public class LevelController : MonoBehaviour
     public void LoadLevel(int level)
     {
         SceneManager.LoadScene(level);
+        GameController.Instance.ScreenController.PushScreen<HUDScreen>();
+        Time.timeScale = 1f;
     }
 
     public void SetLevel(Level level)

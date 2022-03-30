@@ -6,8 +6,6 @@ public class HealthItems : GameItems
 {
     public int Health = 1;
 
-    //public Collider2D Collider2D;
-
     public override void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))

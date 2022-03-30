@@ -12,9 +12,9 @@ public class ScreenController : MonoBehaviour
 
     private void Awake()
     {
-       foreach(var screen in _screensList)
+       foreach(var screens in _screensList)
         {
-            screen.gameObject.SetActive(false);            
+            screens.gameObject.SetActive(false);
         }
         PushScreen(InitScreen);
         DontDestroyOnLoad(this);
@@ -44,6 +44,24 @@ public class ScreenController : MonoBehaviour
         var topScreen= _screensStack.Pop();
         topScreen.gameObject.SetActive(false);
         topScreen.OnPop();
+    }
+
+    public void DisableScreen(Screen screen)
+    {
+        foreach(var screens in _screensList)
+        {
+            if (screens.Equals(screen))
+            {
+                screens.gameObject.SetActive(false);
+            }
+        }
+        throw new Exception("Screen not found!");
+    }
+
+    public void DisableScreen <T>() where T : Screen
+    {
+        var disabledScreen = GetScreen(typeof(T));
+        DisableScreen(disabledScreen);
     }
 
     public Screen GetScreen(Type dataType)

@@ -14,7 +14,7 @@ public class PauseScreen : Screen
     private void Start()
     {
         _resumeBtn.onClick.AddListener(Resume);
-        _resumeBtn.onClick.AddListener(ReplayLevel);
+        _replayBtn.onClick.AddListener(ReplayLevel);
         _exitBtn.onClick.AddListener(GoBackMainMenu);
     }
 
@@ -22,6 +22,7 @@ public class PauseScreen : Screen
     {
         Time.timeScale = 1f;
         GameController.Instance.ScreenController.PopScreen();
+        GameController.Instance.ScreenController.PushScreen<HUDScreen>();
     }
 
     public void ReplayLevel()
@@ -29,11 +30,13 @@ public class PauseScreen : Screen
         Time.timeScale = 1f;
         GameController.Instance.ScreenController.PopScreen();
         GameController.Instance.LoadLevel(SceneManager.GetActiveScene().buildIndex);
+        GameController.Instance.ScreenController.PushScreen<HUDScreen>();
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void GoBackMainMenu()
     {
-        GameController.Instance.ScreenController.PushScreen<MainMenuScreen>();
+        GameController.Instance.ScreenController.PopScreen();
+        GameController.Instance.ScreenController.PushScreen<MainMenuScreen>();        
     }
 }

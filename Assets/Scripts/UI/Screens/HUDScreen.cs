@@ -13,14 +13,14 @@ public class HUDScreen : Screen
 
     private void Start()
     {
-        _pauseBtn.onClick.AddListener(StayPause);
+        _pauseBtn.onClick.AddListener(ClickPause);
     }
 
-    public void StayPause()
+    public void ClickPause()
     {
         GameController.Instance.ScreenController.PushScreen<PauseScreen>();
-        Time.timeScale = 0.01f;
-    }   
+        Time.timeScale = 0f;
+    }    
 
 
     public void UpdateScoreText(int currentScore)

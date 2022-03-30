@@ -5,6 +5,25 @@ using UnityEngine;
 public class PlayerProfile : MonoBehaviour
 {
     public int MaxHealth = 10;
+    public int Score = 0;
+ 
+    public HUDScreen HUDScreen;
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(this);
+    }
+
+    private void Start()
+    {       
+        HUDScreen.UpdateScoreText(Score);
+    }
+
+    public void AddScore(int amount)
+    {
+        Score += amount;
+        HUDScreen.UpdateScoreText(Score);
+    }
 
 
 }

@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour
 
     public void DieEnemy(int scorePerEnemy)
     {
-        FindObjectOfType<PlayerCharacter>().AddScore(scorePerEnemy);
+        GameController.Instance.PlayerProfile.AddScore(scorePerEnemy);
         Animator.SetTrigger("Death");
         Destroy(gameObject, 0.5f);
     }  

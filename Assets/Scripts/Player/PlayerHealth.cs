@@ -13,16 +13,15 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private bool _isInvulnerability = false;
 
     public bool CheatMode;
- 
-    //public HUDManager HUDview;
-    
-    public HUDScreen HUDScreen;
 
     public UnityEvent EventOnTakeDamage;
 
     private void Start()
     {
-        HUDScreen.UpdateHealthView(_currentPlayerHealth);
+        
+        _currentPlayerHealth = GameController.Instance.PlayerProfile.MaxHealth;
+        GameController.Instance.PlayerProfile.HUDScreen.UpdateHealthView(_currentPlayerHealth);
+        Debug.Log(_currentPlayerHealth);
     }
 
     public void AddHealth(int amount)
@@ -33,13 +32,14 @@ public class PlayerHealth : MonoBehaviour
         {
             _currentPlayerHealth = GameController.Instance.PlayerProfile.MaxHealth;
         }
-        HUDScreen.UpdateHealthView(_currentPlayerHealth);
+        GameController.Instance.PlayerProfile.HUDScreen.UpdateHealthView(_currentPlayerHealth);
+        Debug.Log(_currentPlayerHealth);
     }
 
     public void SetHealth(int amount)
     {
         _currentPlayerHealth = amount;
-        HUDScreen.UpdateHealthView(_currentPlayerHealth);
+        GameController.Instance.PlayerProfile.HUDScreen.UpdateHealthView(_currentPlayerHealth);
     }
 
     public void TakeDamage(int damage)
@@ -54,9 +54,10 @@ public class PlayerHealth : MonoBehaviour
             }
             _isInvulnerability = true;
             StartInvulnerable();
-            HUDScreen.UpdateHealthView(_currentPlayerHealth);
+            GameController.Instance.PlayerProfile.HUDScreen.UpdateHealthView(_currentPlayerHealth);
             EventOnTakeDamage.Invoke();
         }
+        Debug.Log(_currentPlayerHealth);
     }
     public void StartInvulnerable()
     {

@@ -5,23 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class PlayerCharacter : MonoBehaviour
 {   
-    [SerializeField] private int _score = 0;
  
-    public HUDManager HUDview;
-
     [SerializeField] private PlayerHealth _playerHealth;
-    public PlayerHealth PlayerHealth => _playerHealth;
-
-    private void Start()
-    {       
-        HUDview.UpdateScoreText(_score);
-    }
-
-    public void AddScore(int amount)
-    {
-        _score += amount;
-        HUDview.UpdateScoreText(_score);
-    }
+    public PlayerHealth PlayerHealth => _playerHealth;  
 
 
     //—делать PowerUp, игрок увеличиваетс€ в 2 раза и становитьс€ неу€звимым

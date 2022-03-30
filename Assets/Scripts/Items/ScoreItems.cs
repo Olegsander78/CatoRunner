@@ -10,7 +10,8 @@ public class ScoreItems : GameItems
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.GetComponent<PlayerCharacter>().AddScore(ScoreValue);
+            //collision.GetComponent<PlayerCharacter>().AddScore(ScoreValue);
+            GameController.Instance.PlayerProfile.AddScore(ScoreValue);
             GameObject newSound = Instantiate(PickUpSoundPrefab);
             newSound.GetComponent<AudioSource>().Play();
             Destroy(newSound, 1f);
