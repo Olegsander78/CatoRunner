@@ -24,9 +24,9 @@ public class GameController : MonoBehaviour
         LevelController.LoadLevel(level);
     }
 
-    public void ResetLevel(int level)
+    public void ResetLevel(int indexLevel, Level level )
     {
-        LevelController.ResetLevel(level);
+        LevelController.ResetLevel(indexLevel, level);
     }
 
 }

@@ -33,7 +33,7 @@ public class PauseScreen : Screen
         //GameController.Instance.ScreenController.PushScreen<HUDScreen>();
         //GameController.Instance.PlayerProfile.Score = 0;
 
-        GameController.Instance.ResetLevel(SceneManager.GetActiveScene().buildIndex);
+        GameController.Instance.ResetLevel(SceneManager.GetActiveScene().buildIndex, GameController.Instance.LevelController.CurrentLevel);
     }
 
     public void GoBackMainMenu()
