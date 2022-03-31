@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6199981335839827162}
   - component: {fileID: 6199981335839827143}
   - component: {fileID: 6199981335839827140}
-  - component: {fileID: 6199981335839827141}
+  - component: {fileID: 5535997858484901329}
   - component: {fileID: 6199981335839827142}
   m_Layer: 5
   m_Name: SoundBtn
@@ -77,7 +77,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6199981335839827141
+--- !u!114 &5535997858484901329
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -86,7 +86,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6199981335839827163}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -107,7 +107,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 21300000, guid: 9d301199be5571d48b4e41d63bdc5c97, type: 3}
+    m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 21300000, guid: 9d301199be5571d48b4e41d63bdc5c97, type: 3}
     m_DisabledSprite: {fileID: 21300000, guid: 9d301199be5571d48b4e41d63bdc5c97, type: 3}
   m_AnimationTriggers:
@@ -118,9 +118,13 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 6199981335839827140}
-  m_OnClick:
+  toggleTransition: 1
+  graphic: {fileID: 0}
+  m_Group: {fileID: 0}
+  onValueChanged:
     m_PersistentCalls:
       m_Calls: []
+  m_IsOn: 1
 --- !u!114 &6199981335839827142
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e938c641a6494409c8a1b7d707c2b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 10
+  MaxHealth: 5
   Score: 0
   HUDScreen: {fileID: 1877972702}
 --- !u!114 &376146646

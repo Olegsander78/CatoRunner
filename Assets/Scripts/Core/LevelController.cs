@@ -19,10 +19,6 @@ public class LevelController : MonoBehaviour
     {
         SceneManager.LoadScene(indexLevel);
         SetLevel(level);
-        //GameController.Instance.ScreenController.PushScreen<HUDScreen>();
-        //_currentLevel.PlayerCharacter.PlayerHealth.SetHealth(GameController.Instance.PlayerProfile.MaxHealth);
-        //GameController.Instance.PlayerProfile.Score = 0;
-        //Time.timeScale = 1f;
     }
 
     public void SetLevel(Level level)

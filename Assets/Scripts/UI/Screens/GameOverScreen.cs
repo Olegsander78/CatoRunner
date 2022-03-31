@@ -18,12 +18,6 @@ public class GameOverScreen : Screen
 
     public void ReplayLevel()
     {
-        //Time.timeScale = 1f;
-        //GameController.Instance.ScreenController.PopScreen();
-        //GameController.Instance.LoadLevel(SceneManager.GetActiveScene().buildIndex);        
-        //GameController.Instance.ScreenController.PushScreen<HUDScreen>();
-        //GameController.Instance.PlayerProfile.Score = 0;
-
         GameController.Instance.ResetLevel(SceneManager.GetActiveScene().buildIndex, GameController.Instance.LevelController.CurrentLevel);
     }
 
