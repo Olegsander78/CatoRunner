@@ -8,9 +8,12 @@ public class GameController : MonoBehaviour
     [SerializeField] private LevelController _levelController;
     [SerializeField] private PlayerProfile _playerProfile;
     [SerializeField] private ScreenController _screenController;
+    [SerializeField] private SoundController _soundController;
     public LevelController LevelController => _levelController;
     public PlayerProfile PlayerProfile => _playerProfile;
     public ScreenController ScreenController => _screenController;
+    public SoundController SoundController => _soundController;
+
 
 
     private void Awake()
