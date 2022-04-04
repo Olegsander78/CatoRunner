@@ -19,8 +19,6 @@ public class MainMenuScreen : Screen
     public void Play()
     {
         GameController.Instance.ScreenController.PushScreen<SelectLevelsScreen>();
-        //GameController.Instance.LoadLevel(1);
-        //GameController.Instance.ScreenController.PopScreen();
     }
 
     public void OpenSettings()
