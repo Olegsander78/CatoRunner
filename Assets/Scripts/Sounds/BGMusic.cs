@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class BGMusic : Sounds
 {
-    
+    [SerializeField] private List<AudioSource> _audioSourcesBGMusic;
+    [SerializeField] private AudioSource _currentAudioSourcesBGMusic;
 }

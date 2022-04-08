@@ -1,13 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class SettingsScreen : Screen
 {
-    [SerializeField] public Toggle _soundTgl;
-    [SerializeField] public Slider _volumeSld;    
-    [SerializeField] public Button _backBtn;
+    //[SerializeField] private Toggle _soundTgl;
+    [SerializeField] private Slider _volumeMusicSld;    
+    [SerializeField] private Slider _volumeSoundSld;    
+    [SerializeField] private Button _backBtn;
+    [SerializeField] private AudioMixer _audioMixer;
+    [SerializeField] private string _nameGroupAudioMixer;
 
 
     private void Start()
@@ -15,14 +19,13 @@ public class SettingsScreen : Screen
         _backBtn.onClick.AddListener(GoBackMainMenu);
     }
 
-    public void OnSound()
+    public void ChangeVolumeMusic(float volume)
     {
-
+        _audioMixer.SetFloat(_nameGroupAudioMixer, volume);
     }
-
-    public void AddVolume()
+    public void ChangeVolumeSound(float volume)
     {
-
+        _audioMixer.SetFloat(_nameGroupAudioMixer, volume);
     }
 
     public void GoBackMainMenu()
