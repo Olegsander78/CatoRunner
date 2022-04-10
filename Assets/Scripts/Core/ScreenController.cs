@@ -8,6 +8,7 @@ public class ScreenController : MonoBehaviour
     [SerializeField] private Stack<Screen> _screensStack = new Stack<Screen>();
     [SerializeField] private List<Screen> _screensList;
     [SerializeField] private Screen InitScreen;
+    //public HUDScreen HUDScreen;
 
 
     private void Awake()
@@ -20,7 +21,7 @@ public class ScreenController : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
-    private void PushScreen(Screen screen)
+    private Screen PushScreen(Screen screen)
     {
         if (_screensStack.Count > 0)
         {
@@ -31,12 +32,14 @@ public class ScreenController : MonoBehaviour
         _screensStack.Push(screen);
         screen.gameObject.SetActive(true);
         screen.OnPush();
+        return screen;
     }
 
-    public void PushScreen <T> () where T: Screen
+    public T PushScreen <T> () where T: Screen
     {
         var currentScreen = GetScreen(typeof(T));
-        PushScreen(currentScreen);
+        return (T)PushScreen(currentScreen);
+        
     }
 
     public void PopScreen()

@@ -10,9 +10,7 @@ public class LevelController : MonoBehaviour
 
     public void LoadLevel(int level)
     {
-        SceneManager.LoadScene(level);
-        GameController.Instance.ScreenController.PushScreen<HUDScreen>();
-        Time.timeScale = 1f;
+        StartCoroutine(LoadLevelRoutine(level));
     }
 
     public void ResetLevel(int indexLevel, Level level)
@@ -29,6 +27,19 @@ public class LevelController : MonoBehaviour
         GameController.Instance.PlayerProfile.Score = 0;
         GameController.Instance.PlayerProfile.HUDScreen.UpdateHealthView(GameController.Instance.PlayerProfile.MaxHealth);
         GameController.Instance.PlayerProfile.HUDScreen.UpdateScoreText(0);
+        Time.timeScale = 1f;
+    }
+
+    IEnumerator LoadLevelRoutine (int level)
+    {
+        AsyncOperation asyncProc = SceneManager.LoadSceneAsync(level);
+        var loadScreen= GameController.Instance.ScreenController.PushScreen<LoadScreen>();
+        while (!asyncProc.isDone)
+        {
+            loadScreen.SetProgress(asyncProc.progress);
+            yield return null;
+        }
+        GameController.Instance.ScreenController.PushScreen<HUDScreen>();
         Time.timeScale = 1f;
     }
 }
