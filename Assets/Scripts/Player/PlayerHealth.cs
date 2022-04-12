@@ -46,6 +46,7 @@ public class PlayerHealth : MonoBehaviour
         {
             _currentPlayerHealth -= damage;
             GameController.Instance.PlayerProfile.HUDScreen.UpdateHealthView(_currentPlayerHealth);
+            GameController.Instance.SoundController.PlaySound(SFX.SFXTypeEvents.DamagePlayer);
             if (_currentPlayerHealth <= 0)
             {
                 _currentPlayerHealth = 0;
@@ -78,6 +79,7 @@ public class PlayerHealth : MonoBehaviour
     public void GameOver()
     {
         GameController.Instance.ScreenController.PushScreen<GameOverScreen>();
+        GameController.Instance.SoundController.StopBGMusic();
         Time.timeScale = 0f;
     }  
 

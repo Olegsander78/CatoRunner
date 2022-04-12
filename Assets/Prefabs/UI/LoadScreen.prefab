@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 502018709}
   - component: {fileID: 502018708}
   m_Layer: 0
-  m_Name: Loading
+  m_Name: LoadingCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,7 +70,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -262,6 +262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _progressTxt: {fileID: 8678569579582270243}
+  _loadingCircle: {fileID: 502018708}
 --- !u!1 &8678569579582270241
 GameObject:
   m_ObjectHideFlags: 0

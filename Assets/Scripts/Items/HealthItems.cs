@@ -11,9 +11,6 @@ public class HealthItems : GameItems
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.GetComponent<PlayerHealth>().AddHealth(Health);
-            GameObject newSound = Instantiate(PickUpSoundPrefab);
-            newSound.GetComponent<AudioSource>().Play();
-            Destroy(newSound, 1f);
             Destroy(gameObject);
         }        
     }

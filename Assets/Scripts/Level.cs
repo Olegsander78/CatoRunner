@@ -9,14 +9,20 @@ public class Level : MonoBehaviour
     [SerializeField] private float _speedLevel = 3f;
     [SerializeField] private float _minCoordLevelSegX;
     [SerializeField] private float _maxCoordLevelSegX;
+    [SerializeField] private int _numberLevel;
+    [SerializeField] private BGMusic.MusicType _bgMusicType;
 
     public float MinCoordLevelSegX { get => _minCoordLevelSegX; set => _minCoordLevelSegX = value; }
 
     public float MaxCoordLevelSegX { get => _maxCoordLevelSegX; set => _maxCoordLevelSegX = value; }
     public float SpeedLevel => _speedLevel;
 
+    public int NumberLevel => _numberLevel;
+
     [SerializeField] private PlayerCharacter _playerCharacter;
     public PlayerCharacter PlayerCharacter => _playerCharacter;
+
+    public BGMusic.MusicType BGMusicType => _bgMusicType;
 
     private void Awake()
     {
@@ -30,6 +36,9 @@ public class Level : MonoBehaviour
         }
 
         GameController.Instance.LevelController.SetLevel(this);
+
+        GameController.Instance.SoundController.StopBGMusic();
+        GameController.Instance.SoundController.PlayBGMusic(GameController.Instance.LevelController.CurrentLevel);
     }
     private void FixedUpdate()
     {

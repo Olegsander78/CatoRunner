@@ -3,20 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
-{    
-    //[SerializeField] private float _speedEnemy = 0.005f;
+{       
     [SerializeField] private int _healthEnemy = 1;    
     [SerializeField] private int _scorePerEnemy = 100;
     [SerializeField] private bool _IsUnstumtable = false;
     public bool IsUnstumtable { get => _IsUnstumtable; set => _IsUnstumtable = value; }
 
-    public GameObject StampSound;
+    [SerializeField] private SFX.SFXTypeCreatures _screamEnemyOnDamage;
+    public SFX.SFXTypeCreatures ScreamEnemyOnDamage => _screamEnemyOnDamage;
+
+    [SerializeField] private SFX.SFXTypeCreatures _screamEnemyOnDie;
+    public SFX.SFXTypeCreatures ScreamEnemyOnDie => _screamEnemyOnDie;
+    
 
     public Animator Animator;
 
     public void GetDamage(int damageValue)
     {
         _healthEnemy -= damageValue;
+
+        GameController.Instance.SoundController.PlaySound(ScreamEnemyOnDamage);
+
         if (_healthEnemy <= 0)
         {
             DieEnemy(_scorePerEnemy);
@@ -26,6 +33,7 @@ public class Enemy : MonoBehaviour
     public void DieEnemy(int scorePerEnemy)
     {
         GameController.Instance.PlayerProfile.AddScore(scorePerEnemy);
+        GameController.Instance.SoundController.PlaySound(ScreamEnemyOnDie);
        // Animator.SetTrigger("Death");
         Destroy(gameObject, 0.5f);
     }  

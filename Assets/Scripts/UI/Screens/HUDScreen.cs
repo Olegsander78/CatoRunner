@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class HUDScreen : Screen
 {
     [SerializeField] private Button _pauseBtn;
+    [SerializeField] private Toggle _musicBtn;
+    [SerializeField] private Toggle _soundBtn;
 
     public TextMeshProUGUI ScoreText;
     public TextMeshProUGUI PlayerHealthText;
@@ -20,7 +22,18 @@ public class HUDScreen : Screen
     {
         GameController.Instance.ScreenController.PushScreen<PauseScreen>();
         Time.timeScale = 0f;
-    }    
+    }  
+    
+    public void OnMusicMute()
+    {
+
+    }
+
+    public void OnSoundMute()
+    {
+
+    }
+
 
 
     public void UpdateScoreText(int currentScore)

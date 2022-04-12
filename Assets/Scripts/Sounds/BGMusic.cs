@@ -24,7 +24,6 @@ public class BGMusic : Sounds
     [SerializeField] private List<MusicNote> _audioSourcesBGMusic;
     [SerializeField] private MusicType _currentAudioSourcesBGMusic;
     [SerializeField] private AudioSource _audioSource;
-    
 
     public void PlayMusic(MusicType music)
     {
@@ -38,5 +37,10 @@ public class BGMusic : Sounds
                 return;
             }
         }
+    }
+
+    public void StopMusic()
+    {
+        _audioSource.Stop();
     }
 }

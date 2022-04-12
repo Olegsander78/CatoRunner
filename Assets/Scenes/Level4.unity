@@ -176,6 +176,8 @@ MonoBehaviour:
   _speedLevel: 3
   _minCoordLevelSegX: 0
   _maxCoordLevelSegX: 0
+  _numberLevel: 4
+  _bgMusicType: 5
   _playerCharacter: {fileID: 1109900290}
 --- !u!114 &140108407 stripped
 MonoBehaviour:

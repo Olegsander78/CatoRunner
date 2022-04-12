@@ -4,24 +4,45 @@ using UnityEngine;
 
 public class SoundController : MonoBehaviour
 {
-    [SerializeField] private List<Sounds> _soundsList;
-    [SerializeField] private Sounds _initBGMusic;
+    [SerializeField] private BGMusic _bgMusic;
+    [SerializeField] private SFX _sFX;
 
+    private void Awake()
+    {
+        _bgMusic.PlayMusic(BGMusic.MusicType.MainMenu);
+        DontDestroyOnLoad(this);
+    }
 
-    //private void Awake()
-    //{
-    //    foreach (var sounds in _soundsList)
-    //    {
-    //        sounds.gameObject.SetActive(false);
-    //    }
-    //    //_initBGMusic. ;
-    //    DontDestroyOnLoad(this);
-    //}
+    public void PlayBGMusic(Level level)
+    {
+        BGMusic.MusicType musicType = level.BGMusicType;
+        _bgMusic.PlayMusic(musicType);
+    }
 
-    //private void PlayBGMusic(int levelMusic)
-    //{
-    //    //_soundsList[levelMusic].
-    //}
+    public void StopBGMusic()
+    {
+        _bgMusic.StopMusic();
+    }
+
+    public void PlaySound(SFX.SFXTypeItems sound)
+    {
+        _sFX.PlaySFX(sound);
+    }
+
+    public void PlaySound(SFX.SFXTypeCreatures sound)
+    {
+        _sFX.PlaySFX(sound);
+    }
+
+    public void PlaySound(SFX.SFXTypeUI sound)
+    {
+        _sFX.PlaySFX(sound);
+    }
+
+    public void PlaySound(SFX.SFXTypeEvents sound)
+    {
+        _sFX.PlaySFX(sound);
+    }
 }
 
 
