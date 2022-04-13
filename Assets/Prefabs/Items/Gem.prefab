@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69fa309db9ec006418e5dac98a6f1eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUpSoundPrefab: {fileID: 3614887396304891461}
+  _pickUpSound: 6
   ScoreValue: 50
 --- !u!114 &575833550918598740
 MonoBehaviour:

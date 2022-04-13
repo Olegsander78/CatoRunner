@@ -10,13 +10,16 @@ public class SFX : Sounds
         PickUpHealth = 2,
         PickUpFullHP = 3,
         PickUpShield = 4,
-        PickUpSpeed = 5
+        PickUpSpeed = 5,
+        PickUpGem = 6
     }
 
     public enum SFXTypeCreatures
     {        
         DamageStampEnemy = 1,
-        DamageUnstampEnemy = 2
+        DamageUnstampEnemy = 2,
+        DieStampEnemy = 3,
+        DieUnstampEnemy = 4
     }
 
     public enum SFXTypeUI
@@ -80,6 +83,20 @@ public class SFX : Sounds
         }
     }
 
+    // AudioSource is assigned on object, enemy, player
+
+    //public void PlaySFX(SFXTypeItems sound, AudioSource audioSource)
+    //{
+    //    foreach (var sfxNote in _audioItemsSFX)
+    //    {
+    //        if (sfxNote.SoundItem == sound)
+    //        {
+    //            audioSource.clip = sfxNote.AudioClip;
+    //            audioSource.Play();
+    //            return;
+    //        }
+    //    }
+    //}
     public void PlaySFX(SFXTypeCreatures sound)
     {
         foreach (var sfxNote in _audioCreaturesSFX)

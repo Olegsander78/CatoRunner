@@ -262,17 +262,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioSourcesBGMusic:
   - Music: 1
-    AudioClip: {fileID: 8300000, guid: 46ba40fb8bd922a4b86c695d6a500638, type: 3}
+    AudioClip: {fileID: 8300000, guid: eb9da422ef893284aab0efaf68121fc2, type: 3}
   - Music: 2
-    AudioClip: {fileID: 8300000, guid: 5515569745262e5449978e0c4dee0f56, type: 3}
+    AudioClip: {fileID: 8300000, guid: be7d6337623932d42b7133e757a490f1, type: 3}
   - Music: 3
-    AudioClip: {fileID: 8300000, guid: 164e45a0341ac9744b23d7a3f45ff51e, type: 3}
+    AudioClip: {fileID: 8300000, guid: aa87f49dbd0b5584491e95df2edfd6dc, type: 3}
   - Music: 4
-    AudioClip: {fileID: 8300000, guid: 87f465a9af721d54488b3c7c74fc4ad7, type: 3}
+    AudioClip: {fileID: 8300000, guid: 7a6a56224d49a40458db1df22e10998e, type: 3}
   - Music: 5
-    AudioClip: {fileID: 8300000, guid: cf5fed7d914727f4fabc8610a521623a, type: 3}
+    AudioClip: {fileID: 8300000, guid: 209c8d58220811d4b88581ff4c138292, type: 3}
   - Music: 6
-    AudioClip: {fileID: 8300000, guid: 7b5891330610a164ea2c961b5d607855, type: 3}
+    AudioClip: {fileID: 8300000, guid: 5c26682b7108c2147a1c4e46bdde546d, type: 3}
   _currentAudioSourcesBGMusic: 1
   _audioSource: {fileID: 423028338}
 --- !u!82 &423028338
@@ -643,12 +643,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioItemsSFX:
   - SoundItem: 1
-    AudioClip: {fileID: 8300000, guid: ec100e46aaa81544bae30acb166162b9, type: 3}
-  _audioCreaturesSFX: []
-  _audioUISFX: []
+    AudioClip: {fileID: 8300000, guid: ba7a68fef2bf6da459c99d1303f380ba, type: 3}
+  - SoundItem: 3
+    AudioClip: {fileID: 8300000, guid: f6b10a9eafedcc840a4ad9448c73af10, type: 3}
+  - SoundItem: 6
+    AudioClip: {fileID: 8300000, guid: cef83404a4c841642b330fff20387777, type: 3}
+  - SoundItem: 4
+    AudioClip: {fileID: 8300000, guid: 622fbf12179521143b7b7d59664f4ade, type: 3}
+  - SoundItem: 2
+    AudioClip: {fileID: 8300000, guid: 3ce4ad7bb98c42b4ea63c07d5afb9b1c, type: 3}
+  - SoundItem: 5
+    AudioClip: {fileID: 8300000, guid: ca898eb98993f3640a3be9ea283031bd, type: 3}
+  _audioCreaturesSFX:
+  - SoundCreatures: 1
+    AudioClip: {fileID: 8300000, guid: 99a07dcfd799b1c4a819f1b6cb6cde78, type: 3}
+  - SoundCreatures: 2
+    AudioClip: {fileID: 8300000, guid: 9178ab0002c596d4d8d7f3e405523477, type: 3}
+  - SoundCreatures: 3
+    AudioClip: {fileID: 8300000, guid: a775d35984249664c9bcee18f51ddb8a, type: 3}
+  _audioUISFX:
+  - SoundUI: 1
+    AudioClip: {fileID: 8300000, guid: e16511ca1c56456449f141ab4fdd5331, type: 3}
+  - SoundUI: 2
+    AudioClip: {fileID: 8300000, guid: 4d1a231e997659847999d0e740aa542f, type: 3}
   _audioEventsSFX:
   - SoundEvent: 3
     AudioClip: {fileID: 8300000, guid: c4a7218e35076694daa88040b0542909, type: 3}
+  - SoundEvent: 2
+    AudioClip: {fileID: 8300000, guid: 113574e518edad248a2c7dba69ce78c6, type: 3}
+  - SoundEvent: 1
+    AudioClip: {fileID: 8300000, guid: 5d5e6caa778451e4e93f3b6d61418101, type: 3}
   _audioSourceItems: {fileID: 760782862}
   _audioSourceCreatures: {fileID: 760782865}
   _audioSourceUI: {fileID: 760782864}
@@ -1731,6 +1755,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 483284938}
     m_Modifications:
+    - target: {fileID: 338186193009542793, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 338186193009542793, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 338186193009542793, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 338186193009542793, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6199981335839827162, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6199981335839827162, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6199981335839827162, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6199981335839827162, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6199981336895305480, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1818,6 +1874,22 @@ PrefabInstance:
     - target: {fileID: 6199981336895305481, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
       propertyPath: m_Name
       value: HUDscreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 6199981337324226488, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6199981337324226488, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6199981337324226488, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6199981337324226488, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}

@@ -29,6 +29,13 @@ public class SoundController : MonoBehaviour
         _sFX.PlaySFX(sound);
     }
 
+    // AudioSource is assigned on object, enemy, player
+
+    //public void PlaySound(SFX.SFXTypeItems sound, AudioSource audioSource)
+    //{
+    //    _sFX.PlaySFXItems(sound,audioSource);
+    //}
+
     public void PlaySound(SFX.SFXTypeCreatures sound)
     {
         _sFX.PlaySFX(sound);

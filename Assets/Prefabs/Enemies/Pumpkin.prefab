@@ -223,7 +223,8 @@ MonoBehaviour:
   _healthEnemy: 1
   _scorePerEnemy: 150
   _IsUnstumtable: 0
-  StampSound: {fileID: 5291469212481067087}
+  _screamEnemyOnDamage: 1
+  _screamEnemyOnDie: 2
   Animator: {fileID: 5291469213992197327}
 --- !u!114 &5291469214022848009
 MonoBehaviour:
