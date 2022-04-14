@@ -136,6 +136,14 @@ public class SFX : Sounds
         }
     }
 
+    public void MuteSFX()
+    {
+        _audioSourceItems.mute = !_audioSourceItems.mute;
+        _audioSourceCreatures.mute = !_audioSourceCreatures.mute;
+        _audioSourceUI.mute = !_audioSourceUI.mute;
+        _audioSourceEvents.mute = !_audioSourceEvents.mute;
+    }
+
     public void StopSFX(AudioSource audioSource)
     {
         audioSource.Stop();

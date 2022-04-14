@@ -21,12 +21,14 @@ public class SelectLevelsScreen : Screen
 
     public void SelectLevel(int level)
     {
+        GameController.Instance.SoundController.PlaySound(SFX.SFXTypeUI.ClickButton);
         GameController.Instance.ScreenController.PopScreen();
         GameController.Instance.LoadLevel(level);
     }
 
     public void GoBackMainMenu()
     {
+        GameController.Instance.SoundController.PlaySound(SFX.SFXTypeUI.ClickButton);
         GameController.Instance.ScreenController.PushScreen<MainMenuScreen>();
     }
 

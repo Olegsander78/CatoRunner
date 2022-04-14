@@ -15,6 +15,7 @@ public class StartScreen : Screen
 
     public void Play()
     {
+        GameController.Instance.SoundController.PlaySound(SFX.SFXTypeUI.ClickButton);
         GameController.Instance.ScreenController.PushScreen<MainMenuScreen>();
     }
 

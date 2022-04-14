@@ -16,12 +16,14 @@ public class WinScreen : Screen
 
     public void SelectLevel()
     {
+        GameController.Instance.SoundController.PlaySound(SFX.SFXTypeUI.ClickButton);
         GameController.Instance.ScreenController.PopScreen();
         GameController.Instance.ScreenController.PushScreen<SelectLevelsScreen>();
     }
 
     public void GoBackMainMenu()
     {
+        GameController.Instance.SoundController.PlaySound(SFX.SFXTypeUI.ClickButton);
         GameController.Instance.ScreenController.PopScreen();
         GameController.Instance.ScreenController.PushScreen<MainMenuScreen>();
     }

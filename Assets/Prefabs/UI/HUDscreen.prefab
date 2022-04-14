@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 338186193009542793}
   - component: {fileID: 4325724427015656054}
   - component: {fileID: 1411313814588964954}
-  - component: {fileID: 2675902969621146978}
+  - component: {fileID: 992378867390937198}
   - component: {fileID: 8751784072812439002}
   m_Layer: 5
-  m_Name: MusicTgl
+  m_Name: MusicBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2675902969621146978
+--- !u!114 &992378867390937198
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -86,11 +86,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2890556873645821384}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -109,7 +109,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 21300000, guid: fba4e2464bda9cd499dc2be9bcacc6e8, type: 3}
+    m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -118,13 +118,9 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1411313814588964954}
-  toggleTransition: 0
-  graphic: {fileID: 0}
-  m_Group: {fileID: 0}
-  onValueChanged:
+  m_OnClick:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 1
 --- !u!114 &8751784072812439002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,10 +146,10 @@ GameObject:
   - component: {fileID: 6199981335839827162}
   - component: {fileID: 6199981335839827143}
   - component: {fileID: 6199981335839827140}
-  - component: {fileID: 5535997858484901329}
+  - component: {fileID: 8270064099918586256}
   - component: {fileID: 6199981335839827142}
   m_Layer: 5
-  m_Name: SoundTgl
+  m_Name: SoundBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -216,7 +212,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5535997858484901329
+--- !u!114 &8270064099918586256
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -225,11 +221,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6199981335839827163}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -257,13 +253,9 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 6199981335839827140}
-  toggleTransition: 1
-  graphic: {fileID: 0}
-  m_Group: {fileID: 0}
-  onValueChanged:
+  m_OnClick:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 1
 --- !u!114 &6199981335839827142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1020,8 +1012,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pauseBtn: {fileID: 6199981337324226491}
-  _musicBtn: {fileID: 2675902969621146978}
-  _soundBtn: {fileID: 5535997858484901329}
+  _musicBtn: {fileID: 992378867390937198}
+  _soundBtn: {fileID: 8270064099918586256}
+  _musicOnImg: {fileID: 21300000, guid: b2b445dcf769e2841b031f003216c6a1, type: 3}
+  _musicOffImg: {fileID: 21300000, guid: fba4e2464bda9cd499dc2be9bcacc6e8, type: 3}
+  _soundsOnImg: {fileID: 21300000, guid: a1690b8c9de1f6a488b1189f3b687726, type: 3}
+  _soundsOffImg: {fileID: 21300000, guid: 9d301199be5571d48b4e41d63bdc5c97, type: 3}
   ScoreText: {fileID: 6199981336396312130}
   PlayerHealthText: {fileID: 6199981336244663889}
 --- !u!1 &6199981337324226489
@@ -1120,7 +1116,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 2
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}

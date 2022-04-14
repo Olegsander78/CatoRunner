@@ -145,7 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pickUpSound: 3
   Health: 10
-  isFullHP: 1
+  _isFullHP: 1
 --- !u!114 &1427503728284546264
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class SoundController : MonoBehaviour
 {
@@ -23,6 +24,13 @@ public class SoundController : MonoBehaviour
     {
         _bgMusic.StopMusic();
     }
+
+    public void MuteBGMusic()
+    {
+        _bgMusic.MuteMusic();
+    }
+
+    
 
     public void PlaySound(SFX.SFXTypeItems sound)
     {
@@ -49,6 +57,16 @@ public class SoundController : MonoBehaviour
     public void PlaySound(SFX.SFXTypeEvents sound)
     {
         _sFX.PlaySFX(sound);
+    }
+
+    public void StopSound()
+    {
+        _sFX.StopSFX();
+    }
+
+    public void MuteSFX()
+    {
+        _sFX.MuteSFX();
     }
 }
 

@@ -18,16 +18,19 @@ public class MainMenuScreen : Screen
 
     public void Play()
     {
+        GameController.Instance.SoundController.PlaySound(SFX.SFXTypeUI.ClickButton);
         GameController.Instance.ScreenController.PushScreen<SelectLevelsScreen>();
     }
 
     public void OpenSettings()
     {
+        GameController.Instance.SoundController.PlaySound(SFX.SFXTypeUI.ClickButton);
         GameController.Instance.ScreenController.PushScreen<SettingsScreen>();
     }
 
     public void QuitGame()
     {
+        GameController.Instance.SoundController.PlaySound(SFX.SFXTypeUI.ClickButton);
         Application.Quit();
     }
 
