@@ -7,7 +7,6 @@ using UnityEngine.UI;
 
 public class SettingsScreen : Screen
 {
-    //[SerializeField] private Toggle _soundTgl;
     [SerializeField] private Slider _volumeMusicSld;    
     [SerializeField] private Slider _volumeSoundSld;    
     [SerializeField] private Button _backBtn;

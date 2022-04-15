@@ -412,6 +412,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Spawn: {fileID: 4788120202979406954}
+  APosition: {fileID: 3522685792135457003}
+  BPosition: {fileID: 7741129520297484862}
   PrefabObstacles:
   - {fileID: 7905365686087683054, guid: ba2429ecde35a2e4d827dda07ea5ea14, type: 3}
   - {fileID: 8025255177583666601, guid: 990af4baaa2386044a995375744236f2, type: 3}
@@ -1248,6 +1250,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Spawn: {fileID: 3506228640305786845}
+  APosition: {fileID: 3554567635648844269}
+  BPosition: {fileID: 3821297932261914893}
   PrefabObstacles:
   - {fileID: 7905365686087683054, guid: ba2429ecde35a2e4d827dda07ea5ea14, type: 3}
   - {fileID: 8025255177583666601, guid: 990af4baaa2386044a995375744236f2, type: 3}
@@ -1489,6 +1493,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Spawn: {fileID: 4793035135506751183}
+  APosition: {fileID: 3862842437530904403}
+  BPosition: {fileID: 7080496342658082060}
   PrefabObstacles:
   - {fileID: 7905365686087683054, guid: ba2429ecde35a2e4d827dda07ea5ea14, type: 3}
   - {fileID: 8025255177583666601, guid: 990af4baaa2386044a995375744236f2, type: 3}
@@ -2033,6 +2039,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Spawn: {fileID: 5581762983415371993}
+  APosition: {fileID: 6088497018972288208}
+  BPosition: {fileID: 2024884631746058815}
   PrefabObstacles:
   - {fileID: 7905365686087683054, guid: ba2429ecde35a2e4d827dda07ea5ea14, type: 3}
   - {fileID: 8025255177583666601, guid: 990af4baaa2386044a995375744236f2, type: 3}
@@ -2191,6 +2199,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Spawn: {fileID: 7950238741635597179}
+  APosition: {fileID: 8074452173339242667}
+  BPosition: {fileID: 990118991317564199}
   PrefabObstacles:
   - {fileID: 7905365686087683054, guid: ba2429ecde35a2e4d827dda07ea5ea14, type: 3}
   - {fileID: 8025255177583666601, guid: 990af4baaa2386044a995375744236f2, type: 3}
@@ -2240,6 +2250,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Spawn: {fileID: 792461464984184624}
+  APosition: {fileID: 7937051841074065503}
+  BPosition: {fileID: 619431313643058875}
   PrefabObstacles:
   - {fileID: 7905365686087683054, guid: ba2429ecde35a2e4d827dda07ea5ea14, type: 3}
   - {fileID: 8025255177583666601, guid: 990af4baaa2386044a995375744236f2, type: 3}

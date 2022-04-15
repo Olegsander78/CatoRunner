@@ -7,7 +7,6 @@ public class StartScreen : Screen
 {
     [SerializeField] private Button _playBtn;
 
-
     private void Start()
     {
         _playBtn.onClick.AddListener(Play);
@@ -18,5 +17,4 @@ public class StartScreen : Screen
         GameController.Instance.SoundController.PlaySound(SFX.SFXTypeUI.ClickButton);
         GameController.Instance.ScreenController.PushScreen<MainMenuScreen>();
     }
-
 }

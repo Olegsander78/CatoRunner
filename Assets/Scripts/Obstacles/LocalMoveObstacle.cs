@@ -15,8 +15,6 @@ public class LocalMoveObstacle : MonoBehaviour
     [Header("Points Parameters")]
     public Transform LeftPoint;
     public Transform RightPoint;
-    //public float SpeedPoints = 1.5f;
-    //[SerializeField] private Transform _parentForPoints;
 
     [Header("Obstacle Parameters")]
     public float SpeedToLeft;
@@ -31,12 +29,6 @@ public class LocalMoveObstacle : MonoBehaviour
     private void Start()
     {
         ObstacleRig = GetComponent<Rigidbody2D>();
-        //Debug.Log(transform.position);
-        //Debug.Log(transform.localPosition);
-        //Debug.Log(LeftPoint.position);
-        //Debug.Log(LeftPoint.localPosition);
-        //Debug.Log(RightPoint.position);
-        //Debug.Log(RightPoint.localPosition);
     }
 
     private void FixedUpdate()

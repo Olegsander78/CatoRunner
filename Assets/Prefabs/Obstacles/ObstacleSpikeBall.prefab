@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 7816000662277724169}
   - component: {fileID: 3223839711525881928}
   - component: {fileID: -6204079821522644001}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ObstacleSpikeBall
   m_TagString: Obstacles
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9718309d031f255438028c8cbf842afe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damageToPlayer: 2
+  _damageToPlayer: 1
 --- !u!114 &7816000662277724169
 MonoBehaviour:
   m_ObjectHideFlags: 0

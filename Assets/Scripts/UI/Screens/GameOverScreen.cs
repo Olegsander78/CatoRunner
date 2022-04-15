@@ -26,6 +26,7 @@ public class GameOverScreen : Screen
     {
         GameController.Instance.SoundController.PlaySound(SFX.SFXTypeUI.ClickButton);
         GameController.Instance.ScreenController.PopScreen();
+        //SceneManager.LoadScene("Menu");
         GameController.Instance.ScreenController.PushScreen<MainMenuScreen>();
     }
 

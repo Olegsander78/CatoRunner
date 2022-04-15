@@ -10,10 +10,10 @@ public class ObstacleCreator : MonoBehaviour
     private const float DISTANCE_BETWEEN_OBSTACLES = 1.4f;
 
     public Transform Spawn;
+    public Transform APosition;
+    public Transform BPosition;
 
     public List<GameObject> PrefabObstacles;
-
-    //public UnityEvent OnCreateObstacle;
 
     [ContextMenu("GenObstacles")]
     public void GenerateObstacles()
@@ -28,7 +28,11 @@ public class ObstacleCreator : MonoBehaviour
         {
             GameObject prefObstacle = Instantiate(PrefabObstacles[indexPrefab], nextSpawnPositionItem, Quaternion.identity);
             prefObstacle.transform.parent = Spawn;
-            //OnCreateObstacle.Invoke();
+            if (PrefabObstacles[indexPrefab].GetComponent<LocalMoveObstacle>())
+            {
+                PrefabObstacles[indexPrefab].GetComponent<LocalMoveObstacle>().LeftPoint = APosition;
+                PrefabObstacles[indexPrefab].GetComponent<LocalMoveObstacle>().RightPoint = BPosition;
+            }
             nextSpawnPositionItem += new Vector3(DISTANCE_BETWEEN_OBSTACLES, 0f, 0f);
         }
     }
