@@ -13,11 +13,14 @@ public class PlayerCharacter : MonoBehaviour
     
     [SerializeField] private bool _isSpeedUped = false;
     public bool IsSpeedUped => _isSpeedUped;
-
+       
     
+    public void ProtectionUp(float protectionTime)
+    {
+        PlayerHealth.StartInvulnerable(protectionTime);
+    } 
     
-    //—делать PowerUp, игрок увеличиваетс€ в 2 раза и становитьс€ неу€звимым
-    public void AddPowerUp()
+    public void OnShield(float duration)
     {
 
     }

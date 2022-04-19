@@ -59,14 +59,14 @@ public class PlayerHealth : MonoBehaviour
             }
             _isInvulnerability = true;
 
-            StartInvulnerable();            
+            StartInvulnerable(DURATION_INVUL_AFTER_DAMAGE);            
 
             EventOnTakeDamage.Invoke();
         }
     }
-    public void StartInvulnerable()
+    public void StartInvulnerable(float duration)
     {
-        StartCoroutine(InvulnerableState(DURATION_INVUL_AFTER_DAMAGE));
+        StartCoroutine(InvulnerableState(duration));
     }
     
     public IEnumerator InvulnerableState(float duration)
