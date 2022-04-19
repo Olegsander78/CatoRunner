@@ -13,18 +13,27 @@ public class PlayerCharacter : MonoBehaviour
     
     [SerializeField] private bool _isSpeedUped = false;
     public bool IsSpeedUped => _isSpeedUped;
+
+    public SpriteRenderer ShieldSprite;
        
     
     public void ProtectionUp(float protectionTime)
     {
         PlayerHealth.StartInvulnerable(protectionTime);
+        OnShield(protectionTime);
     } 
     
     public void OnShield(float duration)
     {
-
+        GameController.Instance.SoundController.PlaySound(SFX.SFXTypeItems.PickUpShield);
+        StartCoroutine(OnShieldRoutina(duration));
     }
-       
+    private IEnumerator OnShieldRoutina(float duration)
+    {
+        ShieldSprite.enabled = true;
+        yield return new WaitForSeconds(duration);
+        ShieldSprite.enabled = false;
+    }
 
     public void StartSpeedUP(float speedUPModif, float speedUPTime)
     {

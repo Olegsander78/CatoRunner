@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pickUpSound: 4
-  _protectionTime: 10
+  _protectionTime: 15
 --- !u!114 &4731114980728766908
 MonoBehaviour:
   m_ObjectHideFlags: 0
