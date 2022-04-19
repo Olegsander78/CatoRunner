@@ -6,7 +6,8 @@ public class Level : MonoBehaviour
 {
     public const float LENGHT_SEGMENT = 30.7f;
     [SerializeField] private List<LevelSegment> _levelSegments = new List<LevelSegment>();
-    [SerializeField] private float _speedLevel = 3f;
+    [SerializeField] private float _startSpeedLevel = 3f;
+    [SerializeField] private float _speedLevel;
     [SerializeField] private float _minCoordLevelSegX;
     [SerializeField] private float _maxCoordLevelSegX;
     [SerializeField] private int _numberLevel;
@@ -15,7 +16,8 @@ public class Level : MonoBehaviour
     public float MinCoordLevelSegX { get => _minCoordLevelSegX; set => _minCoordLevelSegX = value; }
 
     public float MaxCoordLevelSegX { get => _maxCoordLevelSegX; set => _maxCoordLevelSegX = value; }
-    public float SpeedLevel => _speedLevel;
+    public float StartSpeedLevel => _startSpeedLevel; 
+    public float SpeedLevel { get => _speedLevel; set => _speedLevel = value; }
 
     public int NumberLevel => _numberLevel;
 
@@ -26,6 +28,8 @@ public class Level : MonoBehaviour
 
     private void Awake()
     {
+        SpeedLevel = StartSpeedLevel;
+        
         MinCoordLevelSegX = _levelSegments[0].transform.position.x;
         MaxCoordLevelSegX = _levelSegments[0].transform.position.x;
 
@@ -56,5 +60,10 @@ public class Level : MonoBehaviour
             }
             segment.Rigidbody.MovePosition(pos);
         }
-    }    
+    } 
+    
+    public void ChangeSpeedLevel(float speedUp)
+    {
+        SpeedLevel *= speedUp;
+    }
 }

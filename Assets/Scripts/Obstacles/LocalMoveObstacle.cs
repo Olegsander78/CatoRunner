@@ -33,20 +33,22 @@ public class LocalMoveObstacle : MonoBehaviour
 
     private void FixedUpdate()
     {
-        StartMoveObstacle();         
+        float speedUpLevelModif = GameController.Instance.LevelController.CurrentLevel.SpeedLevel
+            / GameController.Instance.LevelController.CurrentLevel.StartSpeedLevel;
+        StartMoveObstacle(speedUpLevelModif);
     }
 
-    public void StartMoveObstacle()
+    public void StartMoveObstacle(float speedModif)
     {
-        StartCoroutine(MoveObstacles());
+        StartCoroutine(MoveObstacles(speedModif));
     }
-    private IEnumerator MoveObstacles()
+    private IEnumerator MoveObstacles(float speedModif)
     {
         if (LeftPoint != null && RightPoint != null)
         {
             if (CurrentDirection == LocalDirection.Left)
             {
-                ObstacleRig.velocity = -transform.right * SpeedToLeft;
+                ObstacleRig.velocity = -transform.right * SpeedToLeft * speedModif;
                 if (transform.position.x < LeftPoint.position.x)
                 {
                     CurrentDirection = LocalDirection.Right;
@@ -55,7 +57,7 @@ public class LocalMoveObstacle : MonoBehaviour
             }
             else
             {
-                ObstacleRig.velocity = transform.right * SpeedToRight;
+                ObstacleRig.velocity = transform.right * SpeedToRight * speedModif;
                 if (transform.position.x > RightPoint.position.x)
                 {
                     CurrentDirection = LocalDirection.Left;

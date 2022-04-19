@@ -265,8 +265,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LeftPoint: {fileID: 4812415973937918313}
   RightPoint: {fileID: 2432630942494486776}
-  SpeedToLeft: 6
-  SpeedToRight: 0.5
+  SpeedToLeft: 5
+  SpeedToRight: 0.4
   StopTime: 0.5
   CurrentDirection: 0
   ObstacleRig: {fileID: 3021526511790366915}

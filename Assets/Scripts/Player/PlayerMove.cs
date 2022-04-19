@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
-{    
-    public float JumpForce;
+{
+    [SerializeField] private float _jumpForce;
+    public float JumpForce => _jumpForce;
     public Rigidbody2D Rig;  
 
     [SerializeField] private bool _isGrounded;
@@ -15,15 +16,14 @@ public class PlayerMove : MonoBehaviour
         {
             if (_isGrounded)
             {
-                Jump();
+                Jump(JumpForce);
             }
         }
     }
 
-    public void Jump()
+    public void Jump(float jumpForce)
     {
-        Rig.velocity += new Vector2(0f, JumpForce);
-        //Rig.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
+        Rig.velocity += new Vector2(0f, jumpForce);
     }
     
 

@@ -2,11 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpeedUpItems : GameItems
+public class PowerUpItems : GameItems
 {
     [SerializeField] private float _speedUPModif;
-    public float SpeedUPModif => _speedUPModif;
-
     [SerializeField] private float _speedUPTime;
 
     public override void OnTriggerEnter2D(Collider2D collision)
