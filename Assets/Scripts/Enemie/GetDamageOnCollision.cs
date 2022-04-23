@@ -23,7 +23,7 @@ public class GetDamageOnCollision : MonoBehaviour
                     if (dot > 0.4f)
                     {
                         GetComponent<Enemy>().GetDamage(_damageToEnemy);
-                        playerChar.PlayerMove.Jump(playerChar.PlayerMove.JumpForce * JUMP_MULTIPLY);
+                        //playerChar.PlayerMove.Jump(playerChar.PlayerMove.JumpForce * JUMP_MULTIPLY);
                     }
                     //Debug.Log("dot = "+ dot);
                 }
