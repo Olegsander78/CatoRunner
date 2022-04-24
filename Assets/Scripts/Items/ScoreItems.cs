@@ -12,6 +12,7 @@ public class ScoreItems : GameItems
         {            
             GameController.Instance.PlayerProfile.AddScore(ScoreValue);
             GameController.Instance.SoundController.PlaySound(PickUpSound);
+            GameController.Instance.EventBus.OnCoinCollected(ScoreValue);
             Destroy(gameObject);
         }
     }

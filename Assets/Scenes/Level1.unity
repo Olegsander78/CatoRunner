@@ -180,6 +180,7 @@ MonoBehaviour:
   _numberLevel: 1
   _bgMusicType: 2
   _playerCharacter: {fileID: 1109900290}
+  _quest: {fileID: 11400000, guid: 73b965e037472f44782f83ee96703b35, type: 2}
 --- !u!4 &163175795 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2300354014733262353, guid: ed5247e374d47b242aad656191652187, type: 3}

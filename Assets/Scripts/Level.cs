@@ -24,6 +24,8 @@ public class Level : MonoBehaviour
     [SerializeField] private PlayerCharacter _playerCharacter;
     public PlayerCharacter PlayerCharacter => _playerCharacter;
 
+    [SerializeField] private Quest _quest;
+
     public BGMusic.MusicType BGMusicType => _bgMusicType;
 
     private void Awake()
@@ -40,7 +42,7 @@ public class Level : MonoBehaviour
         }
 
         GameController.Instance.LevelController.SetLevel(this);
-
+        _quest.BeginQuest();
         GameController.Instance.SoundController.StopBGMusic();
         GameController.Instance.SoundController.PlayBGMusic(GameController.Instance.LevelController.CurrentLevel);
     }
@@ -57,8 +59,14 @@ public class Level : MonoBehaviour
                 pos.x = MaxCoordLevelSegX - (MinCoordLevelSegX - pos.x) + LENGHT_SEGMENT;
                 //segment.Clear();
                 segment.RollVariantLevelSegment();
+                GameController.Instance.EventBus.OnLevelSegmentFinishted(segment);
             }
             segment.Rigidbody.MovePosition(pos);
+        }
+        if (_quest.IsQuestFinisheted())
+        {
+            GameController.Instance.ScreenController.PushScreen<WinScreen>();
+            //music
         }
     } 
     

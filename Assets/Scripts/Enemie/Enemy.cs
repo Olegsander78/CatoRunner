@@ -34,6 +34,7 @@ public class Enemy : MonoBehaviour
     {
         GameController.Instance.PlayerProfile.AddScore(scorePerEnemy);
         GameController.Instance.SoundController.PlaySound(ScreamEnemyOnDie);
+        GameController.Instance.EventBus.OnEnemydefeated(this);
        // Animator.SetTrigger("Death");
         Destroy(gameObject, 0.5f);
     }  
