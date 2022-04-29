@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5291469213992197321}
   - component: {fileID: 5291469213992197326}
   - component: {fileID: 5291469213992197327}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,8 @@ GameObject:
   - component: {fileID: 5291469214022848014}
   - component: {fileID: 5291469214022848015}
   - component: {fileID: 5291469214022848012}
-  m_Layer: 7
+  - component: {fileID: 8783199154614699847}
+  m_Layer: 12
   m_Name: Pumpkin
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -248,3 +249,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObstacleRig: {fileID: 5291469214022848008}
   Level: {fileID: 0}
+--- !u!114 &8783199154614699847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5291469214022848013}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88d42924caf1e2244b1ef955a9ac8905, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rigidbody2D: {fileID: 5291469214022848008}
+  Speed: 20
+  DirectionChangeInterval: 2
+  KeepNearStartingPoint: 1
+  OrientToDirection: 0
+  LookAxis: 0

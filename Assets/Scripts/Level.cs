@@ -66,7 +66,8 @@ public class Level : MonoBehaviour
         if (_quest.IsQuestFinisheted())
         {
             GameController.Instance.ScreenController.PushScreen<WinScreen>();
-            //music
+            GameController.Instance.SoundController.PlaySound(SFX.SFXTypeEvents.WinLevel);
+            Time.timeScale = 0f;
         }
     } 
     

@@ -11,13 +11,10 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private bool _isGrounded;
 
     private void FixedUpdate()
-    { 
-        if(Input.GetKey(KeyCode.Space))
+    {
+        if (Input.GetKey(KeyCode.Space) && _isGrounded)
         {
-            if (_isGrounded)
-            {
-                Jump(JumpForce);
-            }
+            Jump(JumpForce);
         }
     }
 

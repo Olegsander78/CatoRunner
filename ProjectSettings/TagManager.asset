@@ -17,12 +17,12 @@ TagManager:
   - Water
   - UI
   - Player
-  - Enemies
+  - EnemiesUnstompable
   - Platforms
   - Collectables
   - JumpHelpers
   - Obstacles
-  - 
+  - EnemiesStompable
   - 
   - 
   - 

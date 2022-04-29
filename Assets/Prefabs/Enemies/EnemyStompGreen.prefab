@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2883297004123075174}
   - component: {fileID: 2883297004123075172}
   - component: {fileID: 2883297004123075175}
-  m_Layer: 7
+  m_Layer: 12
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 2503111129181452872}
   - component: {fileID: 3749370174407370454}
   - component: {fileID: 7116866131800540520}
-  m_Layer: 7
+  m_Layer: 12
   m_Name: EnemyStompGreen
   m_TagString: Enemy
   m_Icon: {fileID: 0}
