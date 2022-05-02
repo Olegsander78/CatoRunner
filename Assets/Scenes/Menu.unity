@@ -674,7 +674,7 @@ MonoBehaviour:
   - SoundEvent: 1
     AudioClip: {fileID: 8300000, guid: 5d5e6caa778451e4e93f3b6d61418101, type: 3}
   - SoundEvent: 4
-    AudioClip: {fileID: 8300000, guid: 0cb37e395ee84be47adcad1d318f345f, type: 3}
+    AudioClip: {fileID: 8300000, guid: 0118d32ea432ed841ba69694b9d18cb4, type: 3}
   _audioSourceItems: {fileID: 760782862}
   _audioSourceCreatures: {fileID: 760782865}
   _audioSourceUI: {fileID: 760782864}
