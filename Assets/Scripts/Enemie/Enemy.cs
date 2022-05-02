@@ -6,8 +6,8 @@ public class Enemy : MonoBehaviour
 {       
     [SerializeField] private int _healthEnemy = 1;    
     [SerializeField] private int _scorePerEnemy = 100;
-    [SerializeField] private bool _IsUnstumtable = false;
-    public bool IsUnstumtable { get => _IsUnstumtable; set => _IsUnstumtable = value; }
+    [SerializeField] private bool _IsUnstomtable = false;
+    public bool IsUnstumtable { get => _IsUnstomtable; set => _IsUnstomtable = value; }
 
     [SerializeField] private SFX.SFXTypeCreatures _screamEnemyOnDamage;
     public SFX.SFXTypeCreatures ScreamEnemyOnDamage => _screamEnemyOnDamage;

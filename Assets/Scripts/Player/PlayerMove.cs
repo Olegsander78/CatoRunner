@@ -10,6 +10,11 @@ public class PlayerMove : MonoBehaviour
 
     [SerializeField] private bool _isGrounded;
 
+    private void Start()
+    {
+        Rig = GetComponentInParent<Rigidbody2D>();
+    }
+
     private void FixedUpdate()
     {
         if (Input.GetKey(KeyCode.Space) && _isGrounded)

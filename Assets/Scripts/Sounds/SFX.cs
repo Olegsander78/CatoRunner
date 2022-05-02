@@ -60,11 +60,13 @@ public class SFX : Sounds
         public SFXTypeEvents SoundEvent;
         public AudioClip AudioClip;
     }
-
+    [Header("SFX Dictionaries")]
     [SerializeField] private List<SFXItemsNote> _audioItemsSFX;
     [SerializeField] private List<SFXCreaturesNote> _audioCreaturesSFX;
     [SerializeField] private List<SFXUINote> _audioUISFX;
     [SerializeField] private List<SFXEventsNote> _audioEventsSFX;
+
+    [Header("Sound Channels")]
     [SerializeField] private AudioSource _audioSourceItems;
     [SerializeField] private AudioSource _audioSourceCreatures;
     [SerializeField] private AudioSource _audioSourceUI;
