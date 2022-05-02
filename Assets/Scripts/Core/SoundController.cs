@@ -19,6 +19,11 @@ public class SoundController : MonoBehaviour
         BGMusic.MusicType musicType = level.BGMusicType;
         _bgMusic.PlayMusic(musicType);
     }
+    public void PlayBGMusic(BGMusic.MusicType bGMusicType)
+    {        
+        _bgMusic.PlayMusic(bGMusicType);
+    }
+
 
     public void StopBGMusic()
     {

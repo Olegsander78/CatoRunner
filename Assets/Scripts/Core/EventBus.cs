@@ -19,7 +19,7 @@ public class EventBus
         onEnemyDefeated?.Invoke(enemy);
     }
 
-    public void OnLevelSegmentFinishted(LevelSegment levelSegment)
+    public void OnLevelSegmentFinished(LevelSegment levelSegment)
     {
         onLevelSegmentFinishted?.Invoke(levelSegment);
     }

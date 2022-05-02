@@ -32,7 +32,8 @@ public class SFX : Sounds
     {
         GameOver = 1,
         WinLevel = 2,
-        DamagePlayer = 3
+        DamagePlayer = 3,
+        JumpPlayer = 4
     }
 
     [System.Serializable]

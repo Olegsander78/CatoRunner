@@ -21,6 +21,7 @@ public class PlayerMove : MonoBehaviour
     public void Jump(float jumpForce)
     {
         Rig.velocity += new Vector2(0f, jumpForce);
+        GameController.Instance.SoundController.PlaySound(SFX.SFXTypeEvents.JumpPlayer);
     }
 
 

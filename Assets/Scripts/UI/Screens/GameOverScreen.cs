@@ -18,16 +18,19 @@ public class GameOverScreen : Screen
 
     public void ReplayLevel()
     {
+        GameController.Instance.SoundController.StopSound();
         GameController.Instance.SoundController.PlaySound(SFX.SFXTypeUI.ClickButton);
         GameController.Instance.ResetLevel(SceneManager.GetActiveScene().buildIndex, GameController.Instance.LevelController.CurrentLevel);
     }
 
     public void GoBackMainMenu()
     {
+        GameController.Instance.SoundController.StopSound();
         GameController.Instance.SoundController.PlaySound(SFX.SFXTypeUI.ClickButton);
         GameController.Instance.ScreenController.PopScreen();
         //SceneManager.LoadScene("Menu");
         GameController.Instance.ScreenController.PushScreen<MainMenuScreen>();
+        GameController.Instance.SoundController.PlayBGMusic(BGMusic.MusicType.MainMenu);
     }
 
 }

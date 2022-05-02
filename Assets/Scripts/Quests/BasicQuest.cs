@@ -24,7 +24,7 @@ public class BasicQuest : Quest
         GameController.Instance.EventBus.onCoinCollected += OnCoinCollected;
     }
 
-    public override bool IsQuestFinisheted()
+    public override bool IsQuestFinished()
     {
         return _currentDistance >= TargetDistance && _currentEnemies >= TargetEnemies && _currentCoins >= TargetCoins;
     }

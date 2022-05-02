@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetDistance: 0
   TargetEnemies: 0
-  TargetCoins: 1000
+  TargetCoins: 10

@@ -8,7 +8,7 @@ public abstract class Quest : ScriptableObject
 
     public abstract void BeginQuest();
 
-    public abstract bool IsQuestFinisheted();
+    public abstract bool IsQuestFinished();
 
     public abstract void CancelQuest();
 }

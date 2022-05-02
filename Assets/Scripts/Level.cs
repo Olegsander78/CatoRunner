@@ -11,8 +11,12 @@ public class Level : MonoBehaviour
     [SerializeField] private float _minCoordLevelSegX;
     [SerializeField] private float _maxCoordLevelSegX;
     [SerializeField] private int _numberLevel;
+    [SerializeField] private Quest _quest;
     [SerializeField] private BGMusic.MusicType _bgMusicType;
+    public BGMusic.MusicType BGMusicType => _bgMusicType;
 
+    [SerializeField] private PlayerCharacter _playerCharacter;
+    public PlayerCharacter PlayerCharacter => _playerCharacter;
     public float MinCoordLevelSegX { get => _minCoordLevelSegX; set => _minCoordLevelSegX = value; }
 
     public float MaxCoordLevelSegX { get => _maxCoordLevelSegX; set => _maxCoordLevelSegX = value; }
@@ -20,13 +24,6 @@ public class Level : MonoBehaviour
     public float SpeedLevel { get => _speedLevel; set => _speedLevel = value; }
 
     public int NumberLevel => _numberLevel;
-
-    [SerializeField] private PlayerCharacter _playerCharacter;
-    public PlayerCharacter PlayerCharacter => _playerCharacter;
-
-    [SerializeField] private Quest _quest;
-
-    public BGMusic.MusicType BGMusicType => _bgMusicType;
 
     private void Awake()
     {
@@ -59,15 +56,16 @@ public class Level : MonoBehaviour
                 pos.x = MaxCoordLevelSegX - (MinCoordLevelSegX - pos.x) + LENGHT_SEGMENT;
                 //segment.Clear();
                 segment.RollVariantLevelSegment();
-                GameController.Instance.EventBus.OnLevelSegmentFinishted(segment);
+                GameController.Instance.EventBus.OnLevelSegmentFinished(segment);
             }
             segment.Rigidbody.MovePosition(pos);
         }
-        if (_quest.IsQuestFinisheted())
+        if (_quest.IsQuestFinished())
         {
+            Time.timeScale = 0f;
+            GameController.Instance.SoundController.StopBGMusic();
             GameController.Instance.ScreenController.PushScreen<WinScreen>();
             GameController.Instance.SoundController.PlaySound(SFX.SFXTypeEvents.WinLevel);
-            Time.timeScale = 0f;
         }
     } 
     
