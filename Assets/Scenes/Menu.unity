@@ -2332,6 +2332,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9068718644631057178, guid: 27d9573ea8ae5b34abec482209d084ed, type: 3}
+      propertyPath: m_MaxValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9068718644631057178, guid: 27d9573ea8ae5b34abec482209d084ed, type: 3}
+      propertyPath: m_MinValue
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 9068718644631057178, guid: 27d9573ea8ae5b34abec482209d084ed, type: 3}
+      propertyPath: m_WholeNumbers
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27d9573ea8ae5b34abec482209d084ed, type: 3}
 --- !u!1001 &7836714514710246675

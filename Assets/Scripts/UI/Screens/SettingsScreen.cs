@@ -34,7 +34,10 @@ public class SettingsScreen : Screen
     public void ChangeVolumeSound(float volume)
     {
         _audioMixer.SetFloat(_nameGroupSFXAudioMixer, volume);
-        GameController.Instance.SoundController.PlaySound(SFX.SFXTypeEvents.DamagePlayer);
+        if (Mathf.Abs(volume % 10) == 0)
+        {
+            GameController.Instance.SoundController.PlaySound(SFX.SFXTypeEvents.DamagePlayer);
+        }
     }
 
     public void GoBackMainMenu()

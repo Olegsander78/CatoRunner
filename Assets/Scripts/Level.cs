@@ -5,13 +5,20 @@ using UnityEngine;
 public class Level : MonoBehaviour
 {
     public const float LENGHT_SEGMENT = 30.7f;
+
     [SerializeField] private List<LevelSegment> _levelSegments = new List<LevelSegment>();
+
+    [Header("Level Parameters:")]
     [SerializeField] private float _startSpeedLevel = 3f;
     [SerializeField] private float _speedLevel;
     [SerializeField] private float _minCoordLevelSegX;
     [SerializeField] private float _maxCoordLevelSegX;
     [SerializeField] private int _numberLevel;
+    [SerializeField] private bool _completedLevel;
+    [SerializeField] private bool _lockedLevel;
+
     [SerializeField] private Quest _quest;
+
     [SerializeField] private BGMusic.MusicType _bgMusicType;
     public BGMusic.MusicType BGMusicType => _bgMusicType;
 
@@ -22,8 +29,9 @@ public class Level : MonoBehaviour
     public float MaxCoordLevelSegX { get => _maxCoordLevelSegX; set => _maxCoordLevelSegX = value; }
     public float StartSpeedLevel => _startSpeedLevel; 
     public float SpeedLevel { get => _speedLevel; set => _speedLevel = value; }
-
     public int NumberLevel => _numberLevel;
+    public bool CompletedLevel { get => _completedLevel; set => _completedLevel = value; }
+    public bool LockedLevel { get => _lockedLevel; set => _lockedLevel = value; }
 
     private void Awake()
     {
@@ -72,5 +80,25 @@ public class Level : MonoBehaviour
     public void ChangeSpeedLevel(float speedUp)
     {
         SpeedLevel *= speedUp;
+    }
+
+    public void CompleteLevel()
+    {
+        _completedLevel = true;
+    }
+
+    //public void Complete(int stars)
+    //{
+    //    _completedLevel = true;
+    //    Stars = stars;
+    //}
+
+    public void LockLevel()
+    {
+        _lockedLevel = true;
+    }
+    public void UnlockLevel()
+    {
+        _lockedLevel = false;
     }
 }
