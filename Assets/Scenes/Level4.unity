@@ -235,9 +235,11 @@ MonoBehaviour:
   _minCoordLevelSegX: 0
   _maxCoordLevelSegX: 0
   _numberLevel: 4
+  _completedLevel: 0
+  _lockedLevel: 1
+  _quest: {fileID: 11400000, guid: 19157407ecabb7542830064f81d13c62, type: 2}
   _bgMusicType: 5
   _playerCharacter: {fileID: 1109900290}
-  _quest: {fileID: 11400000, guid: 19157407ecabb7542830064f81d13c62, type: 2}
 --- !u!114 &140108407 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7999454577656923021, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}

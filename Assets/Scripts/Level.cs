@@ -29,9 +29,11 @@ public class Level : MonoBehaviour
     public float MaxCoordLevelSegX { get => _maxCoordLevelSegX; set => _maxCoordLevelSegX = value; }
     public float StartSpeedLevel => _startSpeedLevel; 
     public float SpeedLevel { get => _speedLevel; set => _speedLevel = value; }
-    public int NumberLevel => _numberLevel;
+    public int NumberLevel { get => _numberLevel; set => _numberLevel = value; }
     public bool CompletedLevel { get => _completedLevel; set => _completedLevel = value; }
     public bool LockedLevel { get => _lockedLevel; set => _lockedLevel = value; }
+
+    
 
     private void Awake()
     {
@@ -74,31 +76,12 @@ public class Level : MonoBehaviour
             GameController.Instance.SoundController.StopBGMusic();
             GameController.Instance.ScreenController.PushScreen<WinScreen>();
             GameController.Instance.SoundController.PlaySound(SFX.SFXTypeEvents.WinLevel);
+            GameController.Instance.LevelController.CompleteLevel(this);
         }
     } 
     
     public void ChangeSpeedLevel(float speedUp)
     {
         SpeedLevel *= speedUp;
-    }
-
-    public void CompleteLevel()
-    {
-        _completedLevel = true;
-    }
-
-    //public void Complete(int stars)
-    //{
-    //    _completedLevel = true;
-    //    Stars = stars;
-    //}
-
-    public void LockLevel()
-    {
-        _lockedLevel = true;
-    }
-    public void UnlockLevel()
-    {
-        _lockedLevel = false;
-    }
+    }    
 }
