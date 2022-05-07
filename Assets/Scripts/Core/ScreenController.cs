@@ -8,7 +8,8 @@ public class ScreenController : MonoBehaviour
     [SerializeField] private Stack<Screen> _screensStack = new Stack<Screen>();
     [SerializeField] private List<Screen> _screensList;
     [SerializeField] private Screen InitScreen;
-    //public HUDScreen HUDScreen;
+
+    public List<Screen> ScreensList => _screensList;
 
 
     private void Awake()

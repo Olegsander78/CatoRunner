@@ -7,13 +7,13 @@ public class LevelController : MonoBehaviour
 {
 
     [System.Serializable]
-    public class LevelsNote
+    public class SelectLevelsInUINote
     {
         public int LevelNumber;
         public bool Completed;
         public bool Locked;
 
-        public LevelsNote(int id, bool completed, bool locked)
+        public SelectLevelsInUINote(int id, bool completed, bool locked)
         {
             LevelNumber = id;
             Completed = completed;
@@ -21,8 +21,8 @@ public class LevelController : MonoBehaviour
         }
     }
 
-    [SerializeField] private List<LevelsNote> _levelsNoteList;
-    public List<LevelsNote> LevelsNoteList { get => _levelsNoteList; set => _levelsNoteList = value; }
+    [SerializeField] private List<SelectLevelsInUINote> _levelsNoteList;
+    public List<SelectLevelsInUINote> LevelsNoteList { get => _levelsNoteList; set => _levelsNoteList = value; }
 
     [SerializeField] private Level _currentLevel;
     public Level CurrentLevel => _currentLevel;
@@ -31,14 +31,14 @@ public class LevelController : MonoBehaviour
 
     private void Awake()
     {
-        LevelsNoteList = new List<LevelsNote>
-        {
-            new LevelsNote(1,false,false),
-            new LevelsNote(2,false,true),
-            new LevelsNote(3,false,true),
-            new LevelsNote(4,false,true),
-            new LevelsNote(5,false,true)
-        };
+        //LevelsNoteList = new List<LevelsNote>
+        //{
+        //    new LevelsNote(1,false,false),
+        //    new LevelsNote(2,false,true),
+        //    new LevelsNote(3,false,true),
+        //    new LevelsNote(4,false,true),
+        //    new LevelsNote(5,false,true)
+        //};
     }
 
     public void LoadLevel(int level)
@@ -67,7 +67,7 @@ public class LevelController : MonoBehaviour
     {
         level.CompletedLevel = true;
         //Не могу сообразить как подтянуть следующий уровень..
-        //nextLevel.LockedLevel = false;
+        //How do? nextLevel.LockedLevel = false;
 
         for (int i = 0; i < LevelsNoteList.Count; i++)
         {

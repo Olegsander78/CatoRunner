@@ -218,7 +218,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5623769b4e3ef24884cee55b67829f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelsNoteList: []
+  _levelsNoteList:
+  - LevelNumber: 1
+    Completed: 0
+    Locked: 0
+  - LevelNumber: 2
+    Completed: 0
+    Locked: 1
+  - LevelNumber: 3
+    Completed: 0
+    Locked: 1
+  - LevelNumber: 4
+    Completed: 0
+    Locked: 1
+  - LevelNumber: 5
+    Completed: 0
+    Locked: 1
   _currentLevel: {fileID: 0}
 --- !u!114 &376146647
 MonoBehaviour:
@@ -2457,6 +2472,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3147831858747972826, guid: 588c06b62d27edd43857714e6ecb9949, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4150406979336607192, guid: 588c06b62d27edd43857714e6ecb9949, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5767265383651969549, guid: 588c06b62d27edd43857714e6ecb9949, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6426817218911093027, guid: 588c06b62d27edd43857714e6ecb9949, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2503,6 +2530,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7634598384362316085, guid: 588c06b62d27edd43857714e6ecb9949, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7836714515083655924, guid: 588c06b62d27edd43857714e6ecb9949, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7836714515252825260, guid: 588c06b62d27edd43857714e6ecb9949, type: 3}

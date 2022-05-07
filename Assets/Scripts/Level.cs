@@ -76,7 +76,7 @@ public class Level : MonoBehaviour
             GameController.Instance.SoundController.StopBGMusic();
             GameController.Instance.ScreenController.PushScreen<WinScreen>();
             GameController.Instance.SoundController.PlaySound(SFX.SFXTypeEvents.WinLevel);
-            GameController.Instance.LevelController.CompleteLevel(this);
+            GameController.Instance.LevelController.CompleteLevel(GameController.Instance.LevelController.CurrentLevel);
         }
     } 
     

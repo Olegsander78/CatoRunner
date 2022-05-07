@@ -14,5 +14,4 @@ public class ProtectionItems : GameItems
             Destroy(gameObject);
         }
     }
-
 }

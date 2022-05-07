@@ -14,6 +14,19 @@ public class UILevel : MonoBehaviour
     [SerializeField] private int _levelUINumber;
     public int LevelUINumber => _levelUINumber;
 
-    
+    //toDel
+    [ContextMenu("LockUILevel")]
+    public void LockUILevel()
+    {
+        _lockImage.SetActive(true);
+        _unLockImage.SetActive(false);
+    }
+
+    [ContextMenu("UnLockUILevel")]
+    public void UnLockUILevel()
+    {
+        _lockImage.SetActive(false);
+        _unLockImage.SetActive(true);
+    }
     
 }
