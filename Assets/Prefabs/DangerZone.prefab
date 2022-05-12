@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3814975945832135892}
   - component: {fileID: 7646298628268967164}
   - component: {fileID: 7504266520205981942}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: DangerZone
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -45,7 +45,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -3.094431, y: 2.8894558}
+  m_Offset: {x: -4.3983135, y: 2.8894558}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -56,7 +56,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.188863, y: 15.285467}
+  m_Size: {x: 9.796627, y: 15.285467}
   m_EdgeRadius: 0
 --- !u!114 &7504266520205981942
 MonoBehaviour:

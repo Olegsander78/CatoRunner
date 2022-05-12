@@ -60,8 +60,6 @@ public class SelectLevelsScreen : Screen
             {
                 UILevelsList[i].LockImage.gameObject.SetActive(GameController.Instance.LevelController.LevelsNoteList[i].Locked);
                 UILevelsList[i].UnLockImage.gameObject.SetActive(!GameController.Instance.LevelController.LevelsNoteList[i].Locked);
-                Debug.Log(UILevelsList[i].LevelUINumber);
-                Debug.Log(GameController.Instance.LevelController.LevelsNoteList[i].Locked);
             }
         }
     }    

@@ -8,12 +8,9 @@ public class MakeDamageOnTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.attachedRigidbody)
+        if (collision.gameObject.TryGetComponent<PlayerHealth>(out var playerHealth))
         {
-            if (collision.attachedRigidbody.GetComponent<PlayerHealth>())
-            {
-                collision.attachedRigidbody.GetComponent<PlayerHealth>().TakeDamage(_damageToPlayer);
-            }
+            playerHealth.TakeDamage(_damageToPlayer);
         }
     }
 }

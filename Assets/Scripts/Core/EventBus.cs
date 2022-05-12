@@ -9,9 +9,9 @@ public class EventBus
     public event Action<Enemy> onEnemyDefeated;
     public event Action<LevelSegment> onLevelSegmentFinishted;
 
-    public void OnCoinCollected(int coinsAmaunt)
+    public void OnCoinCollected(int coinsAmount)
     {
-        onCoinCollected?.Invoke(coinsAmaunt);
+        onCoinCollected?.Invoke(coinsAmount);
     }
 
     public void OnEnemydefeated(Enemy enemy)

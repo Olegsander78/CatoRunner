@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    [SerializeField] private float _jumpForce;
+    [SerializeField] private float _jumpForce;    
     public float JumpForce => _jumpForce;
+
+    [SerializeField] private Vector2 _playerStartPoint;
+
     public Rigidbody2D Rig;  
 
     [SerializeField] private bool _isGrounded;
@@ -13,6 +16,7 @@ public class PlayerMove : MonoBehaviour
     private void Start()
     {
         Rig = GetComponentInParent<Rigidbody2D>();
+        _playerStartPoint = transform.position;
     }
 
     private void FixedUpdate()
@@ -21,6 +25,8 @@ public class PlayerMove : MonoBehaviour
         {
             Jump(JumpForce);
         }
+
+        CheckStartPoint();
     }
 
     public void Jump(float jumpForce)
@@ -57,5 +63,15 @@ public class PlayerMove : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
         _isGrounded = false;
+    }
+
+    public void CheckStartPoint()
+    {
+        if (transform.position.x != _playerStartPoint.x)
+        {
+            //Rig.MovePosition(_playerStartPoint * Time.fixedDeltaTime * 10f);
+            //Rig.MovePosition(Vector2.Lerp(transform.position, _playerStartPoint, 1f));
+            //Rig.transform.position = Vector2.Lerp(transform.position, _playerStartPoint, 1f);
+        }
     }
 }
