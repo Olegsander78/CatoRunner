@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3814975945832135892}
   - component: {fileID: 7646298628268967164}
   - component: {fileID: 7504266520205981942}
-  m_Layer: 13
+  m_Layer: 7
   m_Name: DangerZone
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41,7 +41,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2847997839377268029}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: a7743dd22af1864418731ea8307cd889, type: 2}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0

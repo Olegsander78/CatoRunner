@@ -190,7 +190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _healthEnemy: 1
   _scorePerEnemy: 100
-  _IsUnstumtable: 1
+  _IsUnstomtable: 1
   _screamEnemyOnDamage: 2
   _screamEnemyOnDie: 2
   Animator: {fileID: 4220727603579606817}

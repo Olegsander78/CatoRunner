@@ -8,6 +8,10 @@ public class PlayerMove : MonoBehaviour
     public float JumpForce => _jumpForce;
 
     [SerializeField] private Vector2 _playerStartPoint;
+    [SerializeField] private float _offsetPlayerStartPoint = 0.2f;
+    [SerializeField] private float _distanceBeforeObstacle = 3f;
+    [SerializeField] private float _speedReturnToStartPoint = 10f;
+    [SerializeField] private LayerMask _layerMaskObstacle;
 
     public Rigidbody2D Rig;  
 
@@ -16,7 +20,11 @@ public class PlayerMove : MonoBehaviour
     private void Start()
     {
         Rig = GetComponentInParent<Rigidbody2D>();
-        _playerStartPoint = transform.position;
+        _playerStartPoint = Rig.transform.position;
+    }
+    private void Update()
+    {
+        CheckStartPoint();
     }
 
     private void FixedUpdate()
@@ -26,7 +34,7 @@ public class PlayerMove : MonoBehaviour
             Jump(JumpForce);
         }
 
-        CheckStartPoint();
+        //CheckStartPoint();
     }
 
     public void Jump(float jumpForce)
@@ -67,8 +75,13 @@ public class PlayerMove : MonoBehaviour
 
     public void CheckStartPoint()
     {
-        if (transform.position.x != _playerStartPoint.x)
+        if (Rig.transform.position.x < (_playerStartPoint.x - _offsetPlayerStartPoint))
         {
+            RaycastHit2D hit = Physics2D.Raycast(Rig.transform.position, Vector2.right, _distanceBeforeObstacle, _layerMaskObstacle);
+            if (hit.collider == null)
+            {
+                Rig.transform.position = Vector2.MoveTowards(transform.position, _playerStartPoint, Time.deltaTime * _speedReturnToStartPoint);
+            }
             //Rig.MovePosition(_playerStartPoint * Time.fixedDeltaTime * 10f);
             //Rig.MovePosition(Vector2.Lerp(transform.position, _playerStartPoint, 1f));
             //Rig.transform.position = Vector2.Lerp(transform.position, _playerStartPoint, 1f);
