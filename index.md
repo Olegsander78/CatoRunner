@@ -4,7 +4,7 @@
 ### Theme and name game:
 - Казуальная игра
 - Рабочее название – “CatoRunner”
-- Running and Jumping Cat Demo Video <a href="https://youtu.be/P1oW_vj1kU0"> YouTube Link</a>
+- Running and Jumping Cat Demo Video <a href="https://youtu.be/P1oW_vj1kU0" target="_blank"> YouTube Link</a>
 
 ![изображение](https://user-images.githubusercontent.com/79563332/168284521-dab21e79-9f89-4a2e-92f4-b4278f16b42f.png) 
 
@@ -29,15 +29,15 @@
 
 ### Game Asset:
 -	Game Asset - Running and Jumping Cat Sprite Sheets 
-<a href= "https://graphicriver.net/item/game-asset-running-and-jumping-cat-sprite-sheets/8116763"> Link </a>
+<a href= "https://graphicriver.net/item/game-asset-running-and-jumping-cat-sprite-sheets/8116763" target="_blank"> Link </a>
 -	Game Asset Ornaments 
-<a href= "https://graphicriver.net/item/game-asset-ornaments/7440284?irgwc=1&clickid=yfwSSkyGpxyIRzmX30wL5WzCUkGyys2QCWSWVY0&iradid=275988&irpid=1288408&iradtype=ONLINE_TRACKING_LINK&irmptype=mediapartner&mp_value1=&utm_campaign=af_impact_radius_1288408&utm_medium=affiliate&utm_source=impact_radius"> Link </a>
+<a href= "https://graphicriver.net/item/game-asset-ornaments/7440284?irgwc=1&clickid=yfwSSkyGpxyIRzmX30wL5WzCUkGyys2QCWSWVY0&iradid=275988&irpid=1288408&iradtype=ONLINE_TRACKING_LINK&irmptype=mediapartner&mp_value1=&utm_campaign=af_impact_radius_1288408&utm_medium=affiliate&utm_source=impact_radius" target="_blank"> Link </a>
 -	Game Enemies Collection 
-<a href= "https://graphicriver.net/collections/4688905-game-enemies-collection"> Link</a>
+<a href= "https://graphicriver.net/collections/4688905-game-enemies-collection" target="_blank"> Link</a>
 -	Game tileable background
-<a href= "https://graphicriver.net/tileable-graphics-in-game-assets/backgrounds?date=this-year&price_max=4&sort=sales#content"> Link</a>
+<a href= "https://graphicriver.net/tileable-graphics-in-game-assets/backgrounds?date=this-year&price_max=4&sort=sales#content" target="_blank"> Link</a>
 -	COINS,SUCCESS(stars123), POWER UP SOUND FX HD Quality
-<a href= "https://www.gamedevmarket.net/asset/coinssuccessstars123-power-up-sound-fx-hd-quality/"> Link</a>
+<a href= "https://www.gamedevmarket.net/asset/coinssuccessstars123-power-up-sound-fx-hd-quality/" target="_blank"> Link</a>
 -	Другие ассеты в похожей стилистике
 
 
