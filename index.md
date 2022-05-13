@@ -5,20 +5,26 @@
 - Казуальная игра
 - Рабочее название – “CatoRunner”
 - Running and Jumping Cat Demo Video 
+
 ![изображение](https://user-images.githubusercontent.com/79563332/168277792-dfb6a38a-61c0-430c-b1f4-78abae625c2b.png)
 
 ### Player Experience:
 - Relax
+
 ### Core Mechanic:
 - Бесконечная смена сегментов уровня 
 - Прыжок сверху на врага
 - Сбор монет и кристаллов
+
 ### Game Loop:
 - Уровень бесконечен, чтобы выиграть необходимо выполнить задание, описанное в начале уровня. 
+
 ![изображение](https://user-images.githubusercontent.com/79563332/168277565-c3541953-f248-4933-a899-adcd8106a994.png)
+
 
 ### Game platform:
 - PC & Android
+
 ### Game Asset:
 -	Game Asset - Running and Jumping Cat Sprite Sheets 
 https://graphicriver.net/item/game-asset-running-and-jumping-cat-sprite-sheets/8116763
