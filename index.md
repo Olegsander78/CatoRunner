@@ -1,37 +1,38 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/Olegsander78/PetProject--CatoRunner--/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+# Game Design Document
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Theme and name game:
+- Казуальная игра
+- Рабочее название – “CatoRunner”
+- Running and Jumping Cat Demo Video 
+![изображение](https://user-images.githubusercontent.com/79563332/168277792-dfb6a38a-61c0-430c-b1f4-78abae625c2b.png)
 
-### Markdown
+### Player Experience:
+- Relax
+### Core Mechanic:
+- Бесконечная смена сегментов уровня 
+- Прыжок сверху на врага
+- Сбор монет и кристаллов
+### Game Loop:
+- Уровень бесконечен, чтобы выиграть необходимо выполнить задание, описанное в начале уровня. 
+![изображение](https://user-images.githubusercontent.com/79563332/168277565-c3541953-f248-4933-a899-adcd8106a994.png)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Game platform:
+- PC & Android
+### Game Asset:
+-	Game Asset - Running and Jumping Cat Sprite Sheets 
+https://graphicriver.net/item/game-asset-running-and-jumping-cat-sprite-sheets/8116763
+-	Game Asset Ornaments 
+https://graphicriver.net/item/game-asset-ornaments/7440284?irgwc=1&clickid=yfwSSkyGpxyIRzmX30wL5WzCUkGyys2QCWSWVY0&iradid=275988&irpid=1288408&iradtype=ONLINE_TRACKING_LINK&irmptype=mediapartner&mp_value1=&utm_campaign=af_impact_radius_1288408&utm_medium=affiliate&utm_source=impact_radius
+-	Game Enemies Collection 
+https://graphicriver.net/collections/4688905-game-enemies-collection
+-	Game tileable background
+https://graphicriver.net/tileable-graphics-in-game-assets/backgrounds?date=this-year&price_max=4&sort=sales#content
+-	COINS,SUCCESS(stars123), POWER UP SOUND FX HD Quality
+https://www.gamedevmarket.net/asset/coinssuccessstars123-power-up-sound-fx-hd-quality/
+-	Другие ассеты в похожей стилистике
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Olegsander78/PetProject--CatoRunner--/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
 ### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Telegram: @Olegsander78
