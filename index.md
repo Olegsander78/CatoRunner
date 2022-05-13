@@ -6,7 +6,7 @@
 - Рабочее название – “CatoRunner”
 - Running and Jumping Cat Demo Video 
 
-![изображение](https://user-images.githubusercontent.com/79563332/168277792-dfb6a38a-61c0-430c-b1f4-78abae625c2b.png)
+![изображение](https://user-images.githubusercontent.com/79563332/168284521-dab21e79-9f89-4a2e-92f4-b4278f16b42f.png)
 
 ### Player Experience:
 - Relax
@@ -15,6 +15,8 @@
 - Бесконечная смена сегментов уровня 
 - Прыжок сверху на врага
 - Сбор монет и кристаллов
+
+![изображение](https://user-images.githubusercontent.com/79563332/168277792-dfb6a38a-61c0-430c-b1f4-78abae625c2b.png)
 
 ### Game Loop:
 - Уровень бесконечен, чтобы выиграть необходимо выполнить задание, описанное в начале уровня. 
