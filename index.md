@@ -1,5 +1,5 @@
 
-# Game Design Document
+# Mini Game Design Document
 
 ### Theme and name game:
 - Казуальная игра
