@@ -41,6 +41,5 @@ public class LevelSegment : MonoBehaviour
         _variants[numberVariant].GetComponent<VariantsLevelSegment>().RollVariantSpawnsObstacles();
         _variants[numberVariant].GetComponent<VariantsLevelSegment>().RollVariantSpawnsEnemies();
         _variants[numberVariant].GetComponent<VariantsLevelSegment>().RollVariantSpawnsStateItems();
-    }
-   
+    }   
 }

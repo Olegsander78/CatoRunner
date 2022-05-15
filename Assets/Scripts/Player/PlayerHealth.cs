@@ -82,6 +82,5 @@ public class PlayerHealth : MonoBehaviour
         GameController.Instance.ScreenController.PushScreen<GameOverScreen>();
         GameController.Instance.SoundController.StopBGMusic();
         GameController.Instance.SoundController.PlaySound(SFX.SFXTypeEvents.GameOver);
-    }  
-
+    }
 }

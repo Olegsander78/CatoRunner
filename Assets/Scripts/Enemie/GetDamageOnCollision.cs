@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class GetDamageOnCollision : MonoBehaviour
 {
-    private const float JUMP_MULTIPLY = 2.5f;
-
     [SerializeField] private int _damageToEnemy = 1;
     
     private void OnCollisionEnter2D(Collision2D collision)
@@ -23,9 +21,7 @@ public class GetDamageOnCollision : MonoBehaviour
                     if (dot > 0.4f)
                     {
                         GetComponent<Enemy>().GetDamage(_damageToEnemy);
-                        //playerChar.PlayerMove.Jump(playerChar.PlayerMove.JumpForce * JUMP_MULTIPLY);
                     }
-                    //Debug.Log("dot = "+ dot);
                 }
             }
         }

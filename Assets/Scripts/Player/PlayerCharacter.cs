@@ -53,5 +53,4 @@ public class PlayerCharacter : MonoBehaviour
         GameController.Instance.LevelController.CurrentLevel.SpeedLevel = GameController.Instance.LevelController.CurrentLevel.StartSpeedLevel;
         _isSpeedUped = false;
     }
-
 }

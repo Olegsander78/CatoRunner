@@ -39,9 +39,9 @@ public class BasicQuest : Quest
         _currentDistance++;
     }
 
-    private void OnCoinCollected(int coinAmaunt)
+    private void OnCoinCollected(int coinAmount)
     {
-        _currentCoins += coinAmaunt;
+        _currentCoins += coinAmount;
     }
 
     public override void CancelQuest()

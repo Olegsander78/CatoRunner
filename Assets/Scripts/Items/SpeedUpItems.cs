@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PowerUpItems : GameItems
+public class SpeedUpItems : GameItems
 {
     [SerializeField] private float _speedUPModif;
     [SerializeField] private float _speedUPTime;

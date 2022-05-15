@@ -22,10 +22,7 @@ public class PlayerMove : MonoBehaviour
         Rig = GetComponentInParent<Rigidbody2D>();
         _playerStartPoint = Rig.transform.position;
     }
-    private void Update()
-    {
-        CheckStartPoint();
-    }
+    
 
     private void FixedUpdate()
     {
@@ -34,7 +31,7 @@ public class PlayerMove : MonoBehaviour
             Jump(JumpForce);
         }
 
-        //CheckStartPoint();
+        CheckStartPoint();
     }
 
     public void Jump(float jumpForce)

@@ -55,19 +55,24 @@ public class Level : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        float displacement = SpeedLevel * Time.deltaTime;
+        float displacement = SpeedLevel * Time.fixedDeltaTime;
 
         foreach (var segment in _levelSegments)
-        {
-            var pos = segment.transform.position;
+        {            
+            Vector3 pos = segment.transform.position;
             pos.x -= displacement;
+
+            //segment.Rigidbody.velocity = new Vector2(-SpeedLevel, 0f);
+
             if (pos.x < MinCoordLevelSegX)
             {
                 pos.x = MaxCoordLevelSegX - (MinCoordLevelSegX - pos.x) + LENGHT_SEGMENT;
                 //segment.Clear();
+                //segment.Rigidbody.MovePosition(pos);
                 segment.RollVariantLevelSegment();
                 GameController.Instance.EventBus.OnLevelSegmentFinished(segment);
             }
+                        
             segment.Rigidbody.MovePosition(pos);
         }
         if (_quest.IsQuestFinished())

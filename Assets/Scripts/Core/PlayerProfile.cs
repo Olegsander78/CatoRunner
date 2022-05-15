@@ -24,6 +24,4 @@ public class PlayerProfile : MonoBehaviour
         Score += amount;
         HUDScreen.UpdateScoreText(Score);
     }
-
-
 }
