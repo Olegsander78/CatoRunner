@@ -11,11 +11,14 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float _offsetPlayerStartPoint = 0.2f;
     [SerializeField] private float _distanceBeforeObstacle = 3f;
     [SerializeField] private float _speedReturnToStartPoint = 10f;
-    [SerializeField] private LayerMask _layerMaskObstacle;
+    [SerializeField] private LayerMask _layerMaskObstacle;    
 
     public Rigidbody2D Rig;  
 
     [SerializeField] private bool _isGrounded;
+    [SerializeField] private float _groundPointRadius;
+    [SerializeField] private Transform _groundPoint;
+    [SerializeField] private LayerMask _layerMaskGround;
 
     private void Start()
     {
@@ -24,20 +27,30 @@ public class PlayerMove : MonoBehaviour
     }
     
 
-    private void FixedUpdate()
+    private void Update()
     {
-        if (Input.GetKey(KeyCode.Space) && _isGrounded)
-        {
-            Jump(JumpForce);
-        }
 
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (Grounded() || _isGrounded)
+            {
+                Jump(JumpForce);
+            }
+        }
         CheckStartPoint();
     }
 
     public void Jump(float jumpForce)
     {
-        Rig.velocity += new Vector2(0f, jumpForce);
+        //Rig.velocity += new Vector2(0f, jumpForce);
+        Rig.AddForce(new Vector2(0, _jumpForce));
         GameController.Instance.SoundController.PlaySound(SFX.SFXTypeEvents.JumpPlayer);
+    }
+
+    private bool Grounded()
+    {
+        return Physics2D.OverlapCircle(_groundPoint.position, _groundPointRadius, _layerMaskGround);
     }
 
 
@@ -61,14 +74,16 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        _isGrounded = true;
-    }
+    //private void OnCollisionStay2D(Collision2D collision)
+    //{
+    //    _isGrounded = true;
+    //}
     private void OnCollisionExit2D(Collision2D collision)
     {
         _isGrounded = false;
     }
+
+    
 
     public void CheckStartPoint()
     {
