@@ -10,7 +10,7 @@ public class SpeedUpItems : GameItems
     public override void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
-        {
+        {            
             collision.gameObject.GetComponent<PlayerCharacter>().StartSpeedUP(_speedUPModif, _speedUPTime);
             Destroy(gameObject);
         }

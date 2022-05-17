@@ -42,7 +42,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 673155705296857091}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 63e8bf96f7d14ce408d7dd7970628162, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9fe10d9ec959964fa9e155804be97f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _jumpForce: 500
+  _jumpForce: 10
   _playerStartPoint: {x: 0, y: 0}
   _offsetPlayerStartPoint: 0.2
   _distanceBeforeObstacle: 3
@@ -440,7 +440,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 9148902242600683022}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 63e8bf96f7d14ce408d7dd7970628162, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0

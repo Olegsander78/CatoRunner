@@ -12,6 +12,9 @@ public class PlayerCharacter : MonoBehaviour
     public PlayerMove PlayerMove => _playerMove;
     
     [SerializeField] private bool _isSpeedUped = false;
+
+    //[SerializeField] private bool _isFinishedSpeedUP = true;
+
     public bool IsSpeedUped => _isSpeedUped;
 
     public SpriteRenderer ShieldSprite;
@@ -38,19 +41,26 @@ public class PlayerCharacter : MonoBehaviour
     public void StartSpeedUP(float speedUPModif, float speedUPTime)
     {
         GameController.Instance.SoundController.PlaySound(SFX.SFXTypeItems.PickUpSpeed);
-        if (IsSpeedUped == false)
-        {
-            StartCoroutine(SpeedUP(speedUPModif,speedUPTime));
-        }
+        //if (!IsSpeedUped && _isFinishedSpeedUP)
+        //{
+            StartCoroutine(SpeedUP(speedUPModif, speedUPTime));
+        //}else if(IsSpeedUped && !_isFinishedSpeedUP)
+        //{
+        //    speedUPModif = 1f;
+        //    StartCoroutine(SpeedUP(speedUPModif, speedUPTime));
+        //}
     }
 
     private IEnumerator SpeedUP(float speedUPModif, float speedUPTime)
     {
         GameController.Instance.LevelController.CurrentLevel.ChangeSpeedLevel(speedUPModif);
         _isSpeedUped = true;
+        //_isFinishedSpeedUP = false;
+        Debug.Log(speedUPTime);
         yield return new WaitForSeconds(speedUPTime);
 
         GameController.Instance.LevelController.CurrentLevel.SpeedLevel = GameController.Instance.LevelController.CurrentLevel.StartSpeedLevel;
         _isSpeedUped = false;
+        //_isFinishedSpeedUP = true;
     }
 }

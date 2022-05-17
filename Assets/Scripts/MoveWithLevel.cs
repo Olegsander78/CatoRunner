@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveWithLevel : MonoBehaviour
 {
-    [SerializeField] private Rigidbody2D ObstacleRig;
+    [SerializeField] private Rigidbody2D Rig;
 
     [SerializeField] private Level Level;
 
@@ -12,10 +12,10 @@ public class MoveWithLevel : MonoBehaviour
     {        
         Level = GameController.Instance.LevelController.CurrentLevel;
 
-        ObstacleRig = GetComponent<Rigidbody2D>();
+        Rig = GetComponent<Rigidbody2D>();
     }
     void FixedUpdate()
     {
-        ObstacleRig.velocity = transform.right * -Level.SpeedLevel;
+        Rig.velocity = transform.right * -Level.SpeedLevel;
     }
 }
