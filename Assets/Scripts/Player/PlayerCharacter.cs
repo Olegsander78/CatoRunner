@@ -41,9 +41,19 @@ public class PlayerCharacter : MonoBehaviour
     public void StartSpeedUP(float speedUPModif, float speedUPTime)
     {
         GameController.Instance.SoundController.PlaySound(SFX.SFXTypeItems.PickUpSpeed);
+        if (!IsSpeedUped)
+        {
+            StartCoroutine(SpeedUP(speedUPModif, speedUPTime));
+        }
+        else
+        {
+            speedUPModif = 1f;
+            StartCoroutine(SpeedUP(speedUPModif, speedUPTime));
+        }
+
         //if (!IsSpeedUped && _isFinishedSpeedUP)
         //{
-            StartCoroutine(SpeedUP(speedUPModif, speedUPTime));
+        //    StartCoroutine(SpeedUP(speedUPModif, speedUPTime));
         //}else if(IsSpeedUped && !_isFinishedSpeedUP)
         //{
         //    speedUPModif = 1f;
@@ -56,7 +66,7 @@ public class PlayerCharacter : MonoBehaviour
         GameController.Instance.LevelController.CurrentLevel.ChangeSpeedLevel(speedUPModif);
         _isSpeedUped = true;
         //_isFinishedSpeedUP = false;
-        Debug.Log(speedUPTime);
+        //Debug.Log(speedUPTime);
         yield return new WaitForSeconds(speedUPTime);
 
         GameController.Instance.LevelController.CurrentLevel.SpeedLevel = GameController.Instance.LevelController.CurrentLevel.StartSpeedLevel;

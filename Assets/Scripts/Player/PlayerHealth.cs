@@ -31,7 +31,6 @@ public class PlayerHealth : MonoBehaviour
             _currentPlayerHealth = GameController.Instance.PlayerProfile.MaxHealth;
         }
         GameController.Instance.PlayerProfile.HUDScreen.UpdateHealthView(_currentPlayerHealth);
-        Debug.Log(_currentPlayerHealth);
     }
 
     public void SetHealth(int amount)

@@ -38,7 +38,7 @@ public class PlayerMove : MonoBehaviour
                 Jump(JumpForce);
             }
         }
-        CheckStartPoint();
+        //CheckStartPoint();
     }
 
     public void Jump(float jumpForce)
