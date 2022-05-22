@@ -26,20 +26,7 @@ public class LevelController : MonoBehaviour
 
     [SerializeField] private Level _currentLevel;
     public Level CurrentLevel => _currentLevel;
-
     
-
-    private void Awake()
-    {
-        //LevelsNoteList = new List<LevelsNote>
-        //{
-        //    new LevelsNote(1,false,false),
-        //    new LevelsNote(2,false,true),
-        //    new LevelsNote(3,false,true),
-        //    new LevelsNote(4,false,true),
-        //    new LevelsNote(5,false,true)
-        //};
-    }
 
     public void LoadLevel(int level)
     {
