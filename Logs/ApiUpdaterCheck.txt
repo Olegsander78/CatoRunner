@@ -98,3 +98,53 @@ C# parse time         : 306ms
 candidates check time : 58ms
 console write time    : 0ms
 
+[api-updater (non-obsolete-error-filter)] 23.05.2022 0:44:01 : Starting B:/Unity/2020.3.25f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 457,418ms
+moved types parse time: 81ms
+candidates parse time : 14ms
+C# parse time         : 323ms
+candidates check time : 71ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 23.05.2022 1:18:26 : Starting B:/Unity/2020.3.25f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 111,701ms
+moved types parse time: 74ms
+candidates parse time : 13ms
+C# parse time         : 244ms
+candidates check time : 83ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 23.05.2022 1:18:53 : Starting B:/Unity/2020.3.25f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 104,719ms
+moved types parse time: 67ms
+candidates parse time : 13ms
+C# parse time         : 246ms
+candidates check time : 84ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 23.05.2022 1:19:22 : Starting B:/Unity/2020.3.25f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 121,4374ms
+moved types parse time: 92ms
+candidates parse time : 10ms
+C# parse time         : 293ms
+candidates check time : 88ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 23.05.2022 1:20:16 : Starting B:/Unity/2020.3.25f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 102,7248ms
+moved types parse time: 72ms
+candidates parse time : 13ms
+C# parse time         : 259ms
+candidates check time : 87ms
+console write time    : 0ms
+

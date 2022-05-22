@@ -98,7 +98,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1624650704174024823
 Transform:
   m_ObjectHideFlags: 0
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 9103112867539644704}
   - component: {fileID: 1098109090141102400}
   m_Layer: 0
-  m_Name: VisualLevelSegment
+  m_Name: VisualBackLevelSegment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -230,6 +230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f01da5e1bf772f749b6bd3ab517a331b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _transform: {fileID: 2300354014733262353}
   _rb: {fileID: 9103112867539644704}
   _velocityMultiply: 0.5
 --- !u!1 &4119030548620535336
@@ -248,7 +249,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9205075469480046937
 Transform:
   m_ObjectHideFlags: 0
@@ -412,7 +413,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8172218642052469370
 Transform:
   m_ObjectHideFlags: 0
