@@ -184,40 +184,37 @@ MonoBehaviour:
   _quest: {fileID: 11400000, guid: 73b965e037472f44782f83ee96703b35, type: 2}
   _bgMusicType: 2
   _playerCharacter: {fileID: 1109900290}
-  _visualLevelsNotes:
+  _paralaxLayersMatrix:
   - VisualLevelSegments:
-    - {fileID: 537298343}
-    - {fileID: 885202690}
     - {fileID: 1488838844}
-    EnableVisualLevel: 1
-    NameVisualLevel: 'Back '
-    StartSpeedVisualLevel: 3
-    SpeedVisualLevel: 0
+    - {fileID: 885202690}
+    - {fileID: 537298343}
+    EnableParalaxLayer: 1
+    NameParalaxLayer: Back Layer
+    StartSpeedParalaxLayer: 1
+    SpeedParalaxLayer: 0
     MinCoordVisualLevelSegX: 0
     MaxCoordVisualLevelSegX: 0
-    VelocityMultiplyVisualLevel: 0.4
   - VisualLevelSegments:
     - {fileID: 1516498569}
     - {fileID: 268298019}
     - {fileID: 1747827589}
-    EnableVisualLevel: 1
-    NameVisualLevel: Middle
-    StartSpeedVisualLevel: 3
-    SpeedVisualLevel: 0
+    EnableParalaxLayer: 1
+    NameParalaxLayer: Middle Layer
+    StartSpeedParalaxLayer: -3
+    SpeedParalaxLayer: 0
     MinCoordVisualLevelSegX: 0
     MaxCoordVisualLevelSegX: 0
-    VelocityMultiplyVisualLevel: 0.6
   - VisualLevelSegments:
     - {fileID: 1302261393}
     - {fileID: 1787003359}
     - {fileID: 204431895}
-    EnableVisualLevel: 1
-    NameVisualLevel: Top
-    StartSpeedVisualLevel: 3
-    SpeedVisualLevel: 0
+    EnableParalaxLayer: 1
+    NameParalaxLayer: Top Layer
+    StartSpeedParalaxLayer: 2
+    SpeedParalaxLayer: 0
     MinCoordVisualLevelSegX: 0
     MaxCoordVisualLevelSegX: 0
-    VelocityMultiplyVisualLevel: 0.8
 --- !u!4 &163175795 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2300354014733262353, guid: ed5247e374d47b242aad656191652187, type: 3}

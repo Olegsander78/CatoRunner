@@ -69,7 +69,7 @@ public class PlayerCharacter : MonoBehaviour
         //Debug.Log(speedUPTime);
         yield return new WaitForSeconds(speedUPTime);
 
-        GameController.Instance.LevelController.CurrentLevel.SpeedLevel = GameController.Instance.LevelController.CurrentLevel.StartSpeedLevel;
+        GameController.Instance.LevelController.CurrentLevel.SetStartSpeedLevels();
         _isSpeedUped = false;
         //_isFinishedSpeedUP = true;
     }

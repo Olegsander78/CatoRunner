@@ -33,64 +33,44 @@ public class Level : MonoBehaviour
 
     [SerializeField] private PlayerCharacter _playerCharacter;
     public PlayerCharacter PlayerCharacter => _playerCharacter;
-
-    //[Header("Level Visual Parameters:")]
-    //[SerializeField] private List<VisualLevelSegment> _visualTopLevelSegments = new List<VisualLevelSegment>();
-    //[SerializeField] private List<VisualLevelSegment> _visualMiddleLevelSegments = new List<VisualLevelSegment>();
-    //[SerializeField] private List<VisualLevelSegment> _visualBackLevelSegments = new List<VisualLevelSegment>();
-    //[Space(15)]
-    //[SerializeField] private float _startSpeedVisualLevel = 3f;
-    //[SerializeField] private float _speedVisualLevel;
-
-    //[SerializeField] private float _minCoordVisualTopLevelSegX;
-    //[SerializeField] private float _maxCoordVisualTopLevelSegX;
-    //[SerializeField] private float _minCoordVisualMiddleLevelSegX;
-    //[SerializeField] private float _maxCoordVisualMiddleLevelSegX;
-    //[SerializeField] private float _minCoordVisualBackLevelSegX;
-    //[SerializeField] private float _maxCoordVisualBackLevelSegX;
-
-    //public float MaxCoordVisualLevelSegX { get => _maxCoordVisualLevelSegX; set => _maxCoordVisualLevelSegX = value; }
-    //public float MinCoordVisualLevelSegX { get => _minCoordVisualLevelSegX; set => _minCoordVisualLevelSegX = value; }
-    //public float StartSpeedVisualLevel => _startSpeedVisualLevel;
-    //public float SpeedVisualLevel { get => _speedVisualLevel; set => _speedVisualLevel = value; }
+    
     [System.Serializable]
-    public class VisualLevelsNote
+    public class ParalaxLayers
     {
         public List<VisualLevelSegment> VisualLevelSegments;
 
-        public bool EnableVisualLevel;
-        public string NameVisualLevel;
-        public float StartSpeedVisualLevel;
-        public float SpeedVisualLevel;
-        public float MinCoordVisualLevelSegX;
-        public float MaxCoordVisualLevelSegX;
-        public float VelocityMultiplyVisualLevel;
+        public bool EnableParalaxLayer;
+        public string NameParalaxLayer;
+        public float StartSpeedParalaxLayer;
+        [Header("Don't change!")]
+        public float SpeedParalaxLayer;
+        public float MinCoordParalaxLayerSegX;
+        public float MaxCoordParalaxLayerSegX;
 
-        public VisualLevelsNote(bool enableVisualLevel, string nameLevel, List<VisualLevelSegment> visualLevelSegments, float startSpeedVisualLevel, 
-            float speedVisualLevel, float minCoordVisualLevelSegX, float maxCoordVisualLevelSegX, float velocityMultiplyVisualLevel)
+        public ParalaxLayers(bool enableParalaxLayer, string nameParalaxLayer, List<VisualLevelSegment> visualLevelSegments, float startSpeedParalaxLayer, 
+            float speedParalaxLayer, float minCoordParalaxLayerSegX, float maxCoordParalaxLayerSegX)
         {
-            EnableVisualLevel = enableVisualLevel;
-            NameVisualLevel = nameLevel;
-            SpeedVisualLevel = speedVisualLevel;
-            MinCoordVisualLevelSegX = minCoordVisualLevelSegX;
-            MaxCoordVisualLevelSegX = maxCoordVisualLevelSegX;
-            VelocityMultiplyVisualLevel = velocityMultiplyVisualLevel;
+            EnableParalaxLayer = enableParalaxLayer;
+            NameParalaxLayer = nameParalaxLayer;
+            SpeedParalaxLayer = speedParalaxLayer;
+            MinCoordParalaxLayerSegX = minCoordParalaxLayerSegX;
+            MaxCoordParalaxLayerSegX = maxCoordParalaxLayerSegX;
         }
     }
 
     [Header("Level Visual Parameters:")]
-    [SerializeField] private List<VisualLevelsNote> _visualLevelsNotes;
+    [SerializeField] private List<ParalaxLayers> _paralaxLayersMatrix;
 
 
     private void Awake()
     {
         InitLevel();
-        //InitVisualLevels();
+        InitParalaxLayers();
     }
     private void FixedUpdate()
     {
         MoveLevelSegment();
-        //MoveVisualLevelSegment();
+        MoveParalaxLayers();
         CheckFinishedQuest();
     }
 
@@ -113,42 +93,30 @@ public class Level : MonoBehaviour
         GameController.Instance.SoundController.PlayBGMusic(GameController.Instance.LevelController.CurrentLevel);
     }
 
-    //private void InitVisualLevel(List<VisualLevelSegment> visualLevelSegments, out float minCoordVisualLevelSegX, out float maxCoordVisualLevelSegX)
-    //{
-    //    SpeedVisualLevel = StartSpeedVisualLevel * visualLevelSegments[0].VelocityMultiply;
-
-    //    float minCoordVisualLevelSegX = visualLevelSegments[0].transform.position.x;
-    //    float maxCoordVisualLevelSegX = visualLevelSegments[0].transform.position.x;
-
-    //    for (int i = 1; i < visualLevelSegments.Count; i++)
-    //    {
-    //        if (minCoordVisualLevelSegX > visualLevelSegments[i].transform.position.x)
-    //        { minCoordVisualLevelSegX = visualLevelSegments[i].transform.position.x; }
-
-    //        if (maxCoordVisualLevelSegX < visualLevelSegments[i].transform.position.x)
-    //        { maxCoordVisualLevelSegX = visualLevelSegments[i].transform.position.x; }
-    //    }
-    //}
-    private void InitVisualLevels()
+    private void InitParalaxLayers()
     {
-        foreach (var visualSegment in _visualLevelsNotes)
+        foreach (var visualSegment in _paralaxLayersMatrix)
         {
-            visualSegment.SpeedVisualLevel = visualSegment.StartSpeedVisualLevel * visualSegment.VelocityMultiplyVisualLevel;
+            if (visualSegment != null && visualSegment.EnableParalaxLayer)
+            {
+                visualSegment.SpeedParalaxLayer = visualSegment.StartSpeedParalaxLayer;
 
-            visualSegment.MinCoordVisualLevelSegX = visualSegment.VisualLevelSegments[0].Transform.position.x;
-            visualSegment.MaxCoordVisualLevelSegX = visualSegment.VisualLevelSegments[0].Transform.position.x;
+                visualSegment.MinCoordParalaxLayerSegX = visualSegment.VisualLevelSegments[0].transform.position.x;
+                visualSegment.MaxCoordParalaxLayerSegX = visualSegment.VisualLevelSegments[0].transform.position.x;
 
-
+                for (int i = 1; i < visualSegment.VisualLevelSegments.Count; i++)
+                {
+                    if (visualSegment.MinCoordParalaxLayerSegX > visualSegment.VisualLevelSegments[i].transform.position.x)
+                    {
+                        visualSegment.MinCoordParalaxLayerSegX = visualSegment.VisualLevelSegments[i].transform.position.x;
+                    }
+                    if (visualSegment.MaxCoordParalaxLayerSegX < visualSegment.VisualLevelSegments[i].transform.position.x)
+                    {
+                        visualSegment.MaxCoordParalaxLayerSegX = visualSegment.VisualLevelSegments[i].transform.position.x;
+                    }
+                }
+            }
         }
-
-        //for (int i = 1; i < visualLevelSegments.Count; i++)
-        //{
-        //    if (minCoordVisualLevelSegX > visualLevelSegments[i].transform.position.x)
-        //    { minCoordVisualLevelSegX = visualLevelSegments[i].transform.position.x; }
-
-        //    if (maxCoordVisualLevelSegX < visualLevelSegments[i].transform.position.x)
-        //    { maxCoordVisualLevelSegX = visualLevelSegments[i].transform.position.x; }
-        //}
     }
 
     private void MoveLevelSegment()
@@ -160,13 +128,9 @@ public class Level : MonoBehaviour
             Vector3 pos = segment.transform.position;
             pos.x -= displacement;
 
-            //segment.Rigidbody.velocity = new Vector2(-SpeedLevel, 0f);
-
             if (pos.x < MinCoordLevelSegX)
             {
                 pos.x = MaxCoordLevelSegX - (MinCoordLevelSegX - pos.x) + LENGHT_SEGMENT;
-                //segment.Clear();
-                //segment.Rigidbody.MovePosition(pos);
                 segment.RollVariantLevelSegment();
                 GameController.Instance.EventBus.OnLevelSegmentFinished(segment);
             }
@@ -175,28 +139,58 @@ public class Level : MonoBehaviour
         }
     }
 
-    //private void MoveVisualLevelSegment()
-    //{
-    //    float displacementVisual = SpeedVisualLevel * _visualLevelSegments[0].VelocityMultiply * Time.fixedDeltaTime;
+    private void MoveParalaxLayers()
+    {
+        foreach (var paralaxLayers in _paralaxLayersMatrix)
+        {
+            if (paralaxLayers != null && paralaxLayers.EnableParalaxLayer)
+            {
+                float displacementLayer = paralaxLayers.SpeedParalaxLayer * Time.deltaTime;
 
-    //    foreach (var visualSegments in _visualLevelSegments)
-    //    {
-    //        Vector3 pos = visualSegments.transform.position;
-    //        pos.x -= displacementVisual;
+                foreach (var visualSegments in paralaxLayers.VisualLevelSegments)
+                {
+                    Vector3 pos = visualSegments.transform.position;
+                    pos.x -= displacementLayer;
+                    if (displacementLayer >= 0)
+                    {
 
-    //        if (pos.x < MinCoordVisualLevelSegX)
-    //        {
-    //            pos.x = MaxCoordVisualLevelSegX - (MinCoordVisualLevelSegX - pos.x) + LENGHT_VISUAL_SEGMENT;
-    //        }
-    //        visualSegments.Rigidbody.MovePosition(pos);
-    //    }
-    //}
-    
+                        if (pos.x < paralaxLayers.MinCoordParalaxLayerSegX)
+                        {
+                            pos.x = paralaxLayers.MaxCoordParalaxLayerSegX - (paralaxLayers.MinCoordParalaxLayerSegX - pos.x) + LENGHT_VISUAL_SEGMENT;
+                        }
+                    }
+                    else
+                    {
+                        if (pos.x > paralaxLayers.MaxCoordParalaxLayerSegX)
+                        {
+                            pos.x = paralaxLayers.MinCoordParalaxLayerSegX + (paralaxLayers.MaxCoordParalaxLayerSegX - pos.x) - LENGHT_VISUAL_SEGMENT;
+                        }
+                    }
+                    visualSegments.RigidbodyVisualLevel.MovePosition(pos);
+                }
+            }
+        }
+    }
+
     public void ChangeSpeedLevel(float speedUp)
     {
         SpeedLevel *= speedUp;
-        //SpeedVisualLevel *= speedUp * _visualLevelSegments[0].VelocityMultiply;
-    } 
+
+        foreach (var paralaxLayer in _paralaxLayersMatrix)
+        {
+            paralaxLayer.SpeedParalaxLayer *= speedUp;
+        }
+    }
+    
+    public void SetStartSpeedLevels()
+    {
+        SpeedLevel = StartSpeedLevel;
+
+        foreach (var paralaxLayer in _paralaxLayersMatrix)
+        {
+            paralaxLayer.SpeedParalaxLayer = paralaxLayer.StartSpeedParalaxLayer;
+        }
+    }
     
     private void CheckFinishedQuest()
     {
