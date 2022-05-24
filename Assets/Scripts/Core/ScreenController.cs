@@ -62,7 +62,7 @@ public class ScreenController : MonoBehaviour
         throw new Exception("Screen not found!");
     }
 
-    public void DisableScreen <T>() where T : Screen
+    public void DisableScreen<T>() where T : Screen
     {
         var disabledScreen = GetScreen(typeof(T));
         DisableScreen(disabledScreen);

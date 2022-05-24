@@ -193,8 +193,8 @@ MonoBehaviour:
     NameParalaxLayer: Back Layer
     StartSpeedParalaxLayer: 1
     SpeedParalaxLayer: 0
-    MinCoordVisualLevelSegX: 0
-    MaxCoordVisualLevelSegX: 0
+    MinCoordParalaxLayerSegX: 0
+    MaxCoordParalaxLayerSegX: 0
   - VisualLevelSegments:
     - {fileID: 1516498569}
     - {fileID: 268298019}
@@ -203,8 +203,8 @@ MonoBehaviour:
     NameParalaxLayer: Middle Layer
     StartSpeedParalaxLayer: -3
     SpeedParalaxLayer: 0
-    MinCoordVisualLevelSegX: 0
-    MaxCoordVisualLevelSegX: 0
+    MinCoordParalaxLayerSegX: 0
+    MaxCoordParalaxLayerSegX: 0
   - VisualLevelSegments:
     - {fileID: 1302261393}
     - {fileID: 1787003359}
@@ -213,8 +213,8 @@ MonoBehaviour:
     NameParalaxLayer: Top Layer
     StartSpeedParalaxLayer: 2
     SpeedParalaxLayer: 0
-    MinCoordVisualLevelSegX: 0
-    MaxCoordVisualLevelSegX: 0
+    MinCoordParalaxLayerSegX: 0
+    MaxCoordParalaxLayerSegX: 0
 --- !u!4 &163175795 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2300354014733262353, guid: ed5247e374d47b242aad656191652187, type: 3}

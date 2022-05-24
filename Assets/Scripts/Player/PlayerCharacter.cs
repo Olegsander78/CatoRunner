@@ -51,6 +51,8 @@ public class PlayerCharacter : MonoBehaviour
             StartCoroutine(SpeedUP(speedUPModif, speedUPTime));
         }
 
+        //TRIED TO DO CONTINUED SPEEDUP EFFECT
+
         //if (!IsSpeedUped && _isFinishedSpeedUP)
         //{
         //    StartCoroutine(SpeedUP(speedUPModif, speedUPTime));

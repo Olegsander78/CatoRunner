@@ -35,8 +35,14 @@ public class SelectLevelsScreen : Screen
         }
         else
         {
-            throw new Exception("Level locked!!!");
-            //ToDo Popup
+            //Clear text for Level Task 
+            UILevelsList[level - 1].GetComponent<ToolTip>().View.text = "";
+            //PopUp for Locked levels
+            GameController.Instance.SoundController.PlaySound(SFX.SFXTypeUI.ClickButton);            
+            GameController.Instance.ScreenController.PushScreen<LevelPopUpScreen>();
+            GameController.Instance.ScreenController.PushScreen<LevelPopUpScreen>().SetText("<b>Уровень " +
+                GameController.Instance.LevelController.LevelsNoteList[level - 1].LevelNumber + " заблокирован!</b>\nНеобходимо пройти уровень " +
+                (GameController.Instance.LevelController.LevelsNoteList[level - 1].LevelNumber - 1) + " чтобы разблокировать!");
         }
     }
 

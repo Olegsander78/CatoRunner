@@ -465,6 +465,7 @@ GameObject:
   - component: {fileID: 5470179606170777718}
   - component: {fileID: 8568521237633961041}
   - component: {fileID: 4686446452283340064}
+  - component: {fileID: 8320583039091801076}
   m_Layer: 0
   m_Name: Level2Btn
   m_TagString: Untagged
@@ -619,6 +620,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   View: {fileID: 4466278030912253349}
   TextView: Collect 2500 scores
+--- !u!61 &8320583039091801076
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4029264679373387433}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 70, y: 70}
+  m_EdgeRadius: 0
 --- !u!1 &4150406979336607192
 GameObject:
   m_ObjectHideFlags: 0
@@ -1443,6 +1470,7 @@ GameObject:
   - component: {fileID: 7836714515252825296}
   - component: {fileID: 8098688492854144062}
   - component: {fileID: 6128630495597108064}
+  - component: {fileID: 5946186838239207944}
   m_Layer: 0
   m_Name: Level5Btn
   m_TagString: Untagged
@@ -1597,6 +1625,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   View: {fileID: 2038720219273200157}
   TextView: Collect 10000 scores
+--- !u!61 &5946186838239207944
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7836714515252825261}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 70, y: 70}
+  m_EdgeRadius: 0
 --- !u!1 &7836714515274157637
 GameObject:
   m_ObjectHideFlags: 0
@@ -1612,6 +1666,7 @@ GameObject:
   - component: {fileID: 4784147651713624185}
   - component: {fileID: 7836714515274157640}
   - component: {fileID: 7674106631389460127}
+  - component: {fileID: 6294347082907996546}
   m_Layer: 0
   m_Name: Level1Btn
   m_TagString: Untagged
@@ -1766,6 +1821,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   View: {fileID: 9149707837526219132}
   TextView: Collect 1000 scores
+--- !u!61 &6294347082907996546
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7836714515274157637}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 70, y: 70}
+  m_EdgeRadius: 0
 --- !u!1 &7836714515310105454
 GameObject:
   m_ObjectHideFlags: 0
@@ -1781,6 +1862,7 @@ GameObject:
   - component: {fileID: 7836714515310105489}
   - component: {fileID: 2822731349037330248}
   - component: {fileID: 6734857675278181771}
+  - component: {fileID: 1653729343023303182}
   m_Layer: 0
   m_Name: Level3Btn
   m_TagString: Untagged
@@ -1935,6 +2017,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   View: {fileID: 11108221328920543}
   TextView: Collect 5000 scores
+--- !u!61 &1653729343023303182
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7836714515310105454}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 70, y: 70}
+  m_EdgeRadius: 0
 --- !u!1 &7836714515362607497
 GameObject:
   m_ObjectHideFlags: 0
@@ -1995,7 +2103,12 @@ MonoBehaviour:
   - {fileID: 7836714516300080922}
   - {fileID: 7836714515252825299}
   _backBtn: {fileID: 7836714516394966174}
-  _uiLevelsList: []
+  _uiLevelsList:
+  - {fileID: 4784147651713624185}
+  - {fileID: 8568521237633961041}
+  - {fileID: 2822731349037330248}
+  - {fileID: 3036405255438294981}
+  - {fileID: 8098688492854144062}
 --- !u!1 &7836714515490412035
 GameObject:
   m_ObjectHideFlags: 0
@@ -2145,6 +2258,7 @@ GameObject:
   - component: {fileID: 7836714516300080927}
   - component: {fileID: 3036405255438294981}
   - component: {fileID: 754148381985989203}
+  - component: {fileID: 7778893761323045752}
   m_Layer: 0
   m_Name: Level4Btn
   m_TagString: Untagged
@@ -2299,6 +2413,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   View: {fileID: 3763311020418854536}
   TextView: 'Collect 7000 scores '
+--- !u!61 &7778893761323045752
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7836714516300080916}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 70, y: 70}
+  m_EdgeRadius: 0
 --- !u!1 &7836714516394966168
 GameObject:
   m_ObjectHideFlags: 0
@@ -2334,7 +2474,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 17.3, y: -108.2}
+  m_AnchoredPosition: {x: 0, y: -120}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7836714516394966172

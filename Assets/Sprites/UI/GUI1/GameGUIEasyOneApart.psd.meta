@@ -1,7 +1,13 @@
 fileFormatVersion: 2
 guid: d03a40c5a957c174b8f1077555cf96f1
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2986434591555408780
+    second: GameGUIEasyOneApart_0
+  - first:
+      213: 8859763529824646878
+    second: GameGUIEasyOneApart_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,7 +107,49 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: GameGUIEasyOneApart_0
+      rect:
+        serializedVersion: 2
+        x: 2598
+        y: 3185
+        width: 391
+        height: 282
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47ca661df8d0e86d0800000000000000
+      internalID: -2986434591555408780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameGUIEasyOneApart_1
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 3220
+        width: 307
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed6b8254df334fa70800000000000000
+      internalID: 8859763529824646878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
