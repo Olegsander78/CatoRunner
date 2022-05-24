@@ -23,7 +23,6 @@ public class SelectLevelsScreen : Screen
         _backBtn.onClick.AddListener(GoBackMainMenu);
     }
 
-
     public void StartLevel(int level)
     {
         if (GameController.Instance.LevelController.LevelsNoteList[level-1].LevelNumber == level &&
@@ -37,6 +36,7 @@ public class SelectLevelsScreen : Screen
         {
             //Clear text for Level Task 
             UILevelsList[level - 1].GetComponent<ToolTip>().View.text = "";
+
             //PopUp for Locked levels
             GameController.Instance.SoundController.PlaySound(SFX.SFXTypeUI.ClickButton);            
             GameController.Instance.ScreenController.PushScreen<LevelPopUpScreen>();
@@ -52,10 +52,7 @@ public class SelectLevelsScreen : Screen
         GameController.Instance.ScreenController.PushScreen<MainMenuScreen>();
     }
 
-    private void OnEnable()
-    {
-        UpdateUISelectLevels();
-    }
+    private void OnEnable() => UpdateUISelectLevels();
 
     [ContextMenu("UpdateUILevel")]
     public void UpdateUISelectLevels()

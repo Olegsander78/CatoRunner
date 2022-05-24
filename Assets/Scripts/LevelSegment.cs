@@ -6,6 +6,7 @@ public class LevelSegment : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D _rb;
     public Rigidbody2D Rigidbody => _rb;
+
     [SerializeField] private List<GameObject> _variants;
     [SerializeField] private int _defaultVariantLeveSegment;
 
@@ -29,14 +30,12 @@ public class LevelSegment : MonoBehaviour
         RollLevelObjects(numberVariantLS);
     }
 
-    private void RollLevelObjects(int numberVariant)
-    {
-        StartCoroutine(RollObjects(numberVariant));
-    }
+    private void RollLevelObjects(int numberVariant) => StartCoroutine(RollObjects(numberVariant));
 
     private IEnumerator RollObjects(int numberVariant)
     {
         yield return new WaitForSeconds(0.2f);
+
         _variants[numberVariant].GetComponent<VariantsLevelSegment>().RollVariantSpawnsScoreItems();
         _variants[numberVariant].GetComponent<VariantsLevelSegment>().RollVariantSpawnsObstacles();
         _variants[numberVariant].GetComponent<VariantsLevelSegment>().RollVariantSpawnsEnemies();

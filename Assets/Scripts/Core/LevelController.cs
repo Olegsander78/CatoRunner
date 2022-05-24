@@ -53,8 +53,8 @@ public class LevelController : MonoBehaviour
     public void CompleteLevel(Level level)
     {
         level.CompletedLevel = true;
-        //Ќе могу сообразить как подт€нуть следующий уровень..
-        //How do? nextLevel.LockedLevel = false;
+        //Ќе могу сообразить как подт€нуть следующий уровень в следующей сцене..
+        //How does it? => nextLevel.LockedLevel = false;
 
         for (int i = 0; i < LevelsNoteList.Count; i++)
         {

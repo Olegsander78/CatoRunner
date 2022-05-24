@@ -12,7 +12,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private bool _isGrounded;
     [SerializeField] private float _groundPointRadius;
     [SerializeField] private Transform _groundPoint;
-    [SerializeField] private LayerMask _layerMaskGround;
+    [SerializeField] private LayerMask _whatIsGround;
 
     private void Start()
     {
@@ -32,13 +32,13 @@ public class PlayerMove : MonoBehaviour
 
     public void Jump(float jumpForce)
     {        
-        Rig.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
+        Rig.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         GameController.Instance.SoundController.PlaySound(SFX.SFXTypeEvents.JumpPlayer);
     }
 
     private bool Grounded()
     {
-        return Physics2D.OverlapCircle(_groundPoint.position, _groundPointRadius, _layerMaskGround);
+        return Physics2D.OverlapCircle(_groundPoint.position, _groundPointRadius, _whatIsGround);
     }
 
 
