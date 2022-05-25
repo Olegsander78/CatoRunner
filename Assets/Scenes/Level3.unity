@@ -183,6 +183,7 @@ MonoBehaviour:
   _quest: {fileID: 11400000, guid: 9c1dfb136fce051499a2af06cda2a517, type: 2}
   _bgMusicType: 4
   _playerCharacter: {fileID: 1109900290}
+  _paralaxLayersMatrix: []
 --- !u!114 &140108407 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7999454577656923021, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
@@ -423,7 +424,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7999454577656923021, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
       propertyPath: CheatMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7999454577656923021, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
       propertyPath: EventOnTakeDamage.m_PersistentCalls.m_Calls.Array.size

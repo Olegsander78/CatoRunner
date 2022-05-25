@@ -42,7 +42,7 @@ public class Level : MonoBehaviour
         public bool EnableParalaxLayer;
         public string NameParalaxLayer;
         public float StartSpeedParalaxLayer;
-        [Header("Don't change!")]
+        [Header("Don't change! Computed")]
         public float SpeedParalaxLayer;
         public float MinCoordParalaxLayerSegX;
         public float MaxCoordParalaxLayerSegX;
@@ -132,6 +132,7 @@ public class Level : MonoBehaviour
             {
                 pos.x = MaxCoordLevelSegX - (MinCoordLevelSegX - pos.x) + LENGHT_SEGMENT;
                 segment.RollVariantLevelSegment();
+
                 GameController.Instance.EventBus.OnLevelSegmentFinished(segment);
             }
 

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5291469213992197321}
   - component: {fileID: 5291469213992197326}
   - component: {fileID: 5291469213992197327}
+  - component: {fileID: 3139895718358726444}
   m_Layer: 12
   m_Name: Sprite
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5291469213992197324}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5291469214022848010}
@@ -102,6 +103,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!58 &3139895718358726444
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5291469213992197324}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.05, y: -0.15}
+  serializedVersion: 2
+  m_Radius: 0.6
 --- !u!1 &5291469214022848013
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,15 +165,15 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5291469214022848013}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.05, y: -0.2}
+  m_Offset: {x: 0, y: 0.6}
   serializedVersion: 2
-  m_Radius: 0.6041539
+  m_Radius: 0.6
 --- !u!50 &5291469214022848008
 Rigidbody2D:
   serializedVersion: 4
@@ -247,7 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1411f6d3b00e724d863841a95426c17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObstacleRig: {fileID: 5291469214022848008}
+  Rig: {fileID: 0}
   Level: {fileID: 0}
 --- !u!114 &8783199154614699847
 MonoBehaviour:

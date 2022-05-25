@@ -13,8 +13,7 @@ public class Enemy : MonoBehaviour
     public SFX.SFXTypeCreatures ScreamEnemyOnDamage => _screamEnemyOnDamage;
 
     [SerializeField] private SFX.SFXTypeCreatures _screamEnemyOnDie;
-    public SFX.SFXTypeCreatures ScreamEnemyOnDie => _screamEnemyOnDie;
-    
+    public SFX.SFXTypeCreatures ScreamEnemyOnDie => _screamEnemyOnDie;    
 
     public Animator Animator;
 
@@ -22,7 +21,7 @@ public class Enemy : MonoBehaviour
     {
         _healthEnemy -= damageValue;
 
-        GameController.Instance.SoundController.PlaySound(ScreamEnemyOnDamage);
+        //GameController.Instance.SoundController.PlaySound(ScreamEnemyOnDamage);
 
         if (_healthEnemy <= 0)
         {
@@ -35,7 +34,7 @@ public class Enemy : MonoBehaviour
         GameController.Instance.PlayerProfile.AddScore(scorePerEnemy);
         GameController.Instance.SoundController.PlaySound(ScreamEnemyOnDie);
         GameController.Instance.EventBus.OnEnemydefeated(this);
-       // Animator.SetTrigger("Death");
-        Destroy(gameObject, 0.5f);
-    }  
+        Animator.SetTrigger("Death");
+        Destroy(gameObject, 1.5f);
+    }
 }
