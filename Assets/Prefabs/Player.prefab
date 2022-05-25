@@ -62,18 +62,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _jumpForce: 10
-  _playerStartPoint: {x: 0, y: 0}
-  _offsetPlayerStartPoint: 0.2
-  _distanceBeforeObstacle: 3
-  _speedReturnToStartPoint: 10
-  _layerMaskObstacle:
-    serializedVersion: 2
-    m_Bits: 4480
   Rig: {fileID: 9148902242600683023}
+  PlayerAnimator: {fileID: 9148902241034824952}
   _isGrounded: 0
   _groundPointRadius: 0.3
   _groundPoint: {fileID: 5513213148624190323}
-  _layerMaskGround:
+  _whatIsGround:
     serializedVersion: 2
     m_Bits: 4352
 --- !u!1 &1569563542814549539
@@ -383,7 +377,7 @@ Animator:
   m_GameObject: {fileID: 9148902241034824951}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5810ec245161f634b8bb7a75dd1a8eab, type: 2}
+  m_Controller: {fileID: 9100000, guid: c928685bf97614440a254558d9a2414f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -499,7 +493,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rg: {fileID: 9148902242600683023}
   _xPosition: -2
-  _forceMuliply: 1.5
+  _velocityMuliply: 0.5
 --- !u!114 &7999454577656923021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -514,6 +508,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentPlayerHealth: 1
   _isInvulnerability: 0
+  PlayerAnimator: {fileID: 9148902241034824952}
   CheatMode: 0
   EventOnTakeDamage:
     m_PersistentCalls:

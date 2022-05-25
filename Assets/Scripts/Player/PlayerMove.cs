@@ -7,7 +7,9 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float _jumpForce;    
     public float JumpForce => _jumpForce;
 
-    public Rigidbody2D Rig;  
+    public Rigidbody2D Rig;
+
+    public Animator PlayerAnimator;
 
     [SerializeField] private bool _isGrounded;
     [SerializeField] private float _groundPointRadius;
@@ -26,6 +28,8 @@ public class PlayerMove : MonoBehaviour
             if (Grounded() || _isGrounded)
             {
                 Jump(JumpForce);
+
+                PlayerAnimator.SetTrigger("Jump");
             }
         }
     }
