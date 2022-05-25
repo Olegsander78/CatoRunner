@@ -11,6 +11,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private int _currentPlayerHealth;
     [SerializeField] private bool _isInvulnerability = false;
     [SerializeField] private float _delayDestroyPlayer = 1.5f;
+    [SerializeField] private float _speedBeforeGameOver = 0.3f;
 
     [SerializeField] private Animator PlayerAnimator;
 
@@ -20,7 +21,6 @@ public class PlayerHealth : MonoBehaviour
 
     private void Start()
     {
-        
         _currentPlayerHealth = GameController.Instance.PlayerProfile.MaxHealth;
         GameController.Instance.PlayerProfile.HUDScreen.UpdateHealthView(_currentPlayerHealth);
     }
@@ -54,7 +54,7 @@ public class PlayerHealth : MonoBehaviour
                 _currentPlayerHealth = 0;
                 GameController.Instance.PlayerProfile.HUDScreen.UpdateHealthView(_currentPlayerHealth);
 
-                GameController.Instance.LevelController.CurrentLevel.ChangeSpeedLevel(0f);
+                GameController.Instance.LevelController.CurrentLevel.ChangeSpeedLevel(_speedBeforeGameOver);
                 PlayerAnimator.SetTrigger("Death");                
 
                 Invoke("GameOver", _delayDestroyPlayer);
