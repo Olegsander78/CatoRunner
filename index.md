@@ -43,7 +43,7 @@
 
 ### Game architecture:
 
-![SchemeCatoRunner](https://user-images.githubusercontent.com/79563332/170463842-d79e1c7f-5f26-4a09-b124-caf8bc458c1c.png)
+<img src="https://user-images.githubusercontent.com/79563332/170463842-d79e1c7f-5f26-4a09-b124-caf8bc458c1c.png" width="1000" height="800"/>
 
 
 ### Support or Contact:
