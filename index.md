@@ -2,7 +2,7 @@
 # Mini Game Design Document
 
 ### Theme and name game:
-- Казуальная игра
+- Казуальная игра в стиле бесконечный раннер
 - Рабочее название – “CatoRunner”
 - Running and Jumping Cat Demo Video <a href="https://youtu.be/P1oW_vj1kU0" target="_blank"> YouTube Link</a>
 
