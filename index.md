@@ -41,7 +41,7 @@
 <a href= "https://www.gamedevmarket.net/asset/coinssuccessstars123-power-up-sound-fx-hd-quality/" target="_blank">Gamedevmarket link</a>
 -	Другие ассеты в похожей стилистике
 
-### Game architecture
+### Game architecture:
 
 ![SchemeCatoRunner](https://user-images.githubusercontent.com/79563332/170463842-d79e1c7f-5f26-4a09-b124-caf8bc458c1c.png)
 
