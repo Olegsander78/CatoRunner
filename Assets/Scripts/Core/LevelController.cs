@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
 {
-
     [System.Serializable]
     public class SelectLevelsInUINote
     {

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class WinScreen : Screen
@@ -28,7 +29,8 @@ public class WinScreen : Screen
         GameController.Instance.SoundController.StopSound();
         GameController.Instance.SoundController.PlaySound(SFX.SFXTypeUI.ClickButton);
         GameController.Instance.ScreenController.PopScreen();
-        GameController.Instance.ScreenController.PushScreen<MainMenuScreen>();
-        GameController.Instance.SoundController.PlayBGMusic(BGMusic.MusicType.MainMenu);
+        SceneManager.LoadScene("Menu");
+        //GameController.Instance.ScreenController.PushScreen<MainMenuScreen>();
+        //GameController.Instance.SoundController.PlayBGMusic(BGMusic.MusicType.MainMenu);
     }
 }

@@ -6,8 +6,10 @@ using UnityEngine.UI;
 
 public class SelectLevelsScreen : Screen
 {
+    [SerializeField] private int _offsetBuildIndexScene = 1;
+    [Space(15)]
     [SerializeField] private List<Button> _levelBtn;
-    [SerializeField] private Button _backBtn;
+    [SerializeField] private Button _backBtn;    
 
     [SerializeField] private List<UILevel> _uiLevelsList = new List<UILevel>();
     public List<UILevel> UILevelsList { get => _uiLevelsList; set => _uiLevelsList = value; }
@@ -17,6 +19,7 @@ public class SelectLevelsScreen : Screen
         for (int i = 0; i < _levelBtn.Count; i++)
         {
             int numLevel = i + 1;
+
             _levelBtn[i].onClick.AddListener(() => StartLevel(numLevel));
         }
 
@@ -30,12 +33,12 @@ public class SelectLevelsScreen : Screen
         {
             GameController.Instance.SoundController.PlaySound(SFX.SFXTypeUI.ClickButton);
             GameController.Instance.ScreenController.PopScreen();
-            GameController.Instance.LoadLevel(level);
+            GameController.Instance.LoadLevel(level + _offsetBuildIndexScene);
         }
         else
         {
             //Clear text for Level Task 
-            UILevelsList[level - 1].GetComponent<ToolTip>().View.text = "";
+            UILevelsList[level - _offsetBuildIndexScene].GetComponent<ToolTip>().View.text = "";
 
             //PopUp for Locked levels
             GameController.Instance.SoundController.PlaySound(SFX.SFXTypeUI.ClickButton);            

@@ -14,13 +14,16 @@ public class ScreenController : MonoBehaviour
 
     private void Awake()
     {
-       foreach(var screens in _screensList)
+        foreach (var screens in _screensList)
         {
             screens.gameObject.SetActive(false);
         }
+
         PushScreen(InitScreen);
-        DontDestroyOnLoad(this);
-    }
+
+        //DontDestroyOnLoad(this);
+    }    
+    
 
     private Screen PushScreen(Screen screen)
     {

@@ -42,8 +42,10 @@ public class PauseScreen : Screen
 
     public void GoBackMainMenu()
     {
+        GameController.Instance.SoundController.StopSound();
         GameController.Instance.SoundController.PlaySound(SFX.SFXTypeUI.ClickButton);
         GameController.Instance.ScreenController.PopScreen();
-        GameController.Instance.ScreenController.PushScreen<MainMenuScreen>();        
+        SceneManager.LoadScene("Menu");
+        //GameController.Instance.ScreenController.PushScreen<MainMenuScreen>();        
     }
 }

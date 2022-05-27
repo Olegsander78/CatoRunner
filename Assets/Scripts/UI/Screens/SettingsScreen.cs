@@ -13,6 +13,7 @@ public class SettingsScreen : Screen
     [SerializeField] private AudioMixer _audioMixer;
     [SerializeField] private string _nameGroupMusicAudioMixer;
     [SerializeField] private string _nameGroupSFXAudioMixer;
+    [SerializeField] private int _indexMainMenuScene = 1;
 
 
     private void Start()
@@ -43,8 +44,10 @@ public class SettingsScreen : Screen
     public void GoBackMainMenu()
     {
         GameController.Instance.SoundController.PlaySound(SFX.SFXTypeUI.ClickButton);
-        if (SceneManager.GetActiveScene().buildIndex == 0)
+        if (SceneManager.GetActiveScene().buildIndex == _indexMainMenuScene)
         {
+            Debug.Log(SceneManager.GetActiveScene().buildIndex);
+            Debug.Log(_indexMainMenuScene);
             GameController.Instance.ScreenController.PushScreen<MainMenuScreen>();
         }
         else
@@ -53,5 +56,4 @@ public class SettingsScreen : Screen
             GameController.Instance.ScreenController.PushScreen<PauseScreen>();
         }                
     }
-
 }
