@@ -46,8 +46,6 @@ public class SettingsScreen : Screen
         GameController.Instance.SoundController.PlaySound(SFX.SFXTypeUI.ClickButton);
         if (SceneManager.GetActiveScene().buildIndex == _indexMainMenuScene)
         {
-            Debug.Log(SceneManager.GetActiveScene().buildIndex);
-            Debug.Log(_indexMainMenuScene);
             GameController.Instance.ScreenController.PushScreen<MainMenuScreen>();
         }
         else

@@ -23,15 +23,15 @@ public class GameController : MonoBehaviour
     {
         if (Instance == null)
         {
-            Instance = this;                        
+            Instance = this;
         }
         else
         {
             Destroy(gameObject);
         }
 
-        DontDestroyOnLoad(this);
-        DontDestroyOnLoad(Instance.ScreenController);
+        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(Instance.ScreenController);
         //DontDestroyOnLoad(Instance._soundController);
 
         _eventBus = new EventBus();

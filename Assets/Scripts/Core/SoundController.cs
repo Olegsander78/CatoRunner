@@ -10,8 +10,27 @@ public class SoundController : MonoBehaviour
 
     private void Awake()
     {
+        InitSoundController();
+
+        DestroyExtraSoundController();
+    }
+
+    private void InitSoundController()
+    {
         _bgMusic.PlayMusic(BGMusic.MusicType.MainMenu);
+
         DontDestroyOnLoad(this);
+    }
+
+    private void DestroyExtraSoundController()
+    {
+        SoundController[] allSoundControllers = FindObjectsOfType<SoundController>();
+        if (allSoundControllers.Length > 1)
+        {
+            Destroy(allSoundControllers[1].gameObject);
+            GameController.Instance.SoundController.StopBGMusic();
+            GameController.Instance.SoundController.PlayBGMusic(BGMusic.MusicType.MainMenu);
+        }
     }
 
     public void PlayBGMusic(Level level)
@@ -33,21 +52,12 @@ public class SoundController : MonoBehaviour
     public void MuteBGMusic()
     {
         _bgMusic.MuteMusic();
-    }
-
-    
+    }    
 
     public void PlaySound(SFX.SFXTypeItems sound)
     {
         _sFX.PlaySFX(sound);
     }
-
-    // AudioSource is assigned on object, enemy, player
-
-    //public void PlaySound(SFX.SFXTypeItems sound, AudioSource audioSource)
-    //{
-    //    _sFX.PlaySFXItems(sound,audioSource);
-    //}
 
     public void PlaySound(SFX.SFXTypeCreatures sound)
     {

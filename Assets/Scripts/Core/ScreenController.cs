@@ -14,6 +14,13 @@ public class ScreenController : MonoBehaviour
 
     private void Awake()
     {
+        InitScreenController();
+
+        DestroyExtraScreenController();
+    }
+
+    private void InitScreenController()
+    {
         foreach (var screens in _screensList)
         {
             screens.gameObject.SetActive(false);
@@ -21,9 +28,18 @@ public class ScreenController : MonoBehaviour
 
         PushScreen(InitScreen);
 
-        //DontDestroyOnLoad(this);
-    }    
-    
+        DontDestroyOnLoad(this);
+    }
+
+    private void DestroyExtraScreenController()
+    {
+        ScreenController[] allScreenControllers = FindObjectsOfType<ScreenController>();
+        if (allScreenControllers.Length > 1)
+        {
+            Destroy(allScreenControllers[1].gameObject);
+            GameController.Instance.ScreenController.PushScreen<MainMenuScreen>();
+        }
+    }
 
     private Screen PushScreen(Screen screen)
     {
