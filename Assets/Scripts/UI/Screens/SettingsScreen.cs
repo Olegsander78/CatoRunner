@@ -49,9 +49,17 @@ public class SettingsScreen : Screen
             GameController.Instance.ScreenController.PushScreen<MainMenuScreen>();
         }
         else
-        {            
-            GameController.Instance.ScreenController.PopScreen();
-            GameController.Instance.ScreenController.PushScreen<PauseScreen>();
+        {
+            if (!GameController.Instance.LevelController.CurrentLevel.Quest.IsQuestFinished())
+            {
+                GameController.Instance.ScreenController.PopScreen();
+                GameController.Instance.ScreenController.PushScreen<PauseScreen>();
+            }
+            else
+            {
+                GameController.Instance.ScreenController.PopScreen();
+                GameController.Instance.ScreenController.PushScreen<MainMenuScreen>();
+            }
         }                
     }
 }

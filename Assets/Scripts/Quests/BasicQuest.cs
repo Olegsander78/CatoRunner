@@ -42,6 +42,7 @@ public class BasicQuest : Quest
     private void OnCoinCollected(int coinAmount)
     {
         _currentCoins += coinAmount;
+        //Debug.Log(_currentCoins);
     }
 
     public override void CancelQuest()

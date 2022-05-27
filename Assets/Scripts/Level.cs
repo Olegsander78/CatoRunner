@@ -11,10 +11,21 @@ public class Level : MonoBehaviour
 
     [Header("Level Parameters:")]
     [SerializeField] private float _startSpeedLevel = 3f;
+    [SerializeField] private int _numberLevel;
+    [Space(15)]
+    [SerializeField] private Quest _quest;
+    public Quest Quest => _quest;
+
+    [SerializeField] private BGMusic.MusicType _bgMusicType;
+    public BGMusic.MusicType BGMusicType => _bgMusicType;
+
+    [SerializeField] private PlayerCharacter _playerCharacter;
+    public PlayerCharacter PlayerCharacter => _playerCharacter;
+
+    [Header("Don't change! Computing:")]
     [SerializeField] private float _speedLevel;
     [SerializeField] private float _minCoordLevelSegX;
     [SerializeField] private float _maxCoordLevelSegX;
-    [SerializeField] private int _numberLevel;
     [SerializeField] private bool _completedLevel;
     [SerializeField] private bool _lockedLevel;
     public float MinCoordLevelSegX { get => _minCoordLevelSegX; set => _minCoordLevelSegX = value; }
@@ -24,16 +35,7 @@ public class Level : MonoBehaviour
     public int NumberLevel { get => _numberLevel; set => _numberLevel = value; }
     public bool CompletedLevel { get => _completedLevel; set => _completedLevel = value; }
     public bool LockedLevel { get => _lockedLevel; set => _lockedLevel = value; }
-    
-    [Space(15)]
-    [SerializeField] private Quest _quest;
 
-    [SerializeField] private BGMusic.MusicType _bgMusicType;
-    public BGMusic.MusicType BGMusicType => _bgMusicType;
-
-    [SerializeField] private PlayerCharacter _playerCharacter;
-    public PlayerCharacter PlayerCharacter => _playerCharacter;
-    
     [System.Serializable]
     public class ParalaxLayers
     {
@@ -42,7 +44,7 @@ public class Level : MonoBehaviour
         public bool EnableParalaxLayer;
         public string NameParalaxLayer;
         public float StartSpeedParalaxLayer;
-        [Header("Don't change! Computed")]
+        [Header("Don't change! Computing:")]
         public float SpeedParalaxLayer;
         public float MinCoordParalaxLayerSegX;
         public float MaxCoordParalaxLayerSegX;
@@ -197,6 +199,7 @@ public class Level : MonoBehaviour
     {
         if (_quest.IsQuestFinished())
         {
+            _quest.CancelQuest();
             Time.timeScale = 0f;
             GameController.Instance.SoundController.StopBGMusic();
             GameController.Instance.ScreenController.PushScreen<WinScreen>();

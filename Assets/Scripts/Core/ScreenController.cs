@@ -45,7 +45,7 @@ public class ScreenController : MonoBehaviour
     {
         if (_screensStack.Count > 0)
         {
-            var topScreen = _screensStack.Peek();
+            Screen topScreen = _screensStack.Peek();
             topScreen.gameObject.SetActive(false);
             topScreen.OnPop();
         }
@@ -57,14 +57,14 @@ public class ScreenController : MonoBehaviour
 
     public T PushScreen <T> () where T: Screen
     {
-        var currentScreen = GetScreen(typeof(T));
+        Screen currentScreen = GetScreen(typeof(T));
         return (T)PushScreen(currentScreen);
         
     }
 
     public void PopScreen()
     {
-        var topScreen= _screensStack.Pop();
+        Screen topScreen = _screensStack.Pop();
         topScreen.gameObject.SetActive(false);
         topScreen.OnPop();
     }
@@ -77,14 +77,38 @@ public class ScreenController : MonoBehaviour
             {
                 screens.gameObject.SetActive(false);
             }
-        }
-        throw new Exception("Screen not found!");
+            else
+            {
+                throw new Exception("Screen not disable!");
+            }
+        }        
     }
 
     public void DisableScreen<T>() where T : Screen
     {
-        var disabledScreen = GetScreen(typeof(T));
+        Screen disabledScreen = GetScreen(typeof(T));
         DisableScreen(disabledScreen);
+    }
+
+    public void EnableScreen(Screen screen)
+    {
+        foreach (var screens in _screensList)
+        {
+            if (screens.Equals(screen))
+            {
+                screens.gameObject.SetActive(true);
+            }
+            else
+            {
+                throw new Exception("Screen not enable!");
+            }
+        }
+    }
+
+    public void EnableScreen<T>() where T : Screen
+    {
+        Screen enabledScreen = GetScreen(typeof(T));
+        EnableScreen(enabledScreen);
     }
 
     public Screen GetScreen(Type dataType)

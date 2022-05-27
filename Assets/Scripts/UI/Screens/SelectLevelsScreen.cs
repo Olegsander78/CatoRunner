@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SelectLevelsScreen : Screen
@@ -28,8 +29,8 @@ public class SelectLevelsScreen : Screen
 
     public void StartLevel(int level)
     {
-        if (GameController.Instance.LevelController.LevelsNoteList[level-1].LevelNumber == level &&
-                !GameController.Instance.LevelController.LevelsNoteList[level-1].Locked)
+        if (GameController.Instance.LevelController.LevelsNoteList[level - 1].LevelNumber == level &&
+                !GameController.Instance.LevelController.LevelsNoteList[level - 1].Locked)
         {
             GameController.Instance.SoundController.PlaySound(SFX.SFXTypeUI.ClickButton);
             GameController.Instance.ScreenController.PopScreen();
@@ -41,11 +42,16 @@ public class SelectLevelsScreen : Screen
             UILevelsList[level - _offsetBuildIndexScene].GetComponent<ToolTip>().View.text = "";
 
             //PopUp for Locked levels
-            GameController.Instance.SoundController.PlaySound(SFX.SFXTypeUI.ClickButton);            
+            GameController.Instance.SoundController.PlaySound(SFX.SFXTypeUI.ClickButton);
+            //if (SceneManager.GetActiveScene().buildIndex != 1)
+            //{
+            //    GameController.Instance.ScreenController.EnableScreen<SelectLevelsScreen>();
+            //    //GameController.Instance.ScreenController.PushScreen<SelectLevelsScreen>();
+            //}
             GameController.Instance.ScreenController.PushScreen<LevelPopUpScreen>();
-            GameController.Instance.ScreenController.PushScreen<LevelPopUpScreen>().SetText("<b>Уровень " +
-                GameController.Instance.LevelController.LevelsNoteList[level - 1].LevelNumber + " заблокирован!</b>\nНеобходимо пройти уровень " +
-                (GameController.Instance.LevelController.LevelsNoteList[level - 1].LevelNumber - 1) + " чтобы разблокировать!");
+            GameController.Instance.ScreenController.PushScreen<LevelPopUpScreen>().SetText("<b>Level " +
+                GameController.Instance.LevelController.LevelsNoteList[level - 1].LevelNumber + " is currently locked!</b>\nComplete level " +
+                (GameController.Instance.LevelController.LevelsNoteList[level - 1].LevelNumber - 1) + " to unlock it!");            
         }
     }
 
@@ -57,7 +63,6 @@ public class SelectLevelsScreen : Screen
 
     private void OnEnable() => UpdateUISelectLevels();
 
-    [ContextMenu("UpdateUILevel")]
     public void UpdateUISelectLevels()
     {
         for (int i = 1; i < UILevelsList.Count; i++)

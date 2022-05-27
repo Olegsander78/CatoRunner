@@ -2101,7 +2101,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 210816922030512235, guid: 4fb09071a2918104bb5fc7437e7761a6, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: -71
       objectReference: {fileID: 0}
     - target: {fileID: 210816922030512235, guid: 4fb09071a2918104bb5fc7437e7761a6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2137,7 +2137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 210816922030512235, guid: 4fb09071a2918104bb5fc7437e7761a6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -3
+      value: -19.5
       objectReference: {fileID: 0}
     - target: {fileID: 210816922030512235, guid: 4fb09071a2918104bb5fc7437e7761a6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2154,10 +2154,6 @@ PrefabInstance:
     - target: {fileID: 210816922030512236, guid: 4fb09071a2918104bb5fc7437e7761a6, type: 3}
       propertyPath: m_Name
       value: LevelPopUpScreen
-      objectReference: {fileID: 0}
-    - target: {fileID: 210816922030512236, guid: 4fb09071a2918104bb5fc7437e7761a6, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fb09071a2918104bb5fc7437e7761a6, type: 3}

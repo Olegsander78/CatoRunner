@@ -31,9 +31,13 @@ public class Enemy : MonoBehaviour
 
     public void DieEnemy(int scorePerEnemy)
     {
+        //Extra scores for defeat Enemy
         GameController.Instance.PlayerProfile.AddScore(scorePerEnemy);
+        GameController.Instance.EventBus.OnCoinCollected(scorePerEnemy);
+
         GameController.Instance.SoundController.PlaySound(ScreamEnemyOnDie);
-        GameController.Instance.EventBus.OnEnemydefeated(this);
+        GameController.Instance.EventBus.OnEnemydefeated(this);        
+        
         Animator.SetTrigger("Death");
         Destroy(gameObject, 1.5f);
     }

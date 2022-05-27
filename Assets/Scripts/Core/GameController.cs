@@ -31,16 +31,12 @@ public class GameController : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
-        //DontDestroyOnLoad(Instance.ScreenController);
-        //DontDestroyOnLoad(Instance._soundController);
 
         _eventBus = new EventBus();
     }
 
     public void LoadLevel(int level)
     {
-        //if (Instance.SoundController != null) Destroy(SoundController);
-        //if (Instance.ScreenController != null) Destroy(ScreenController);
         LevelController.LoadLevel(level);
     }
 
