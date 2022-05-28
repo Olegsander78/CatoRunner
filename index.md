@@ -4,7 +4,7 @@
 ### Theme and name game:
 - Казуальная игра в стиле бесконечный раннер
 - Рабочее название – “CatoRunner”
-- Game Level 1 Demo Video <a href="https://youtu.be/SCYZb06bjlg" target="_blank"> YouTube Link</a>
+- Game Demo Video <a href="https://youtu.be/3SAvv4GZ6Hc" target="_blank"> YouTube Link</a>
 
 ![изображение](https://user-images.githubusercontent.com/79563332/168284521-dab21e79-9f89-4a2e-92f4-b4278f16b42f.png) 
 
