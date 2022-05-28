@@ -43,7 +43,7 @@
 
 ### Game architecture:
 
-<a href= "https://user-images.githubusercontent.com/79563332/170839514-abef6b44-09fc-4087-96bf-e397361b945f.png" target="_blank"><img src="https://user-images.githubusercontent.com/79563332/170463842-d79e1c7f-5f26-4a09-b124-caf8bc458c1c.png" width="800" height="500"/></a>
+<a href= "https://user-images.githubusercontent.com/79563332/170839533-a88fdc0e-502f-42e7-a0b1-85d3e0c93df5.png" target="_blank"><img src="https://user-images.githubusercontent.com/79563332/170839533-a88fdc0e-502f-42e7-a0b1-85d3e0c93df5.png" width="800" height="500"/></a>
 
 
 ### Support or Contact:
