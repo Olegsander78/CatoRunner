@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Bluebat
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: e41eafc72d426594d94367c6fbe982e0, type: 3}
+    - {fileID: 2800000, guid: 7fd0bdca0b48e8944b1addfddff6d887, type: 3}
+    - {fileID: 2800000, guid: 188cd681e8ef7be42b20d057c6d5b4ea, type: 3}
+    - {fileID: 2800000, guid: c95f96e8739430b4bb942d0e2343b239, type: 3}
+    - {fileID: 2800000, guid: a080e74681afefa40af45470d44e3cac, type: 3}
+    - {fileID: 2800000, guid: 32224a14142a229419807eb94e05cb0f, type: 3}
+    - {fileID: 2800000, guid: 8a94f3e16a77f614a95528474165afb6, type: 3}
+    - {fileID: 2800000, guid: 4a408907a28340142b39af542ccbb9ff, type: 3}
+    - {fileID: 2800000, guid: 7135655974cdaf94495615bde0a72d30, type: 3}
+    - {fileID: 2800000, guid: 5bb32193e78c67146b6d34210f472897, type: 3}
+    - {fileID: 2800000, guid: 7991b486b967ac54283771958ce18ab8, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 188cd681e8ef7be42b20d057c6d5b4ea, type: 3}
+  - {fileID: 21300000, guid: 8a94f3e16a77f614a95528474165afb6, type: 3}
+  - {fileID: 21300000, guid: 5bb32193e78c67146b6d34210f472897, type: 3}
+  - {fileID: 21300000, guid: 32224a14142a229419807eb94e05cb0f, type: 3}
+  - {fileID: 21300000, guid: a080e74681afefa40af45470d44e3cac, type: 3}
+  - {fileID: 21300000, guid: 7991b486b967ac54283771958ce18ab8, type: 3}
+  - {fileID: 21300000, guid: 4a408907a28340142b39af542ccbb9ff, type: 3}
+  - {fileID: 21300000, guid: e41eafc72d426594d94367c6fbe982e0, type: 3}
+  - {fileID: 21300000, guid: c95f96e8739430b4bb942d0e2343b239, type: 3}
+  - {fileID: 21300000, guid: 7135655974cdaf94495615bde0a72d30, type: 3}
+  - {fileID: 21300000, guid: 7fd0bdca0b48e8944b1addfddff6d887, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - skeleton-fly_02
+  - skeleton-fly_06
+  - skeleton-fly_09
+  - skeleton-fly_05
+  - skeleton-fly_04
+  - skeleton-fly_10
+  - skeleton-fly_07
+  - skeleton-fly_00
+  - skeleton-fly_03
+  - skeleton-fly_08
+  - skeleton-fly_01
+  m_RenderDataMap: {}
+  m_Tag: Bluebat
+  m_IsVariant: 0
