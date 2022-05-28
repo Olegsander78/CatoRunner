@@ -98,7 +98,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1624650704174024823
 Transform:
   m_ObjectHideFlags: 0
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 9103112867539644704}
   - component: {fileID: 1098109090141102400}
   m_Layer: 0
-  m_Name: VisualMiddleLevelSegment
+  m_Name: VisualTopLevel1Segment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -249,7 +249,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &9205075469480046937
 Transform:
   m_ObjectHideFlags: 0
@@ -413,7 +413,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8172218642052469370
 Transform:
   m_ObjectHideFlags: 0

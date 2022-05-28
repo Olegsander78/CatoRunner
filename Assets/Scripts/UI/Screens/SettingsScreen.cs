@@ -22,10 +22,11 @@ public class SettingsScreen : Screen
         _volumeMusicSld.value = valueMusic;
         _audioMixer.GetFloat(_nameGroupSFXAudioMixer, out var valueSFX);
         _volumeSoundSld.value = valueSFX;
-
-        _backBtn.onClick.AddListener(GoBackMainMenu);
+        
         _volumeMusicSld.onValueChanged.AddListener(ChangeVolumeMusic);
         _volumeSoundSld.onValueChanged.AddListener(ChangeVolumeSound);
+
+        _backBtn.onClick.AddListener(GoBackMainMenu);
     }
 
     public void ChangeVolumeMusic(float volume)
