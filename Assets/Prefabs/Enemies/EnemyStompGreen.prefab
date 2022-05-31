@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1672382699
-  m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingLayer: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 64764171c23cbf04da2e92e5e26cfb54, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -191,7 +191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _healthEnemy: 1
   _scorePerEnemy: 100
-  _IsUnstumtable: 0
+  _IsUnstomtable: 0
   _screamEnemyOnDamage: 1
   _screamEnemyOnDie: 3
   Animator: {fileID: 2883297004123075175}
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1411f6d3b00e724d863841a95426c17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObstacleRig: {fileID: 2883297004583529484}
+  Rig: {fileID: 0}
   Level: {fileID: 0}
 --- !u!114 &7116866131800540520
 MonoBehaviour:

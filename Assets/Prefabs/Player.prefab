@@ -270,9 +270,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1847694227
-  m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingLayerID: 1672382699
+  m_SortingLayer: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 786a1914147cee94d954683626078674, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -355,7 +355,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1672382699
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 9bf42619f70785945b1afa0a2c68adb3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -508,6 +508,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentPlayerHealth: 1
   _isInvulnerability: 0
+  _delayDestroyPlayer: 1.5
+  _speedLevelBeforeGameOver: 0.1
   PlayerAnimator: {fileID: 9148902241034824952}
   CheatMode: 0
   EventOnTakeDamage:
