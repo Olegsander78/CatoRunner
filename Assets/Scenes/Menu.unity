@@ -197,7 +197,7 @@ MonoBehaviour:
     Locked: 0
   - LevelNumber: 4
     Completed: 0
-    Locked: 1
+    Locked: 0
   - LevelNumber: 5
     Completed: 0
     Locked: 1
@@ -2417,6 +2417,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 754148381985989203, guid: 588c06b62d27edd43857714e6ecb9949, type: 3}
+      propertyPath: TextView
+      value: 'Collect 4000 scores '
+      objectReference: {fileID: 0}
     - target: {fileID: 848287117981918279, guid: 588c06b62d27edd43857714e6ecb9949, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2433,6 +2437,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6128630495597108064, guid: 588c06b62d27edd43857714e6ecb9949, type: 3}
+      propertyPath: TextView
+      value: Collect 5000 scores
+      objectReference: {fileID: 0}
     - target: {fileID: 6426817218911093027, guid: 588c06b62d27edd43857714e6ecb9949, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2464,6 +2472,10 @@ PrefabInstance:
     - target: {fileID: 6661513381913914057, guid: 588c06b62d27edd43857714e6ecb9949, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6734857675278181771, guid: 588c06b62d27edd43857714e6ecb9949, type: 3}
+      propertyPath: TextView
+      value: Collect 3000 scores
       objectReference: {fileID: 0}
     - target: {fileID: 7634598384362316085, guid: 588c06b62d27edd43857714e6ecb9949, type: 3}
       propertyPath: m_AnchorMax.y

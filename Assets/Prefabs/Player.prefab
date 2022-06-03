@@ -492,7 +492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rg: {fileID: 9148902242600683023}
-  _xPosition: -2
+  _xPosition: -4
   _velocityMuliply: 0.5
 --- !u!114 &7999454577656923021
 MonoBehaviour:

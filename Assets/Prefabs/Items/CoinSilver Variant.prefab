@@ -15,6 +15,26 @@ PrefabInstance:
       propertyPath: PickUpSound
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8579930617047534108, guid: ceb775302b650da4282e368b1318f2e0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -592902316924709517, guid: bdbda9329bdca5148a3271933c4d1f09, type: 3}
+    - target: {fileID: 8579930617047534108, guid: ceb775302b650da4282e368b1318f2e0, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579930617047534108, guid: ceb775302b650da4282e368b1318f2e0, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579930617047534108, guid: ceb775302b650da4282e368b1318f2e0, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579930617047534111, guid: ceb775302b650da4282e368b1318f2e0, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: bf5c04618b4c79e449578bb7e55c0cfd, type: 2}
     - target: {fileID: 8579930617550800152, guid: ceb775302b650da4282e368b1318f2e0, type: 3}
       propertyPath: m_RootOrder
       value: 0

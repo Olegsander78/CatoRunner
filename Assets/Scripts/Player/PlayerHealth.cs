@@ -10,7 +10,7 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] private int _currentPlayerHealth;
     [SerializeField] private bool _isInvulnerability = false;
-    [SerializeField] private float _delayDestroyPlayer = 1.5f;
+    [SerializeField] private float _delayDestroyPlayer = 1f;
     [SerializeField] private float _speedLevelBeforeGameOver = 0.1f;
 
     [SerializeField] private Animator PlayerAnimator;
@@ -55,9 +55,8 @@ public class PlayerHealth : MonoBehaviour
                 GameController.Instance.PlayerProfile.HUDScreen.UpdateHealthView(_currentPlayerHealth);
 
                 GameController.Instance.LevelController.CurrentLevel.ChangeSpeedLevel(_speedLevelBeforeGameOver);
-                PlayerAnimator.SetTrigger("Death");                
 
-                Invoke("GameOver", _delayDestroyPlayer);
+                GameOver();
             }
 
             PlayerAnimator.SetTrigger("HitPlayer");
@@ -81,8 +80,22 @@ public class PlayerHealth : MonoBehaviour
         _isInvulnerability = false;
     }
 
+    public void StopInvulnerable()
+    {
+        StopCoroutine(InvulnerableState(0f));
+    }
+
     public void GameOver()
     {
+        StartCoroutine(GameOverRoutina(_delayDestroyPlayer));        
+    }
+
+    public IEnumerator GameOverRoutina(float duration)
+    {
+        PlayerAnimator.SetTrigger("Death");
+        GameController.Instance.LevelController.CurrentLevel.SpeedLevel /= 3f; 
+        yield return new WaitForSeconds(duration);
+
         Destroy(gameObject);
 
         Time.timeScale = 0f;
@@ -90,10 +103,4 @@ public class PlayerHealth : MonoBehaviour
         GameController.Instance.SoundController.StopBGMusic();
         GameController.Instance.SoundController.PlaySound(SFX.SFXTypeEvents.GameOver);
     }
-
-    //public IEnumerator GameOverRoutina(float duration)
-    //{
-    //    PlayerAnimator.SetTrigger("Death");
-    //    yield return new WaitForSeconds(duration);
-    //}
 }
