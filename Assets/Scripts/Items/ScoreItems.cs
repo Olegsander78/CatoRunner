@@ -10,7 +10,7 @@ public class ScoreItems : GameItems
     {
         if (collision.gameObject.CompareTag("Player"))
         {            
-            GameController.Instance.PlayerProfile.AddScore(ScoreValue);
+            GameController.Instance.PlayerSession.AddScore(ScoreValue);
             GameController.Instance.SoundController.PlaySound(PickUpSound);
             GameController.Instance.EventBus.OnCoinCollected(ScoreValue);
             Destroy(gameObject);

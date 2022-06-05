@@ -175,15 +175,15 @@ MonoBehaviour:
   - {fileID: 1800787645}
   - {fileID: 2300354014843765603}
   _startSpeedLevel: 3
-  _speedLevel: 0
-  _minCoordLevelSegX: 0
-  _maxCoordLevelSegX: 0
   _numberLevel: 1
-  _completedLevel: 0
-  _lockedLevel: 0
   _quest: {fileID: 11400000, guid: 73b965e037472f44782f83ee96703b35, type: 2}
   _bgMusicType: 2
   _playerCharacter: {fileID: 1109900290}
+  _speedLevel: 0
+  _minCoordLevelSegX: 0
+  _maxCoordLevelSegX: 0
+  _completedLevel: 0
+  _lockedLevel: 0
   _paralaxLayersMatrix:
   - VisualLevelSegments:
     - {fileID: 1488838844}
@@ -563,7 +563,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.668387, y: 2.0403087, z: -10}
+  m_LocalPosition: {x: 5, y: 2.0599997, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2084,7 +2084,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3814975945832135892, guid: 3c663b2389d6f7143b2da89c48ff4563, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.56
+      value: -7.21
       objectReference: {fileID: 0}
     - target: {fileID: 3814975945832135892, guid: 3c663b2389d6f7143b2da89c48ff4563, type: 3}
       propertyPath: m_LocalPosition.y

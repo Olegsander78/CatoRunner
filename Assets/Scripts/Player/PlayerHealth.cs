@@ -21,25 +21,25 @@ public class PlayerHealth : MonoBehaviour
 
     private void Start()
     {
-        _currentPlayerHealth = GameController.Instance.PlayerProfile.MaxHealth;
-        GameController.Instance.PlayerProfile.HUDScreen.UpdateHealthView(_currentPlayerHealth);
+        _currentPlayerHealth = GameController.Instance.PlayerSession.MaxHealth;
+        GameController.Instance.PlayerSession.HUDScreen.UpdateHealthView(_currentPlayerHealth);
     }
 
     public void AddHealth(int amount)
     {
         _currentPlayerHealth += amount;
 
-        if (_currentPlayerHealth > GameController.Instance.PlayerProfile.MaxHealth)
+        if (_currentPlayerHealth > GameController.Instance.PlayerSession.MaxHealth)
         {
-            _currentPlayerHealth = GameController.Instance.PlayerProfile.MaxHealth;
+            _currentPlayerHealth = GameController.Instance.PlayerSession.MaxHealth;
         }
-        GameController.Instance.PlayerProfile.HUDScreen.UpdateHealthView(_currentPlayerHealth);
+        GameController.Instance.PlayerSession.HUDScreen.UpdateHealthView(_currentPlayerHealth);
     }
 
     public void SetHealth(int amount)
     {
         _currentPlayerHealth = amount;
-        GameController.Instance.PlayerProfile.HUDScreen.UpdateHealthView(_currentPlayerHealth);
+        GameController.Instance.PlayerSession.HUDScreen.UpdateHealthView(_currentPlayerHealth);
     }
 
     public void TakeDamage(int damage)
@@ -47,12 +47,12 @@ public class PlayerHealth : MonoBehaviour
         if (!_isInvulnerability)
         {
             _currentPlayerHealth -= damage;
-            GameController.Instance.PlayerProfile.HUDScreen.UpdateHealthView(_currentPlayerHealth);
+            GameController.Instance.PlayerSession.HUDScreen.UpdateHealthView(_currentPlayerHealth);
             GameController.Instance.SoundController.PlaySound(SFX.SFXTypeEvents.DamagePlayer);
             if (_currentPlayerHealth <= 0 && !CheatMode)
             {
                 _currentPlayerHealth = 0;
-                GameController.Instance.PlayerProfile.HUDScreen.UpdateHealthView(_currentPlayerHealth);
+                GameController.Instance.PlayerSession.HUDScreen.UpdateHealthView(_currentPlayerHealth);
 
                 GameController.Instance.LevelController.CurrentLevel.ChangeSpeedLevel(_speedLevelBeforeGameOver);
 

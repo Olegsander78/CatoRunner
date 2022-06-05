@@ -151,6 +151,7 @@ GameObject:
   - component: {fileID: 376146647}
   - component: {fileID: 376146646}
   - component: {fileID: 376146645}
+  - component: {fileID: 376146649}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -191,13 +192,13 @@ MonoBehaviour:
     Locked: 0
   - LevelNumber: 2
     Completed: 0
-    Locked: 0
+    Locked: 1
   - LevelNumber: 3
     Completed: 0
-    Locked: 0
+    Locked: 1
   - LevelNumber: 4
     Completed: 0
-    Locked: 0
+    Locked: 1
   - LevelNumber: 5
     Completed: 0
     Locked: 1
@@ -215,9 +216,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelController: {fileID: 376146646}
-  _playerProfile: {fileID: 376146645}
+  _playerSession: {fileID: 376146645}
   _screenController: {fileID: 1228660431}
   _soundController: {fileID: 1661511790}
+  _playerProfile: {fileID: 376146649}
 --- !u!4 &376146648
 Transform:
   m_ObjectHideFlags: 0
@@ -232,6 +234,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &376146649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376146644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 737b77ad2e437734d97a5ea43b8fceab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &423028335
 GameObject:
   m_ObjectHideFlags: 0

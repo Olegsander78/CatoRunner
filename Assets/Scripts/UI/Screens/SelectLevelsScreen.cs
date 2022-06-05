@@ -73,5 +73,17 @@ public class SelectLevelsScreen : Screen
                 UILevelsList[i].UnLockImage.gameObject.SetActive(!GameController.Instance.LevelController.LevelsNoteList[i].Locked);
             }
         }
-    }    
+    }
+    //public override void OnPush()
+    //{
+    //    base.OnPush();
+    //    for (int i = 1; i < UILevelsList.Count; i++)
+    //    {
+    //        if (UILevelsList[i].LevelUINumber < GameController.Instance.PlayerProfile.Profile.LastUnlockLevel)
+    //        {
+    //             GameController.Instance.LevelController.LevelsNoteList[i].Locked = false;
+    //        }
+    //    }
+
+    //}
 }

@@ -32,7 +32,7 @@ public class Enemy : MonoBehaviour
     public void DieEnemy(int scorePerEnemy)
     {
         //Extra scores for defeat Enemy
-        GameController.Instance.PlayerProfile.AddScore(scorePerEnemy);
+        GameController.Instance.PlayerSession.AddScore(scorePerEnemy);
         GameController.Instance.EventBus.OnCoinCollected(scorePerEnemy);
 
         GameController.Instance.SoundController.PlaySound(ScreamEnemyOnDie);

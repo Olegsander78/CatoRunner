@@ -25,8 +25,22 @@ public class LevelController : MonoBehaviour
 
     [SerializeField] private Level _currentLevel;
     public Level CurrentLevel => _currentLevel;
-    
 
+
+    private void OnEnable()
+    {
+        for (int i = 0; i < LevelsNoteList.Count; i++)
+        {
+            if (i < GameController.Instance.PlayerProfile.Profile.LastUnlockLevel)
+            {
+                LevelsNoteList[i].Locked = false;
+                if (i > 0)
+                {
+                    LevelsNoteList[i - 1].Completed = true;
+                }
+            }
+        }
+    }
     public void LoadLevel(int level)
     {
         StartCoroutine(LoadLevelRoutine(level));
@@ -42,10 +56,10 @@ public class LevelController : MonoBehaviour
     {
         _currentLevel = level;
         GameController.Instance.ScreenController.PushScreen<HUDScreen>();
-        _currentLevel.PlayerCharacter.PlayerHealth.SetHealth(GameController.Instance.PlayerProfile.MaxHealth);
-        GameController.Instance.PlayerProfile.Score = 0;
-        GameController.Instance.PlayerProfile.HUDScreen.UpdateHealthView(GameController.Instance.PlayerProfile.MaxHealth);
-        GameController.Instance.PlayerProfile.HUDScreen.UpdateScoreText(0);
+        _currentLevel.PlayerCharacter.PlayerHealth.SetHealth(GameController.Instance.PlayerSession.MaxHealth);
+        GameController.Instance.PlayerSession.Score = 0;
+        GameController.Instance.PlayerSession.HUDScreen.UpdateHealthView(GameController.Instance.PlayerSession.MaxHealth);
+        GameController.Instance.PlayerSession.HUDScreen.UpdateScoreText(0);
         Time.timeScale = 1f;
     }
 
