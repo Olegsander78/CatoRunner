@@ -2,5 +2,5 @@ import "common.proto";package profile;
 
 message PlayerProfile
 {
-	optional int32 LastUnlockLevel = 1 [default = 3];	
+	optional int32 LastUnlockLevel = 1 [default = 0];	
 };

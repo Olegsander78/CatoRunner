@@ -6,25 +6,30 @@ using profile;
 public class PlayerProfile : MonoBehaviour
 {
     private static ProtoSerializer ps = new ProtoSerializer();
-    private profile.PlayerProfile _playerProfile;
+    [SerializeField] private profile.PlayerProfile _playerProfile;
     public profile.PlayerProfile Profile => _playerProfile; 
 
     private void Start()
     {
+        DontDestroyOnLoad(this);
+        Debug.Log("BeforeStartLoad - " + GameController.Instance.PlayerProfile.Profile.LastUnlockLevel);
         Load();
+        Debug.Log("AfterStartLoad - " + GameController.Instance.PlayerProfile.Profile.LastUnlockLevel);
     }
     private void OnDestroy()
     {
-        Save();
+        //Save();
     }
-
     public void Save()
     {
+        Debug.Log("BeforeStartSave - " + Profile.LastUnlockLevel);
         System.IO.MemoryStream stream = new System.IO.MemoryStream();
-        ps.Serialize(stream, _playerProfile);
+        ps.Serialize(stream, Profile);
         SaveData("profile.save", stream);
+        Debug.Log("AfterStartSave - " + Profile.LastUnlockLevel);
     }
 
+    [ContextMenu("SaveData")]
     private void SaveData(string fileName, System.IO.MemoryStream stream)
     {
         System.IO.File.Delete(fileName);
@@ -48,6 +53,7 @@ public class PlayerProfile : MonoBehaviour
         }
     }
 
+    [ContextMenu("LoadProfile")]
     private profile.PlayerProfile Load()
     {
         profile.PlayerProfile profile = null;
@@ -64,6 +70,7 @@ public class PlayerProfile : MonoBehaviour
             fs.Close();
             System.IO.File.Delete(saveGameFileName);
             profile = new profile.PlayerProfile();
+            Debug.Log("Ошибка загрузки!");
         }
         return profile;
     }

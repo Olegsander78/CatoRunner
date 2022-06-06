@@ -61,7 +61,20 @@ public class SelectLevelsScreen : Screen
         GameController.Instance.ScreenController.PushScreen<MainMenuScreen>();
     }
 
-    private void OnEnable() => UpdateUISelectLevels();
+    private void OnEnable()
+    {
+        //GameController.Instance.LevelController.LoadUILevelsNote();
+
+        //for (int i = 1; i < GameController.Instance.LevelController.LevelsNoteList.Count; i++)
+        //{
+        //    if (i <= GameController.Instance.PlayerProfile.Profile.LastUnlockLevel)
+        //    {
+        //        GameController.Instance.LevelController.LevelsNoteList[i].Locked = false;
+        //        GameController.Instance.LevelController.LevelsNoteList[i - 1].Completed = true;
+        //    }
+        //}
+        UpdateUISelectLevels();
+    }
 
     public void UpdateUISelectLevels()
     {

@@ -33,6 +33,4 @@ public class MainMenuScreen : Screen
         GameController.Instance.SoundController.PlaySound(SFX.SFXTypeUI.ClickButton);
         Application.Quit();
     }
-
-
 }

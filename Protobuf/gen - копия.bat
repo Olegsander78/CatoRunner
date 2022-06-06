@@ -7,7 +7,7 @@ call .\protobuf-net\ProtoGen\protogen.exe -i:common.proto -o:ProtoClasses\Common
 
 pause
 
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\MSBuild.exe" ProtoClasses/ProtoClasses.sln /p:Configuration=Release 
+"B:\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\MSBuild.exe" ProtoClasses/ProtoClasses.sln /p:Configuration=Release 
 
 pause
 call protobuf-net\Precompile\precompile.exe ProtoClasses\bin\Release\ProtoClasses.dll -o:ProtoClasses\bin\Release\ProtoSerializer.dll -t:ProtoSerializer 

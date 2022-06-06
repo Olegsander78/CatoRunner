@@ -27,20 +27,36 @@ public class LevelController : MonoBehaviour
     public Level CurrentLevel => _currentLevel;
 
 
-    private void OnEnable()
-    {
-        for (int i = 0; i < LevelsNoteList.Count; i++)
-        {
-            if (i < GameController.Instance.PlayerProfile.Profile.LastUnlockLevel)
-            {
-                LevelsNoteList[i].Locked = false;
-                if (i > 0)
-                {
-                    LevelsNoteList[i - 1].Completed = true;
-                }
-            }
-        }
-    }
+    //private void OnEnable()
+    //{
+    //    if (GameController.Instance.PlayerProfile.Profile != null)
+    //    {
+    //        Debug.Log("OnEnable - " + GameController.Instance.PlayerProfile.Profile.LastUnlockLevel);
+
+
+    //        for (int i = 1; i < LevelsNoteList.Count; i++)
+    //        {
+    //            if (i <= GameController.Instance.PlayerProfile.Profile.LastUnlockLevel)
+    //            {
+    //                LevelsNoteList[i].Locked = false;
+    //                LevelsNoteList[i - 1].Completed = true;
+    //            }
+    //        }
+    //    }
+    //}
+
+    //[ContextMenu("LoadUILevel")]
+    //public void LoadUILevelsNote()
+    //{
+    //    for (int i = 1; i < LevelsNoteList.Count; i++)
+    //    {
+    //        if (i <= GameController.Instance.PlayerProfile.Profile.LastUnlockLevel)
+    //        {
+    //            LevelsNoteList[i].Locked = false;
+    //            LevelsNoteList[i - 1].Completed = true;
+    //        }
+    //    }
+    //}
     public void LoadLevel(int level)
     {
         StartCoroutine(LoadLevelRoutine(level));
@@ -66,7 +82,7 @@ public class LevelController : MonoBehaviour
     public void CompleteLevel(Level level)
     {
         level.CompletedLevel = true;
-        //Не могу сообразить как подтянуть следующий уровень в следующей сцене..
+
         //How does it? => nextLevel.LockedLevel = false;
 
         for (int i = 0; i < LevelsNoteList.Count; i++)
@@ -80,6 +96,8 @@ public class LevelController : MonoBehaviour
                 }
             }
         }
+        GameController.Instance.PlayerProfile.Profile.LastUnlockLevel = level.NumberLevel;
+        GameController.Instance.PlayerProfile.Save();
     }
 
     IEnumerator LoadLevelRoutine (int level)

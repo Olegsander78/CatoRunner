@@ -16,9 +16,9 @@ namespace profile
   {
     public PlayerProfile() {}
     
-    private int _LastUnlockLevel = (int)3;
+    private int _LastUnlockLevel = (int)0;
     [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"LastUnlockLevel", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue((int)3)]
+    [global::System.ComponentModel.DefaultValue((int)0)]
     public int LastUnlockLevel
     {
       get { return _LastUnlockLevel; }
