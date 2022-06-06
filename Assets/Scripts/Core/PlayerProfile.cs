@@ -18,7 +18,7 @@ public class PlayerProfile : MonoBehaviour
     }
     private void OnDestroy()
     {
-        //Save();
+        Save();
     }
     public void Save()
     {
@@ -27,6 +27,7 @@ public class PlayerProfile : MonoBehaviour
         ps.Serialize(stream, Profile);
         SaveData("profile.save", stream);
         Debug.Log("AfterStartSave - " + Profile.LastUnlockLevel);
+        Debug.Log(new System.IO.FileInfo("profile.save").FullName);
     }
 
     [ContextMenu("SaveData")]
@@ -59,6 +60,10 @@ public class PlayerProfile : MonoBehaviour
         profile.PlayerProfile profile = null;
         var saveGameFileName = "profile.save";
         var fs = LoadFileStream(saveGameFileName);
+
+        Debug.Log("AfterStartLoad - " + Profile.LastUnlockLevel);
+        Debug.Log(new System.IO.FileInfo(saveGameFileName).FullName);
+
         try
         {
             profile = (profile.PlayerProfile)ps.Deserialize(fs, profile, typeof(profile.PlayerProfile));
@@ -70,7 +75,8 @@ public class PlayerProfile : MonoBehaviour
             fs.Close();
             System.IO.File.Delete(saveGameFileName);
             profile = new profile.PlayerProfile();
-            Debug.Log("Ошибка загрузки!");
+
+            Debug.Log("Error loading!");
         }
         return profile;
     }
