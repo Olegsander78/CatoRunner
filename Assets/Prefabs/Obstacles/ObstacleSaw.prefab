@@ -65,7 +65,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1411f6d3b00e724d863841a95426c17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObstacleRig: {fileID: 3388385733977152748}
+  Rig: {fileID: 0}
   Level: {fileID: 0}
 --- !u!1 &1526337101708553472
 GameObject:
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1411f6d3b00e724d863841a95426c17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObstacleRig: {fileID: 5915589903590261712}
+  Rig: {fileID: 0}
   Level: {fileID: 0}
 --- !u!1 &6753776049444221144
 GameObject:
@@ -263,12 +263,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79fc7e3030c81346b84489fa0040c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LeftPoint: {fileID: 4812415973937918313}
-  RightPoint: {fileID: 2432630942494486776}
+  FirstPoint: {fileID: 0}
+  SecondPoint: {fileID: 0}
   SpeedToLeft: 5
   SpeedToRight: 0.4
   StopTime: 0.5
-  CurrentDirection: 0
+  CurrentPoint: 0
+  DirectionObstacle: 1
   ObstacleRig: {fileID: 3021526511790366915}
 --- !u!114 &8255713888680389319
 MonoBehaviour:
@@ -353,6 +354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad21737b84ea13449a7b94e2f0ecbce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isMovingObstacle: 1
 --- !u!114 &8631943379119873989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,7 +380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1411f6d3b00e724d863841a95426c17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObstacleRig: {fileID: 1767801125041924640}
+  Rig: {fileID: 0}
   Level: {fileID: 0}
 --- !u!1 &7905365686299937631
 GameObject:
@@ -450,7 +452,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1672382699
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 3a90aa57b81c7e243b0680e6b774ec74, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

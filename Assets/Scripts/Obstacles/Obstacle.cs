@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
-
+    [SerializeField] private bool _isMovingObstacle;
+    public bool IsMovingObstacle => _isMovingObstacle;
 }
