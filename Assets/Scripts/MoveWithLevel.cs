@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MoveWithLevel : MonoBehaviour
 {
-    [Header("Don't change, cañhed!")]
     [SerializeField] private Rigidbody2D Rig;
 
     [SerializeField] private Level Level;

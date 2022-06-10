@@ -38,14 +38,10 @@ public class ObstacleCreator : MonoBehaviour
                     prefObstacle.GetComponentInChildren<LocalMoveObstacle>().FirstPoint = APosition;
                     prefObstacle.GetComponentInChildren<LocalMoveObstacle>().SecondPoint = BPosition;
                     _nextSpawnPositionItem += new Vector3(_distanceBetweenMovingObstacles, 0f, 0f);
-                    var dis = _distanceBetweenMovingObstacles;
-                    Debug.Log("Get LocalMove script " + dis);
                     continue;
                 }
             }
             _nextSpawnPositionItem += new Vector3(DISTANCE_BETWEEN_OBSTACLES, 0f, 0f);
-            var dis2 = DISTANCE_BETWEEN_OBSTACLES;
-            Debug.Log("Don't Get LocalMove script " + dis2);
         }
     }
 }

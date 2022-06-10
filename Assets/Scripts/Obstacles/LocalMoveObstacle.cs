@@ -6,12 +6,12 @@ using UnityEngine;
 
 public class LocalMoveObstacle : MonoBehaviour
 {
-    public enum MovingPoints
+    public enum PointsForMoving
     {
-        First = 0,
-        Second = 1
+        ToFirst = 0,
+        ToSecond = 1
     }
-    public enum LocalDirection
+    public enum LocalDirectionMovement
     {
         Vertical = 0,
         Horizontal = 1,
@@ -19,19 +19,22 @@ public class LocalMoveObstacle : MonoBehaviour
     }
 
     [Header("Points Parameters")]
-    public Transform FirstPoint;
-    public Transform SecondPoint;
+    [SerializeField] private Transform _firstPoint;
+    [SerializeField] private Transform _secondPoint;
 
     [Header("Obstacle Parameters")]
-    public float SpeedToLeft;
-    public float SpeedToRight;
+    [SerializeField] private float _speedToFirstPoint;
+    [SerializeField] private float _speedToSecondPoint;
 
-    public float StopTime;
+    [SerializeField] private float _delayOnPoint;
 
-    public MovingPoints CurrentPoint = MovingPoints.First;
-    public LocalDirection DirectionObstacle;
+    [SerializeField] private PointsForMoving CurrentPoint = PointsForMoving.ToFirst;
+    [SerializeField] private LocalDirectionMovement DirectionMovementObstacle;
 
     public Rigidbody2D ObstacleRig;
+
+    public Transform FirstPoint { get => _firstPoint; set => _firstPoint = value; }
+    public Transform SecondPoint { get => _secondPoint; set => _secondPoint = value; }
 
     private void Start()
     {
@@ -43,15 +46,15 @@ public class LocalMoveObstacle : MonoBehaviour
         float speedUpLevelModif = GameController.Instance.LevelController.CurrentLevel.SpeedLevel
             / GameController.Instance.LevelController.CurrentLevel.StartSpeedLevel;
        
-        if(DirectionObstacle == LocalDirection.Horizontal)
+        if(DirectionMovementObstacle == LocalDirectionMovement.Horizontal)
         {
             StartMoveObstacleHorizontal(speedUpLevelModif);
-        }else if(DirectionObstacle == LocalDirection.Vertical)
+        }else if(DirectionMovementObstacle == LocalDirectionMovement.Vertical)
         {
             StartMoveObstacleVertical(speedUpLevelModif);
-        }else if(DirectionObstacle == LocalDirection.Diagonal)
+        }else if(DirectionMovementObstacle == LocalDirectionMovement.Diagonal)
         {
-            StartMoveObstacleVertical(speedUpLevelModif);
+            StartMoveObstacleDiagonal(speedUpLevelModif);
         }        
     }
 
@@ -61,24 +64,24 @@ public class LocalMoveObstacle : MonoBehaviour
     }
     private IEnumerator MoveObstaclesHorizontal(float speedModif)
     {
-        if (FirstPoint != null && SecondPoint != null)
+        if (_firstPoint != null && _secondPoint != null)
         {
-            if (CurrentPoint == MovingPoints.First)
+            if (CurrentPoint == PointsForMoving.ToFirst)
             {
-                ObstacleRig.velocity = -transform.right * SpeedToLeft * speedModif;
-                if (transform.position.x < FirstPoint.position.x)
+                ObstacleRig.velocity = -transform.right * _speedToFirstPoint * speedModif;
+                if (transform.position.x < _firstPoint.position.x)
                 {
-                    CurrentPoint = MovingPoints.Second;
-                    yield return new WaitForSeconds(StopTime);
+                    CurrentPoint = PointsForMoving.ToSecond;
+                    yield return new WaitForSeconds(_delayOnPoint);
                 }
             }
             else
             {
-                ObstacleRig.velocity = transform.right * SpeedToRight * speedModif;
-                if (transform.position.x > SecondPoint.position.x)
+                ObstacleRig.velocity = transform.right * _speedToSecondPoint * speedModif;
+                if (transform.position.x > _secondPoint.position.x)
                 {
-                    CurrentPoint = MovingPoints.First;
-                    yield return new WaitForSeconds(StopTime);
+                    CurrentPoint = PointsForMoving.ToFirst;
+                    yield return new WaitForSeconds(_delayOnPoint);
                 }
             }
         }
@@ -90,26 +93,26 @@ public class LocalMoveObstacle : MonoBehaviour
 
     private IEnumerator MoveObstaclesVertical(float speedModif)
     {
-        if (FirstPoint != null && SecondPoint != null)
+        if (_firstPoint != null && _secondPoint != null)
         {
-            if (CurrentPoint == MovingPoints.First)
+            if (CurrentPoint == PointsForMoving.ToFirst)
             {
-                ObstacleRig.transform.position += transform.up * SpeedToLeft * speedModif * Time.deltaTime;
+                ObstacleRig.transform.position += transform.up * _speedToFirstPoint * speedModif * Time.deltaTime;
                 //ObstacleRig.velocity = new Vector2(SpeedToLeft * speedModif, ObstacleRig.velocity.y);
-                if (transform.position.y > SecondPoint.position.y)
+                if (transform.position.y > _secondPoint.position.y)
                 {
-                    CurrentPoint = MovingPoints.Second;
-                    yield return new WaitForSeconds(StopTime);
+                    CurrentPoint = PointsForMoving.ToSecond;
+                    yield return new WaitForSeconds(_delayOnPoint);
                 }
             }
             else
             {
-                ObstacleRig.transform.position -= transform.up * SpeedToRight * speedModif * Time.deltaTime;
+                ObstacleRig.transform.position -= transform.up * _speedToSecondPoint * speedModif * Time.deltaTime;
                 //ObstacleRig.velocity = new Vector2(SpeedToRight * speedModif, ObstacleRig.velocity.y);
-                if (transform.position.y < FirstPoint.position.y)
+                if (transform.position.y < _firstPoint.position.y)
                 {
-                    CurrentPoint = MovingPoints.First;
-                    yield return new WaitForSeconds(StopTime);
+                    CurrentPoint = PointsForMoving.ToFirst;
+                    yield return new WaitForSeconds(_delayOnPoint);
                 }
             }
         }
@@ -122,26 +125,33 @@ public class LocalMoveObstacle : MonoBehaviour
 
     private IEnumerator MoveObstaclesDiagonal(float speedModif)
     {
-        if (FirstPoint != null && SecondPoint != null)
+        if (_firstPoint != null && _secondPoint != null)
         {
-            if (CurrentPoint == MovingPoints.First)
+            Debug.Log("Start MoveObsDiag");
+            if (CurrentPoint == PointsForMoving.ToFirst)
             {
-                ObstacleRig.velocity = -transform.position * SpeedToLeft * speedModif;
-                //ObstacleRig.velocity = new Vector2(SpeedToLeft * speedModif, ObstacleRig.velocity.y);
-                if (transform.position == FirstPoint.position)
+                Debug.Log("Start FirstPoint");
+                Vector2 dir = _firstPoint.position - transform.position;
+                ObstacleRig.velocity = dir.normalized * _speedToFirstPoint * speedModif;
+                //Debug.Log(dir);
+                if (ObstacleRig.transform.position.x < _firstPoint.position.x && ObstacleRig.transform.position.y < _firstPoint.position.y)
                 {
-                    CurrentPoint = MovingPoints.Second;
-                    yield return new WaitForSeconds(StopTime);
+                    Debug.Log("End FirstPoint");
+                    CurrentPoint = PointsForMoving.ToSecond;
+                    yield return new WaitForSeconds(_delayOnPoint);
                 }
             }
             else
             {
-                ObstacleRig.velocity = transform.position * SpeedToRight * speedModif;
-                //ObstacleRig.velocity = new Vector2(SpeedToRight * speedModif, ObstacleRig.velocity.y);
-                if (transform.position == SecondPoint.position)
+                Debug.Log("Start SecondPoint");
+                Vector2 dirReturn = _secondPoint.position - transform.position;
+                ObstacleRig.velocity = dirReturn.normalized * _speedToSecondPoint * speedModif;
+                //Debug.Log(dirReturn);
+                if (ObstacleRig.transform.position.x > _secondPoint.position.x && ObstacleRig.transform.position.y > _secondPoint.position.y)
                 {
-                    CurrentPoint = MovingPoints.First;
-                    yield return new WaitForSeconds(StopTime);
+                    Debug.Log("End SecondPoint");
+                    CurrentPoint = PointsForMoving.ToFirst;
+                    yield return new WaitForSeconds(_delayOnPoint);
                 }
             }
         }

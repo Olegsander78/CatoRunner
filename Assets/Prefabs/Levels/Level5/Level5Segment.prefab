@@ -1889,7 +1889,7 @@ MonoBehaviour:
   APosition: {fileID: 239275614895093470}
   BPosition: {fileID: 9142799162476199250}
   PrefabObstacles:
-  - {fileID: 2820093154013745301, guid: f2b02c945f4b3274b83942b8be21bd8f, type: 3}
+  - {fileID: 1623819365595211834, guid: 6fab84a68b96d7e47983047fa41fadcc, type: 3}
   _distanceBetweenMovingObstacles: 2.5
 --- !u!1 &3519002458215239212
 GameObject:
@@ -2024,7 +2024,7 @@ MonoBehaviour:
   APosition: {fileID: 2819969526914232997}
   BPosition: {fileID: 8018080002684165194}
   PrefabObstacles:
-  - {fileID: 2820093154013745301, guid: f2b02c945f4b3274b83942b8be21bd8f, type: 3}
+  - {fileID: 1623819365595211834, guid: 6fab84a68b96d7e47983047fa41fadcc, type: 3}
   _distanceBetweenMovingObstacles: 2.5
 --- !u!1 &3674690243997133607
 GameObject:
@@ -2596,7 +2596,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4887899390916140862}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.79, y: 0, z: 0}
+  m_LocalPosition: {x: -6.79, y: 5.34, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2092142602144253198}
@@ -4235,7 +4235,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7697875864214742380}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.15, y: 0, z: 0}
+  m_LocalPosition: {x: -5.15, y: 2.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4479466738175303340}

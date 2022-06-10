@@ -263,13 +263,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79fc7e3030c81346b84489fa0040c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FirstPoint: {fileID: 0}
-  SecondPoint: {fileID: 0}
-  SpeedToLeft: 5
-  SpeedToRight: 0.4
-  StopTime: 0.5
+  _firstPoint: {fileID: 4812415973937918313}
+  _secondPoint: {fileID: 2432630942494486776}
+  _speedToFirstPoint: 5
+  _speedToSecondPoint: 0.3
+  _delayOnPoint: 1
   CurrentPoint: 0
-  DirectionObstacle: 1
+  DirectionMovementObstacle: 1
   ObstacleRig: {fileID: 3021526511790366915}
 --- !u!114 &8255713888680389319
 MonoBehaviour:
