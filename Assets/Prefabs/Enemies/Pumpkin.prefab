@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _healthEnemy: 1
-  _scorePerEnemy: 150
+  _scorePerEnemy: 100
   _IsUnstomtable: 0
   _screamEnemyOnDamage: 1
   _screamEnemyOnDie: 2

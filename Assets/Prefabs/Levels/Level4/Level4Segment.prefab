@@ -81,6 +81,7 @@ MonoBehaviour:
   PrefabObstacles:
   - {fileID: 7905365686087683054, guid: ba2429ecde35a2e4d827dda07ea5ea14, type: 3}
   - {fileID: 8025255177583666601, guid: 990af4baaa2386044a995375744236f2, type: 3}
+  _distanceBetweenMovingObstacles: 2
 --- !u!1 &633644757222659238
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,6 +294,7 @@ MonoBehaviour:
   PrefabObstacles:
   - {fileID: 7905365686087683054, guid: ba2429ecde35a2e4d827dda07ea5ea14, type: 3}
   - {fileID: 8025255177583666601, guid: 990af4baaa2386044a995375744236f2, type: 3}
+  _distanceBetweenMovingObstacles: 2
 --- !u!1 &784248475346022829
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,6 +520,7 @@ MonoBehaviour:
   PrefabObstacles:
   - {fileID: 7905365686087683054, guid: ba2429ecde35a2e4d827dda07ea5ea14, type: 3}
   - {fileID: 8025255177583666601, guid: 990af4baaa2386044a995375744236f2, type: 3}
+  _distanceBetweenMovingObstacles: 2
 --- !u!1 &1432816110995308724
 GameObject:
   m_ObjectHideFlags: 0
@@ -1872,6 +1875,7 @@ MonoBehaviour:
   PrefabObstacles:
   - {fileID: 7905365686087683054, guid: ba2429ecde35a2e4d827dda07ea5ea14, type: 3}
   - {fileID: 8025255177583666601, guid: 990af4baaa2386044a995375744236f2, type: 3}
+  _distanceBetweenMovingObstacles: 2
 --- !u!1 &5940804637506327989
 GameObject:
   m_ObjectHideFlags: 0
@@ -3934,6 +3938,7 @@ MonoBehaviour:
   PrefabObstacles:
   - {fileID: 7905365686087683054, guid: ba2429ecde35a2e4d827dda07ea5ea14, type: 3}
   - {fileID: 8025255177583666601, guid: 990af4baaa2386044a995375744236f2, type: 3}
+  _distanceBetweenMovingObstacles: 2
 --- !u!1 &7715731754494625319
 GameObject:
   m_ObjectHideFlags: 0
@@ -4010,7 +4015,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &534600491377587773
 Transform:
   m_ObjectHideFlags: 0
@@ -4169,6 +4174,7 @@ MonoBehaviour:
   PrefabObstacles:
   - {fileID: 7905365686087683054, guid: ba2429ecde35a2e4d827dda07ea5ea14, type: 3}
   - {fileID: 8025255177583666601, guid: 990af4baaa2386044a995375744236f2, type: 3}
+  _distanceBetweenMovingObstacles: 2
 --- !u!1 &7947550463719505502
 GameObject:
   m_ObjectHideFlags: 0
@@ -4393,7 +4399,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6641784054358665286
 Transform:
   m_ObjectHideFlags: 0
@@ -4722,11 +4728,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7802281320522712443, guid: 635a88460ff4f2742b05e6c584070b40, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.71
+      value: -2.37
       objectReference: {fileID: 0}
     - target: {fileID: 7802281320522712443, guid: 635a88460ff4f2742b05e6c584070b40, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.02
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7802281320522712443, guid: 635a88460ff4f2742b05e6c584070b40, type: 3}
       propertyPath: m_LocalPosition.z
