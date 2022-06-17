@@ -198,10 +198,10 @@ MonoBehaviour:
     Locked: 1
   - LevelNumber: 4
     Completed: 0
-    Locked: 0
+    Locked: 1
   - LevelNumber: 5
     Completed: 0
-    Locked: 0
+    Locked: 1
   _currentLevel: {fileID: 0}
 --- !u!114 &376146647
 MonoBehaviour:

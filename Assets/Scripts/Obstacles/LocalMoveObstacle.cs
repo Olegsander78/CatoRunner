@@ -48,21 +48,21 @@ public class LocalMoveObstacle : MonoBehaviour
        
         if(DirectionMovementObstacle == LocalDirectionMovement.Horizontal)
         {
-            StartMoveObstacleHorizontal(speedUpLevelModif);
+            MoveObstacleHorizontal(speedUpLevelModif);
         }else if(DirectionMovementObstacle == LocalDirectionMovement.Vertical)
         {
-            StartMoveObstacleVertical(speedUpLevelModif);
+            MoveObstacleVertical(speedUpLevelModif);
         }else if(DirectionMovementObstacle == LocalDirectionMovement.Diagonal)
         {
-            StartMoveObstacleDiagonal(speedUpLevelModif);
+            MoveObstacleDiagonal(speedUpLevelModif);
         }        
     }
 
-    public void StartMoveObstacleHorizontal(float speedModif)
+    public void MoveObstacleHorizontal(float speedModif)
     {
-        StartCoroutine(MoveObstaclesHorizontal(speedModif));
+        StartCoroutine(MoveObstaclesHorizontalRoutine(speedModif));
     }
-    private IEnumerator MoveObstaclesHorizontal(float speedModif)
+    private IEnumerator MoveObstaclesHorizontalRoutine(float speedModif)
     {
         if (_firstPoint != null && _secondPoint != null)
         {
@@ -86,19 +86,18 @@ public class LocalMoveObstacle : MonoBehaviour
             }
         }
     }
-    public void StartMoveObstacleVertical(float speedModif)
+    public void MoveObstacleVertical(float speedModif)
     {
-        StartCoroutine(MoveObstaclesVertical(speedModif));
+        StartCoroutine(MoveObstaclesVerticalRoutine(speedModif));
     }
 
-    private IEnumerator MoveObstaclesVertical(float speedModif)
+    private IEnumerator MoveObstaclesVerticalRoutine(float speedModif)
     {
         if (_firstPoint != null && _secondPoint != null)
         {
             if (CurrentPoint == PointsForMoving.ToFirst)
             {
                 ObstacleRig.transform.position += transform.up * _speedToFirstPoint * speedModif * Time.deltaTime;
-                //ObstacleRig.velocity = new Vector2(SpeedToLeft * speedModif, ObstacleRig.velocity.y);
                 if (transform.position.y > _secondPoint.position.y)
                 {
                     CurrentPoint = PointsForMoving.ToSecond;
@@ -108,7 +107,6 @@ public class LocalMoveObstacle : MonoBehaviour
             else
             {
                 ObstacleRig.transform.position -= transform.up * _speedToSecondPoint * speedModif * Time.deltaTime;
-                //ObstacleRig.velocity = new Vector2(SpeedToRight * speedModif, ObstacleRig.velocity.y);
                 if (transform.position.y < _firstPoint.position.y)
                 {
                     CurrentPoint = PointsForMoving.ToFirst;
@@ -118,12 +116,13 @@ public class LocalMoveObstacle : MonoBehaviour
         }
     }
 
-    public void StartMoveObstacleDiagonal(float speedModif)
+
+    public void MoveObstacleDiagonal(float speedModif)
     {
-        StartCoroutine(MoveObstaclesDiagonal(speedModif));
+        StartCoroutine(MoveObstaclesDiagonalRoutine(speedModif));
     }
 
-    private IEnumerator MoveObstaclesDiagonal(float speedModif)
+    private IEnumerator MoveObstaclesDiagonalRoutine(float speedModif)
     {
         if (_firstPoint != null && _secondPoint != null)
         {

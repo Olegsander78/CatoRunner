@@ -12,21 +12,22 @@ public class PlayerProfile : MonoBehaviour
     private void Start()
     {
         DontDestroyOnLoad(this);
-        Debug.Log("BeforeStartLoad - " + GameController.Instance.PlayerProfile.Profile.LastUnlockLevel);
-        Load();
-        Debug.Log("AfterStartLoad - " + GameController.Instance.PlayerProfile.Profile.LastUnlockLevel);
+        Debug.Log("On Start PlayerProfile BeforeStartLoad - " + GameController.Instance.PlayerProfile.Profile.LastUnlockLevel);
+        _playerProfile = Load();
+        Debug.Log("On Start PlayerProfile AfterStartLoad - " + GameController.Instance.PlayerProfile.Profile.LastUnlockLevel);
     }
     private void OnDestroy()
     {
+        //?
         Save();
     }
     public void Save()
     {
-        Debug.Log("BeforeStartSave - " + Profile.LastUnlockLevel);
+        Debug.Log("In Save BeforeStartSave - " + Profile.LastUnlockLevel);
         System.IO.MemoryStream stream = new System.IO.MemoryStream();
         ps.Serialize(stream, Profile);
         SaveData("profile.save", stream);
-        Debug.Log("AfterStartSave - " + Profile.LastUnlockLevel);
+        Debug.Log("In Save AfterStartSave - " + Profile.LastUnlockLevel);
         Debug.Log(new System.IO.FileInfo("profile.save").FullName);
     }
 
@@ -61,13 +62,14 @@ public class PlayerProfile : MonoBehaviour
         var saveGameFileName = "profile.save";
         var fs = LoadFileStream(saveGameFileName);
 
-        Debug.Log("AfterStartLoad - " + Profile.LastUnlockLevel);
+        Debug.Log("In Load BeforeStartLoad - " + Profile.LastUnlockLevel);
         Debug.Log(new System.IO.FileInfo(saveGameFileName).FullName);
 
         try
         {
             profile = (profile.PlayerProfile)ps.Deserialize(fs, profile, typeof(profile.PlayerProfile));
-            fs.Close();
+            Debug.Log("In Load AfterStartLoad - " + profile.LastUnlockLevel);
+            fs.Close();            
         }
         catch (System.Exception e)
         {
@@ -77,7 +79,7 @@ public class PlayerProfile : MonoBehaviour
             profile = new profile.PlayerProfile();
 
             Debug.Log("Error loading!");
-        }
+        }        
         return profile;
     }
     private System.IO.FileStream LoadFileStream(string fileName)

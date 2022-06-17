@@ -62,22 +62,25 @@ public class SelectLevelsScreen : Screen
     }
 
     private void OnEnable()
-    {
-        //GameController.Instance.LevelController.LoadUILevelsNote();
-
-        //for (int i = 1; i < GameController.Instance.LevelController.LevelsNoteList.Count; i++)
-        //{
-        //    if (i <= GameController.Instance.PlayerProfile.Profile.LastUnlockLevel)
-        //    {
-        //        GameController.Instance.LevelController.LevelsNoteList[i].Locked = false;
-        //        GameController.Instance.LevelController.LevelsNoteList[i - 1].Completed = true;
-        //    }
-        //}
+    {        
         UpdateUISelectLevels();
     }
 
     public void UpdateUISelectLevels()
     {
+        if (GameController.Instance.PlayerProfile.Profile != null)
+        {
+
+            for (int i = 1; i < GameController.Instance.LevelController.LevelsNoteList.Count; i++)
+            {
+                if (i <= GameController.Instance.PlayerProfile.Profile.LastUnlockLevel)
+                {
+                    GameController.Instance.LevelController.LevelsNoteList[i].Locked = false;
+                    GameController.Instance.LevelController.LevelsNoteList[i - 1].Completed = true;
+                }
+            }
+        }
+
         for (int i = 1; i < UILevelsList.Count; i++)
         {
             if (UILevelsList[i].LevelUINumber == GameController.Instance.LevelController.LevelsNoteList[i].LevelNumber)

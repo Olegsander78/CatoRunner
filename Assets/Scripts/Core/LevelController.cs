@@ -103,7 +103,7 @@ public class LevelController : MonoBehaviour
     IEnumerator LoadLevelRoutine (int level)
     {
         AsyncOperation asyncProc = SceneManager.LoadSceneAsync(level);
-        var loadScreen= GameController.Instance.ScreenController.PushScreen<LoadScreen>();
+        var loadScreen = GameController.Instance.ScreenController.PushScreen<LoadScreen>();
         while (!asyncProc.isDone)
         {
             loadScreen.SetProgress(asyncProc.progress);
