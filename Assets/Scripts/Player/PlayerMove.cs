@@ -16,21 +16,38 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private Transform _groundPoint;
     [SerializeField] private LayerMask _whatIsGround;
 
+    private float _nextTimeJump;
+
     private void Start()
     {
         Rig = GetComponentInParent<Rigidbody2D>();
-    }    
+    }
 
-    private void Update()
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Space))
+    //    {
+    //        if (Grounded() || _isGrounded)
+    //        {
+    //            Jump(JumpForce);
+
+    //            PlayerAnimator.SetTrigger("Jump");
+    //        }
+    //    }
+    //}
+
+    public void TryJump()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (Grounded() || _isGrounded)
-            {
-                Jump(JumpForce);
+        Debug.Log("Start jump");
 
-                PlayerAnimator.SetTrigger("Jump");
-            }
+        //if ((Grounded() || _isGrounded)&& Time.time > _nextTimeJump)
+        if ((Grounded() || _isGrounded))
+        {
+            Debug.Log("Jump");
+            Jump(JumpForce);
+
+            PlayerAnimator.SetTrigger("Jump");
+            _nextTimeJump = Time.time + 0.2f;
         }
     }
 
