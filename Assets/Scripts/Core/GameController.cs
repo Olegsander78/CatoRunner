@@ -12,7 +12,10 @@ public class GameController : MonoBehaviour
     [SerializeField] private ScreenController _screenController;
     [SerializeField] private SoundController _soundController;
     [SerializeField] private PlayerProfile _playerProfile;
+    
+    [SerializeField] private AdManager _adManager;
 
+    public AdManager AdManager => _adManager;
     public PlayerProfile PlayerProfile => _playerProfile;
 
     private EventBus _eventBus;

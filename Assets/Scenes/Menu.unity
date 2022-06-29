@@ -152,6 +152,7 @@ GameObject:
   - component: {fileID: 376146646}
   - component: {fileID: 376146645}
   - component: {fileID: 376146649}
+  - component: {fileID: 376146650}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -174,6 +175,7 @@ MonoBehaviour:
   MaxHealth: 5
   Score: 0
   HUDScreen: {fileID: 1877972702}
+  PlayerCharacter: {fileID: 9004401872830432135, guid: 58dd72ef33f4bdf40bc4eee290cb2d43, type: 3}
 --- !u!114 &376146646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,6 +222,7 @@ MonoBehaviour:
   _screenController: {fileID: 1228660431}
   _soundController: {fileID: 1661511790}
   _playerProfile: {fileID: 376146649}
+  _adManager: {fileID: 376146650}
 --- !u!4 &376146648
 Transform:
   m_ObjectHideFlags: 0
@@ -244,6 +247,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 737b77ad2e437734d97a5ea43b8fceab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &376146650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376146644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2074938e127e32488f6695855d9603b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &423028335

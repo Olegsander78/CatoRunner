@@ -195,7 +195,7 @@ public class Level : MonoBehaviour
         }
     }
     
-    private void CheckFinishedQuest()
+    public void CheckFinishedQuest()
     {
         if (_quest.IsQuestFinished())
         {

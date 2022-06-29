@@ -9,6 +9,8 @@ public class PlayerSession : MonoBehaviour
  
     public HUDScreen HUDScreen;
 
+    public PlayerCharacter PlayerCharacter;
+
     private void Awake()
     {
         DontDestroyOnLoad(this);

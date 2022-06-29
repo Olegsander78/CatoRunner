@@ -5,10 +5,13 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class HUDScreen : Screen
-{
+{    
     [SerializeField] private Button _pauseBtn;
     [SerializeField] private Button _musicBtn;
     [SerializeField] private Button _soundBtn;
+
+    [SerializeField] private Button _adsHPBtn;
+    [SerializeField] private Button _adsScoreBtn;
 
     [SerializeField] private Sprite _musicOnImg;
     [SerializeField] private Sprite _musicOffImg;
@@ -23,6 +26,9 @@ public class HUDScreen : Screen
         _pauseBtn.onClick.AddListener(ClickPause);
         _musicBtn.onClick.AddListener(OnMusicMute);
         _soundBtn.onClick.AddListener(OnSoundMute);
+
+        _adsHPBtn.onClick.AddListener(OnClickAdHPBtn);
+        _adsScoreBtn.onClick.AddListener(OnClickAdScoreBtn);
     }
 
     public void ClickPause()
@@ -62,14 +68,24 @@ public class HUDScreen : Screen
         }
     }
 
+    public void OnClickAdHPBtn()
+    {
+        GameController.Instance.AdManager.PlayAdForHP();
+    }
+
+    public void OnClickAdScoreBtn()
+    {
+        GameController.Instance.AdManager.PlayAdForScore();
+    }
+
     public void UpdateScoreText(int currentScore)
     {
-        ScoreText.text = " Score: " + currentScore.ToString();
+        ScoreText.text = " " + currentScore.ToString();
     }
 
     public void UpdateHealthView(int playerHealth)
     {
-        PlayerHealthText.text = " Health: " + playerHealth.ToString();
+        PlayerHealthText.text = " " + playerHealth.ToString();
     }
 
 }
