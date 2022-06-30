@@ -42,7 +42,7 @@ public class AdManager : MonoBehaviour, IUnityAdsListener
     }
     public void OnUnityAdsDidError(string message)
     {
-
+        Time.timeScale = 1f;
     }
     public void OnUnityAdsDidFinish(string placementId, ShowResult showResult)
     {

@@ -497,7 +497,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.2
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1685,10 +1685,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainMenuScreen
       objectReference: {fileID: 0}
-    - target: {fileID: 5835355994751689994, guid: 0b2f8fa6204b53e4787efb9baeae784b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5835355994751689997, guid: 0b2f8fa6204b53e4787efb9baeae784b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1814,6 +1810,70 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 483284938}
     m_Modifications:
+    - target: {fileID: 338186193009542793, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 338186193009542793, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 338186193009542793, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 338186193009542793, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1036551935092474851, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1036551935092474851, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1036551935092474851, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1036551935092474851, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5985570876196219618, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5985570876196219618, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5985570876196219618, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5985570876196219618, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6199981335839827162, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6199981335839827162, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6199981335839827162, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6199981335839827162, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6199981336895305480, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1901,6 +1961,22 @@ PrefabInstance:
     - target: {fileID: 6199981336895305481, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
       propertyPath: m_Name
       value: HUDscreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 6199981337324226488, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6199981337324226488, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6199981337324226488, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6199981337324226488, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 230c1148ca182314dabe9c4a30e91630, type: 3}
