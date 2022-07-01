@@ -23,11 +23,11 @@ public class PlayerProfile : MonoBehaviour
     }
     public void Save()
     {
-        Debug.Log("In Save BeforeStartSave - " + Profile.LastUnlockLevel);
+        Debug.Log("In Save BeforeStartSave - " + _playerProfile.LastUnlockLevel);
         System.IO.MemoryStream stream = new System.IO.MemoryStream();
-        ps.Serialize(stream, Profile);
+        ps.Serialize(stream, _playerProfile);
         SaveData("profile.save", stream);
-        Debug.Log("In Save AfterStartSave - " + Profile.LastUnlockLevel);
+        Debug.Log("In Save AfterStartSave - " + _playerProfile.LastUnlockLevel);
         Debug.Log(new System.IO.FileInfo("profile.save").FullName);
     }
 
@@ -62,13 +62,13 @@ public class PlayerProfile : MonoBehaviour
         var saveGameFileName = "profile.save";
         var fs = LoadFileStream(saveGameFileName);
 
-        Debug.Log("In Load BeforeStartLoad - " + Profile.LastUnlockLevel);
+        Debug.Log("In Load BeforeStartLoad - " + _playerProfile.LastUnlockLevel);
         Debug.Log(new System.IO.FileInfo(saveGameFileName).FullName);
 
         try
         {
             profile = (profile.PlayerProfile)ps.Deserialize(fs, profile, typeof(profile.PlayerProfile));
-            Debug.Log("In Load AfterStartLoad - " + profile.LastUnlockLevel);
+            Debug.Log("In Load AfterStartLoad - " + _playerProfile.LastUnlockLevel);
             fs.Close();            
         }
         catch (System.Exception e)

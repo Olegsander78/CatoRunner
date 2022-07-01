@@ -31,6 +31,7 @@ public class MainMenuScreen : Screen
     public void QuitGame()
     {
         GameController.Instance.SoundController.PlaySound(SFX.SFXTypeUI.ClickButton);
+        //GameController.Instance.PlayerProfile.Save();
         Application.Quit();
     }
 }

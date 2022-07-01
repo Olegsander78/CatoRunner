@@ -7,6 +7,10 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float _jumpForce;    
     public float JumpForce => _jumpForce;
 
+    [SerializeField] private float _jumpForceForTuch;
+
+    public float JumpForceForTuch => _jumpForceForTuch;
+
     public Rigidbody2D Rig;
 
     public Animator PlayerAnimator;
@@ -36,7 +40,7 @@ public class PlayerMove : MonoBehaviour
     //    }
     //}
 
-    public void TryJump()
+    public void TryJump(float jumpForce)
     {
         Debug.Log("Start jump");
 
@@ -44,7 +48,7 @@ public class PlayerMove : MonoBehaviour
         if ((Grounded() || _isGrounded))
         {
             Debug.Log("Jump");
-            Jump(JumpForce);
+            Jump(jumpForce);
 
             PlayerAnimator.SetTrigger("Jump");
             _nextTimeJump = Time.time + 0.2f;

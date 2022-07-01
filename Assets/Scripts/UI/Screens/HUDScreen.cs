@@ -88,4 +88,13 @@ public class HUDScreen : Screen
         PlayerHealthText.text = " " + playerHealth.ToString();
     }
 
+    private void OnDestroy()
+    {
+        _pauseBtn.onClick.RemoveAllListeners();
+        _musicBtn.onClick.RemoveAllListeners();
+        _soundBtn.onClick.RemoveAllListeners();
+
+        _adsHPBtn.onClick.RemoveAllListeners();
+        _adsScoreBtn.onClick.RemoveAllListeners();
+    }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,7 +18,7 @@ public class AdManager : MonoBehaviour, IUnityAdsListener
 #endif
 
     private string placementIdForHP = "clickReward";
-    private string placementIdForScores = "clickReward";
+    private string placementIdForScores = "Rewarded_Android";
 
     private void Awake()
     {
@@ -30,7 +31,7 @@ public class AdManager : MonoBehaviour, IUnityAdsListener
     }
 
     public void PlayAdForHP()
-    {
+    {        
         Time.timeScale = 0f;
         Advertisement.Show(placementIdForHP);
     }
@@ -46,20 +47,22 @@ public class AdManager : MonoBehaviour, IUnityAdsListener
     }
     public void OnUnityAdsDidFinish(string placementId, ShowResult showResult)
     {
-        if (showResult == ShowResult.Finished)
+        if (placementId == "clickReward")
         {
-            if (placementId == placementIdForHP)
+            if (showResult == ShowResult.Finished)
             {
                 GameController.Instance.LevelController.CurrentLevel.PlayerCharacter.GetComponent<PlayerHealth>().AddHealth(AMOUNT_HP_FOR_AD);
             }
-            if (placementId == placementIdForScores)
+        }else if (placementId == "Rewarded_Android")
+        {
+            if (showResult == ShowResult.Finished)
             {
                 GameController.Instance.PlayerSession.AddScore(AMOUNT_SCORE_FOR_AD);
                 GameController.Instance.EventBus.OnCoinCollected(AMOUNT_SCORE_FOR_AD);
             }
-
-            Time.timeScale = 1f;
         }
+
+            Time.timeScale = 1f;       
     }
 
     public void OnUnityAdsDidStart(string placementId)
@@ -68,8 +71,8 @@ public class AdManager : MonoBehaviour, IUnityAdsListener
     }
     public void OnUnityAdsReady(string placementId)
     {
-        Advertisement.Banner.SetPosition(BannerPosition.BOTTOM_LEFT);
-        Advertisement.Banner.Show("banner");
+        Advertisement.Banner.SetPosition(BannerPosition.TOP_LEFT);
+        Advertisement.Banner.Show("Banner_Android");
     }
 }
 
