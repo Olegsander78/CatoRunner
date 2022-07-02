@@ -261,6 +261,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2074938e127e32488f6695855d9603b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _androidGameId: 4818957
+  _iOSGameId: 4818956
+  _testMode: 0
 --- !u!1 &423028335
 GameObject:
   m_ObjectHideFlags: 0
