@@ -30,13 +30,7 @@ public class AdManager : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowList
         InitializeAds();
         DontDestroyOnLoad(this);
     }
-    //void Start()
-    //{
-    //    Advertisement.AddListener(this);
-    //    Advertisement.Initialize(gameId, false, this);
-    //}
 
-    
     public void InitializeAds()
     {
         _gameId = (Application.platform == RuntimePlatform.IPhonePlayer)
@@ -72,40 +66,6 @@ public class AdManager : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowList
         Time.timeScale = 0f;
         Advertisement.Show(_placementIdForScores, this);
     }
-
-    //public void OnUnityAdsDidError(string message)
-    //{
-    //    Time.timeScale = 1f;
-    //}
-    //public void OnUnityAdsDidFinish(string placementId, ShowResult showResult)
-    //{
-    //    if (placementId == "clickReward")
-    //    {
-    //        if (showResult == ShowResult.Finished)
-    //        {
-    //            GameController.Instance.LevelController.CurrentLevel.PlayerCharacter.GetComponent<PlayerHealth>().AddHealth(AMOUNT_HP_FOR_AD);
-    //        }
-    //    }else if (placementId == "Rewarded_Android")
-    //    {
-    //        if (showResult == ShowResult.Finished)
-    //        {
-    //            GameController.Instance.PlayerSession.AddScore(AMOUNT_SCORE_FOR_AD);
-    //            GameController.Instance.EventBus.OnCoinCollected(AMOUNT_SCORE_FOR_AD);
-    //        }
-    //    }
-
-    //        Time.timeScale = 1f;       
-    //}
-
-    //public void OnUnityAdsDidStart(string placementId)
-    //{
-
-    //}
-    //public void OnUnityAdsReady(string placementId)
-    //{
-    //    Advertisement.Banner.SetPosition(BannerPosition.TOP_LEFT);
-    //    Advertisement.Banner.Show("Banner_Android");
-    //}
 
     public void OnUnityAdsAdLoaded(string placementId)
     {
@@ -143,35 +103,13 @@ public class AdManager : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowList
             Advertisement.Load(_placementIdForScores, this);
         }
 
-        //if (placementId.Equals(_placementIdForHP))
-        //{
-        //    if (showCompletionState.Equals(UnityAdsCompletionState.COMPLETED))
-        //    {
-        //        Debug.Log("Unity Ads Rewarded HP Ad Completed");
-        //        GameController.Instance.LevelController.CurrentLevel.PlayerCharacter.GetComponent<PlayerHealth>().AddHealth(AMOUNT_HP_FOR_AD);
-
-        //        Advertisement.Load(_placementIdForHP, this);
-        //    }
-        //}
-
-        //if (placementId.Equals(_placementIdForScores))
-        //{
-        //    if (showCompletionState.Equals(UnityAdsCompletionState.COMPLETED))
-        //    {
-        //        Debug.Log("Unity Ads Rewarded Score Ad Completed");
-        //        GameController.Instance.PlayerSession.AddScore(AMOUNT_SCORE_FOR_AD);
-        //        GameController.Instance.EventBus.OnCoinCollected(AMOUNT_SCORE_FOR_AD);
-
-        //        Advertisement.Load(_placementIdForScores, this);
-        //    }
-        //}
-
         Time.timeScale = 1f;
     }
 
     public void OnInitializationComplete()
     {
         Debug.Log("Unity Ads initialization complete.");
+
         LoadAd();
     }
 
@@ -181,13 +119,7 @@ public class AdManager : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowList
     }
 
 
-    public void OnUnityAdsShowStart(string placementId)
-    {
+    public void OnUnityAdsShowStart(string placementId) { }  
 
-    }
-
-    public void OnUnityAdsShowClick(string placementId)
-    {
-
-    }
+    public void OnUnityAdsShowClick(string placementId) { }
 }

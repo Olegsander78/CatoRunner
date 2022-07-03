@@ -27,19 +27,6 @@ public class PlayerMove : MonoBehaviour
         Rig = GetComponentInParent<Rigidbody2D>();
     }
 
-    //private void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.Space))
-    //    {
-    //        if (Grounded() || _isGrounded)
-    //        {
-    //            Jump(JumpForce);
-
-    //            PlayerAnimator.SetTrigger("Jump");
-    //        }
-    //    }
-    //}
-
     public void TryJump(float jumpForce)
     {
         Debug.Log("Start jump");

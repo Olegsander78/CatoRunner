@@ -71,15 +71,11 @@ public class HUDScreen : Screen
     public void OnClickAdHPBtn()
     {        
         GameController.Instance.AdManager.PlayAdForHP();
-        //_adsHPBtn.onClick.RemoveAllListeners();
-        //Debug.Log("All adsHP Listeners Removed");
     }
 
     public void OnClickAdScoreBtn()
     {
         GameController.Instance.AdManager.PlayAdForScore();
-        //_adsScoreBtn.onClick.RemoveAllListeners();
-        //Debug.Log("All adsScore Listeners Removed");
     }
 
     public void UpdateScoreText(int currentScore)
