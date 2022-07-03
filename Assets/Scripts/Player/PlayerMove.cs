@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,6 +23,8 @@ public class PlayerMove : MonoBehaviour
 
     private float _nextTimeJump;
 
+    public Action OnPlayerJump;
+
     private void Start()
     {
         Rig = GetComponentInParent<Rigidbody2D>();
@@ -45,7 +48,8 @@ public class PlayerMove : MonoBehaviour
     public void Jump(float jumpForce)
     {        
         Rig.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-        GameController.Instance.SoundController.PlaySound(SFX.SFXTypeEvents.JumpPlayer);
+        OnPlayerJump?.Invoke();
+        //GameController.Instance.SoundController.PlaySound(SFX.SFXTypeEvents.JumpPlayer);
     }
 
     private bool Grounded()

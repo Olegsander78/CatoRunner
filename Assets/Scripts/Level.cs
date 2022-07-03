@@ -93,6 +93,9 @@ public class Level : MonoBehaviour
         _quest.BeginQuest();
         GameController.Instance.SoundController.StopBGMusic();
         GameController.Instance.SoundController.PlayBGMusic(GameController.Instance.LevelController.CurrentLevel);
+
+        //PlayerCharacter.PlayerMove.OnPlayerJump += () => { GameController.Instance.SoundController.PlaySound(SFX.SFXTypeEvents.JumpPlayer); };
+        PlayerCharacter.PlayerMove.OnPlayerJump += PlayJumpSound;
     }
 
     private void InitParalaxLayers()
@@ -206,5 +209,15 @@ public class Level : MonoBehaviour
             GameController.Instance.SoundController.PlaySound(SFX.SFXTypeEvents.WinLevel);
             GameController.Instance.LevelController.CompleteLevel(GameController.Instance.LevelController.CurrentLevel);
         }
+    }
+
+    public void PlayJumpSound()
+    {
+        GameController.Instance.SoundController.PlaySound(SFX.SFXTypeEvents.JumpPlayer);
+    }
+    private void OnDestroy()
+    {
+        if (_playerCharacter)
+            PlayerCharacter.PlayerMove.OnPlayerJump -= PlayJumpSound;
     }
 }

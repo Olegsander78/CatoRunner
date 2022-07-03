@@ -33,10 +33,10 @@ public class PlayerController : MonoBehaviour, IPointerDownHandler
             _playerMove.TryJump(_playerMove.JumpForceForTuch);
         }
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            Debug.Log("Mouse");
-            _playerMove.TryJump(_playerMove.JumpForce);
-        }
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    Debug.Log("Mouse");
+        //    _playerMove.TryJump(_playerMove.JumpForce);
+        //}
     }
 }

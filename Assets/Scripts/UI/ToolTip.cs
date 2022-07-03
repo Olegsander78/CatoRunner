@@ -18,5 +18,10 @@ public class ToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public void OnPointerEnter(PointerEventData eventData) => View.text = TextView;
 
     public void OnPointerExit(PointerEventData eventData) => View.text = "";
+
+    private void OnDisable()
+    {
+        View.text = "";
+    }
 }
 
