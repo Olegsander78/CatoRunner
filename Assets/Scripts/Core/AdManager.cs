@@ -23,7 +23,7 @@ public class AdManager : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowList
 
     private string _placementIdForHP = "clickReward";
     private string _placementIdForScores = "Rewarded_Android";
-    private string _placementIdBanner = "Banner_Android";
+    //private string _placementIdBanner = "Banner_Android";
 
     private void Awake()
     {
@@ -41,16 +41,19 @@ public class AdManager : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowList
 
     public void LoadAd()
     {
-        Advertisement.Banner.SetPosition(BannerPosition.BOTTOM_CENTER);
-        Advertisement.Banner.Load(_placementIdBanner);
-        Debug.Log("Loading Ad: " + _placementIdBanner);        
-        Advertisement.Banner.Show(_placementIdBanner);
-
         Advertisement.Load(_placementIdForHP,this);
         Debug.Log("Loading Ad: " + _placementIdForHP);
         Advertisement.Load(_placementIdForScores,this);
         Debug.Log("Loading Ad: " + _placementIdForScores);
     }
+
+    //public void LoadBanner()
+    //{
+    //    Advertisement.Banner.SetPosition(BannerPosition.TOP_LEFT);
+    //    Advertisement.Banner.Load(_placementIdBanner);
+    //    Debug.Log("Loading Ad: " + _placementIdBanner);
+    //    Advertisement.Banner.Show(_placementIdBanner);
+    //}
          
 
     public void PlayAdForHP()
@@ -111,6 +114,8 @@ public class AdManager : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowList
         Debug.Log("Unity Ads initialization complete.");
 
         LoadAd();
+        //LoadBanner();
+
     }
 
     public void OnInitializationFailed(UnityAdsInitializationError error, string message)
