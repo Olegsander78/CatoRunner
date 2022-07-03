@@ -63,7 +63,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _jumpForce: 10
-  _jumpForceForTuch: 0.001
+  _jumpForceForTuch: 10
   Rig: {fileID: 9148902242600683023}
   PlayerAnimator: {fileID: 9148902241034824952}
   _isGrounded: 0
