@@ -26,12 +26,12 @@ public class LevelController : MonoBehaviour
     [SerializeField] private Level _currentLevel;
     public Level CurrentLevel => _currentLevel;
 
-    private void Start()
-    {
-#if UNITY_ANDROID
-        GameController.Instance.PlayerProfile.Profile.LastUnlockLevel = LoadWithPlayerPref();
-#endif
-    }
+//    private void Start()
+//    {
+//#if UNITY_ANDROID
+//        GameController.Instance.PlayerProfile.Profile.LastUnlockLevel = LoadWithPlayerPref();
+//#endif
+//    }
 
     public void LoadLevel(int level)
     {
@@ -70,16 +70,16 @@ public class LevelController : MonoBehaviour
                 }
             }
         }
-        if (level.NumberLevel > GameController.Instance.PlayerProfile.Profile.LastUnlockLevel)
-        {
-            GameController.Instance.PlayerProfile.Profile.LastUnlockLevel = level.NumberLevel;
-            GameController.Instance.PlayerProfile.Save();
-        }
+        //if (level.NumberLevel >= GameController.Instance.PlayerProfile.Profile.LastUnlockLevel)
+        //{
+        //    GameController.Instance.PlayerProfile.Profile.LastUnlockLevel = level.NumberLevel;
+        //    GameController.Instance.PlayerProfile.Save();
+        //}
 
-#if UNITY_ANDROID
-        if (level.NumberLevel > LoadWithPlayerPref())
+        if (level.NumberLevel >= LoadWithPlayerPref())
+        {
             SaveWithPlayerPref(level.NumberLevel);
-#endif
+        }
     }
 
     IEnumerator LoadLevelRoutine (int level)

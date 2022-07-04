@@ -32,13 +32,17 @@ public class PlayerController : MonoBehaviour, IPointerDownHandler
             Debug.Log("Touch");
             _playerMove.TryJump(_playerMove.JumpForceForTuch);
         }
-#elif UNITY_EDITOR
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            Debug.Log("Mouse");
-            _playerMove.TryJump(_playerMove.JumpForce);
-        }
 #endif
+//#elif UNITY_EDITOR
+
+        if (Application.platform != RuntimePlatform.Android)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                Debug.Log("Mouse");
+                _playerMove.TryJump(_playerMove.JumpForce);
+            }
+        }
+//#endif
     }
 }

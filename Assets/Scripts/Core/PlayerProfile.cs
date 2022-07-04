@@ -9,16 +9,15 @@ public class PlayerProfile : MonoBehaviour
     [SerializeField] private profile.PlayerProfile _playerProfile;
     public profile.PlayerProfile Profile => _playerProfile; 
 
-    private void Start()
-    {
-        DontDestroyOnLoad(this);
-        Debug.Log("On Start PlayerProfile BeforeStartLoad - " + GameController.Instance.PlayerProfile.Profile.LastUnlockLevel);
-        _playerProfile = Load();
-        Debug.Log("On Start PlayerProfile AfterStartLoad - " + GameController.Instance.PlayerProfile.Profile.LastUnlockLevel);
-    }
+    //private void Start()
+    //{
+    //    DontDestroyOnLoad(this);
+    //    Debug.Log("On Start PlayerProfile BeforeStartLoad - " + GameController.Instance.PlayerProfile.Profile.LastUnlockLevel);
+    //    _playerProfile = Load();
+    //    Debug.Log("On Start PlayerProfile AfterStartLoad - " + GameController.Instance.PlayerProfile.Profile.LastUnlockLevel);
+    //}
     private void OnDestroy()
-    {
-        //?
+    {        
         //Save();
     }
     public void Save()

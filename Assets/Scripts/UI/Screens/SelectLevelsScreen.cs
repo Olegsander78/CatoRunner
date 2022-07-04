@@ -63,20 +63,20 @@ public class SelectLevelsScreen : Screen
 
     public void UpdateUISelectLevels()
     {
-        if (GameController.Instance.PlayerProfile.Profile != null)
-        {
+        //if (GameController.Instance.PlayerProfile.Profile != null)
+        //{
 
-            for (int i = 1; i < GameController.Instance.LevelController.LevelsNoteList.Count; i++)
-            {
-                if (i <= GameController.Instance.PlayerProfile.Profile.LastUnlockLevel)
-                {
-                    GameController.Instance.LevelController.LevelsNoteList[i].Locked = false;
-                    GameController.Instance.LevelController.LevelsNoteList[i - 1].Completed = true;
-                }
-            }
-        }
+        //    for (int i = 1; i < GameController.Instance.LevelController.LevelsNoteList.Count; i++)
+        //    {
+        //        if (i <= GameController.Instance.PlayerProfile.Profile.LastUnlockLevel)
+        //        {
+        //            GameController.Instance.LevelController.LevelsNoteList[i].Locked = false;
+        //            GameController.Instance.LevelController.LevelsNoteList[i - 1].Completed = true;
+        //        }
+        //    }
+        //}
 
-#if UNITY_ANDROID
+//#if UNITY_ANDROID
         if (PlayerPrefs.HasKey("LastUnlockLevel"))
         {
             for (int i = 1; i < GameController.Instance.LevelController.LevelsNoteList.Count; i++)
@@ -88,7 +88,7 @@ public class SelectLevelsScreen : Screen
                 }
             }
         }
-#endif
+//#endif
 
         for (int i = 1; i < UILevelsList.Count; i++)
         {
