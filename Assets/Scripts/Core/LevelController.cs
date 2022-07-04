@@ -26,37 +26,13 @@ public class LevelController : MonoBehaviour
     [SerializeField] private Level _currentLevel;
     public Level CurrentLevel => _currentLevel;
 
+    private void Start()
+    {
+#if UNITY_ANDROID
+        GameController.Instance.PlayerProfile.Profile.LastUnlockLevel = LoadWithPlayerPref();
+#endif
+    }
 
-    //private void OnEnable()
-    //{
-    //    if (GameController.Instance.PlayerProfile.Profile != null)
-    //    {
-    //        Debug.Log("OnEnable - " + GameController.Instance.PlayerProfile.Profile.LastUnlockLevel);
-
-
-    //        for (int i = 1; i < LevelsNoteList.Count; i++)
-    //        {
-    //            if (i <= GameController.Instance.PlayerProfile.Profile.LastUnlockLevel)
-    //            {
-    //                LevelsNoteList[i].Locked = false;
-    //                LevelsNoteList[i - 1].Completed = true;
-    //            }
-    //        }
-    //    }
-    //}
-
-    //[ContextMenu("LoadUILevel")]
-    //public void LoadUILevelsNote()
-    //{
-    //    for (int i = 1; i < LevelsNoteList.Count; i++)
-    //    {
-    //        if (i <= GameController.Instance.PlayerProfile.Profile.LastUnlockLevel)
-    //        {
-    //            LevelsNoteList[i].Locked = false;
-    //            LevelsNoteList[i - 1].Completed = true;
-    //        }
-    //    }
-    //}
     public void LoadLevel(int level)
     {
         StartCoroutine(LoadLevelRoutine(level));
@@ -83,8 +59,6 @@ public class LevelController : MonoBehaviour
     {
         level.CompletedLevel = true;
 
-        //How does it? => nextLevel.LockedLevel = false;
-
         for (int i = 0; i < LevelsNoteList.Count; i++)
         {
             if (LevelsNoteList[i].LevelNumber.Equals(level.NumberLevel))
@@ -96,8 +70,16 @@ public class LevelController : MonoBehaviour
                 }
             }
         }
-        GameController.Instance.PlayerProfile.Profile.LastUnlockLevel = level.NumberLevel;
-        GameController.Instance.PlayerProfile.Save();
+        if (level.NumberLevel > GameController.Instance.PlayerProfile.Profile.LastUnlockLevel)
+        {
+            GameController.Instance.PlayerProfile.Profile.LastUnlockLevel = level.NumberLevel;
+            GameController.Instance.PlayerProfile.Save();
+        }
+
+#if UNITY_ANDROID
+        if (level.NumberLevel > LoadWithPlayerPref())
+            SaveWithPlayerPref(level.NumberLevel);
+#endif
     }
 
     IEnumerator LoadLevelRoutine (int level)
@@ -111,5 +93,26 @@ public class LevelController : MonoBehaviour
         }
         GameController.Instance.ScreenController.PushScreen<HUDScreen>();
         Time.timeScale = 1f;
+    }
+
+    public void SaveWithPlayerPref(int lastLevelNumber)
+    {
+        PlayerPrefs.SetInt("LastUnlockLevel",lastLevelNumber);
+        PlayerPrefs.Save();
+        Debug.Log("In Save PlayerPref after Complete Level - " + lastLevelNumber);
+    }
+    
+    public int LoadWithPlayerPref()
+    {
+        if (PlayerPrefs.HasKey("LastUnlockLevel"))
+        {            
+            Debug.Log("Game data loaded from PlayerPref! " + PlayerPrefs.GetInt("LastUnlockLevel"));
+            return PlayerPrefs.GetInt("LastUnlockLevel");
+        }
+        else
+        {
+            Debug.LogError("PlayerPref hasn't save data!");
+            return 0;
+        }
     }
 }

@@ -26,17 +26,19 @@ public class PlayerController : MonoBehaviour, IPointerDownHandler
             Debug.Log("Space");
             _playerMove.TryJump(_playerMove.JumpForce);
         }
-
+#if UNITY_ANDROID
         if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
         {
             Debug.Log("Touch");
             _playerMove.TryJump(_playerMove.JumpForceForTuch);
         }
+#elif UNITY_EDITOR
 
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    Debug.Log("Mouse");
-        //    _playerMove.TryJump(_playerMove.JumpForce);
-        //}
+        if (Input.GetMouseButtonDown(0))
+        {
+            Debug.Log("Mouse");
+            _playerMove.TryJump(_playerMove.JumpForce);
+        }
+#endif
     }
 }

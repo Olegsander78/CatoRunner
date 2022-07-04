@@ -19,16 +19,18 @@ public class PlayerProfile : MonoBehaviour
     private void OnDestroy()
     {
         //?
-        Save();
+        //Save();
     }
     public void Save()
     {
         Debug.Log("In Save BeforeStartSave - " + _playerProfile.LastUnlockLevel);
-        System.IO.MemoryStream stream = new System.IO.MemoryStream();
-        ps.Serialize(stream, _playerProfile);
-        SaveData("profile.save", stream);
-        Debug.Log("In Save AfterStartSave - " + _playerProfile.LastUnlockLevel);
-        Debug.Log(new System.IO.FileInfo("profile.save").FullName);
+        using (System.IO.MemoryStream stream = new System.IO.MemoryStream())
+        {
+            ps.Serialize(stream, _playerProfile);
+            SaveData("profile.save", stream);
+            Debug.Log("In Save AfterStartSave - " + _playerProfile.LastUnlockLevel);
+            Debug.Log(new System.IO.FileInfo("profile.save").FullName);
+        }        
     }
 
     [ContextMenu("SaveData")]
@@ -79,7 +81,8 @@ public class PlayerProfile : MonoBehaviour
             profile = new profile.PlayerProfile();
 
             Debug.Log("Error loading!");
-        }        
+        }       
+
         return profile;
     }
     private System.IO.FileStream LoadFileStream(string fileName)

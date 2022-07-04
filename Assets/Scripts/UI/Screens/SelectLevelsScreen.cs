@@ -43,11 +43,6 @@ public class SelectLevelsScreen : Screen
 
             //PopUp for Locked levels
             GameController.Instance.SoundController.PlaySound(SFX.SFXTypeUI.ClickButton);
-            //if (SceneManager.GetActiveScene().buildIndex != 1)
-            //{
-            //    GameController.Instance.ScreenController.EnableScreen<SelectLevelsScreen>();
-            //    //GameController.Instance.ScreenController.PushScreen<SelectLevelsScreen>();
-            //}
             GameController.Instance.ScreenController.PushScreen<LevelPopUpScreen>();
             GameController.Instance.ScreenController.PushScreen<LevelPopUpScreen>().SetText("<b>Level " +
                 GameController.Instance.LevelController.LevelsNoteList[level - 1].LevelNumber + " is currently locked!</b>\nComplete level " +
@@ -81,6 +76,20 @@ public class SelectLevelsScreen : Screen
             }
         }
 
+#if UNITY_ANDROID
+        if (PlayerPrefs.HasKey("LastUnlockLevel"))
+        {
+            for (int i = 1; i < GameController.Instance.LevelController.LevelsNoteList.Count; i++)
+            {
+                if (i <= GameController.Instance.LevelController.LoadWithPlayerPref())
+                {
+                    GameController.Instance.LevelController.LevelsNoteList[i].Locked = false;
+                    GameController.Instance.LevelController.LevelsNoteList[i - 1].Completed = true;
+                }
+            }
+        }
+#endif
+
         for (int i = 1; i < UILevelsList.Count; i++)
         {
             if (UILevelsList[i].LevelUINumber == GameController.Instance.LevelController.LevelsNoteList[i].LevelNumber)
@@ -90,16 +99,4 @@ public class SelectLevelsScreen : Screen
             }
         }
     }
-    //public override void OnPush()
-    //{
-    //    base.OnPush();
-    //    for (int i = 1; i < UILevelsList.Count; i++)
-    //    {
-    //        if (UILevelsList[i].LevelUINumber < GameController.Instance.PlayerProfile.Profile.LastUnlockLevel)
-    //        {
-    //             GameController.Instance.LevelController.LevelsNoteList[i].Locked = false;
-    //        }
-    //    }
-
-    //}
 }
