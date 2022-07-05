@@ -108,7 +108,7 @@ public class SelectLevelsScreen : Screen
         {
             for (int i = 1; i < GameController.Instance.LevelController.LevelsNoteList.Count; i++)
             {
-                if (i <= GameController.Instance.LevelController.LoadWithPlayerPref())
+                if (i < GameController.Instance.LevelController.LoadWithPlayerPref())
                 {
                     GameController.Instance.LevelController.LevelsNoteList[i].Locked = false;
                     GameController.Instance.LevelController.LevelsNoteList[i - 1].Completed = true;
