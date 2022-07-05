@@ -7,10 +7,13 @@ using UnityEngine.UI;
 
 public class SelectLevelsScreen : Screen
 {
+    private const int RESET_TO_LEVEL = 1;
+
     [SerializeField] private int _offsetBuildIndexScene = 1;
     [Space(15)]
     [SerializeField] private List<Button> _levelBtn;
     [SerializeField] private Button _backBtn;    
+    [SerializeField] private Button _resetBtn;    
 
     [SerializeField] private List<UILevel> _uiLevelsList = new List<UILevel>();
     public List<UILevel> UILevelsList { get => _uiLevelsList; set => _uiLevelsList = value; }
@@ -25,6 +28,7 @@ public class SelectLevelsScreen : Screen
         }
 
         _backBtn.onClick.AddListener(GoBackMainMenu);
+        _resetBtn.onClick.AddListener(ResetLevels);
     }
 
     public void StartLevel(int level)
@@ -54,6 +58,29 @@ public class SelectLevelsScreen : Screen
     {
         GameController.Instance.SoundController.PlaySound(SFX.SFXTypeUI.ClickButton);
         GameController.Instance.ScreenController.PushScreen<MainMenuScreen>();
+    }
+
+    public void ResetLevels()
+    {
+        GameController.Instance.LevelController.SaveWithPlayerPref(RESET_TO_LEVEL);
+
+        GameController.Instance.LevelController.LevelsNoteList[0].Locked = false;
+        GameController.Instance.LevelController.LevelsNoteList[0].Completed = false;
+
+        for (int i = 1; i < GameController.Instance.LevelController.LevelsNoteList.Count; i++)
+        {
+            GameController.Instance.LevelController.LevelsNoteList[i].Locked = true;
+            GameController.Instance.LevelController.LevelsNoteList[i].Completed = false;
+        }
+
+        UILevelsList[0].LockImage.gameObject.SetActive(GameController.Instance.LevelController.LevelsNoteList[0].Locked);
+        UILevelsList[0].UnLockImage.gameObject.SetActive(!GameController.Instance.LevelController.LevelsNoteList[0].Locked);
+
+        for (int i = 1; i < UILevelsList.Count; i++)
+        {
+            UILevelsList[i].LockImage.gameObject.SetActive(GameController.Instance.LevelController.LevelsNoteList[i].Locked);
+            UILevelsList[i].UnLockImage.gameObject.SetActive(!GameController.Instance.LevelController.LevelsNoteList[i].Locked);
+        }
     }
 
     private void OnEnable()
