@@ -26,7 +26,7 @@
 
 
 ### Game platform:
-- PC & Android
+- PC, Android, WebGL 
 
 ### Game Asset:
 -	Game Asset - Running and Jumping Cat Sprite Sheets 
