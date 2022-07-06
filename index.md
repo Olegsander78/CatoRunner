@@ -17,12 +17,12 @@
 - Смещение препятствиями игрока в левую часть экрана в опасную зону, и возврат игрока на исходную позицию если перепрыгнуть препятствие
 - Сбор монет и кристаллов
 
-![изображение](https://user-images.githubusercontent.com/79563332/168277792-dfb6a38a-61c0-430c-b1f4-78abae625c2b.png)
+![изображение](https://user-images.githubusercontent.com/79563332/177524260-5ddfbae6-d6f6-4456-bc34-f7dabdad7bd8.png)
 
 ### Game Loop:
 - Уровень бесконечен, чтобы выиграть необходимо выполнить задание, описанное в начале уровня. 
 
-![изображение](https://user-images.githubusercontent.com/79563332/168277565-c3541953-f248-4933-a899-adcd8106a994.png)
+![изображение](https://user-images.githubusercontent.com/79563332/177523965-80b9e4a6-9a7f-45e5-893d-1cd7488faa28.png)
 
 
 ### Game platform:
