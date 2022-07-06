@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class SelectLevelsScreen : Screen
 {
-    private const int RESET_TO_LEVEL = 1;
+    private const int RESET_TO_LEVEL = 0;
 
     [SerializeField] private int _offsetBuildIndexScene = 1;
     [Space(15)]
@@ -90,6 +90,7 @@ public class SelectLevelsScreen : Screen
 
     public void UpdateUISelectLevels()
     {
+       //FOR PROTOBUF
         //if (GameController.Instance.PlayerProfile.Profile != null)
         //{
 
@@ -108,15 +109,14 @@ public class SelectLevelsScreen : Screen
         {
             for (int i = 1; i < GameController.Instance.LevelController.LevelsNoteList.Count; i++)
             {
-                if (i < GameController.Instance.LevelController.LoadWithPlayerPref())
+                if (i <= GameController.Instance.LevelController.LoadWithPlayerPref())
                 {
                     GameController.Instance.LevelController.LevelsNoteList[i].Locked = false;
                     GameController.Instance.LevelController.LevelsNoteList[i - 1].Completed = true;
                 }
             }
         }
-//#endif
-
+        //#endif
         for (int i = 1; i < UILevelsList.Count; i++)
         {
             if (UILevelsList[i].LevelUINumber == GameController.Instance.LevelController.LevelsNoteList[i].LevelNumber)
@@ -125,5 +125,6 @@ public class SelectLevelsScreen : Screen
                 UILevelsList[i].UnLockImage.gameObject.SetActive(!GameController.Instance.LevelController.LevelsNoteList[i].Locked);
             }
         }
+
     }
 }
