@@ -2,7 +2,7 @@
 # Mini Game Design Document
 
 ### Theme and name game:
-- Казуальная игра в стиле бесконечный раннер
+- Казуальная игра в стиле бесконечный 2D раннер
 - Рабочее название – “CatoRunner”
 - Game Demo Video <a href="https://youtu.be/3SAvv4GZ6Hc" target="_blank"> YouTube Link</a>
 
