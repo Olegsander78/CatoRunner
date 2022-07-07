@@ -69,14 +69,20 @@ public class HUDScreen : Screen
     }
 
     public void OnClickAdHPBtn()
-    {        
+    {
+        //For Unity Ad
         //GameController.Instance.AdManager.PlayAdForHP();
+
+        //For Yandex Ad
         GameController.Instance.AdYAManager.PlayAdForHP();
     }
 
     public void OnClickAdScoreBtn()
     {
+        //For Unity Ad
         //GameController.Instance.AdManager.PlayAdForScore();
+
+        //For Yandex Ad
         GameController.Instance.AdYAManager.PlayAdForScore();
     }
 

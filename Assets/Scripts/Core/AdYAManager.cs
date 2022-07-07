@@ -10,9 +10,6 @@ public class AdYAManager : MonoBehaviour
     private const int AMOUNT_SCORE_FOR_AD = 500;
 
     [DllImport("__Internal")]
-    private static extern void ShowFullscreenAdv();
-
-    [DllImport("__Internal")]
     private static extern void TestLog();
 
     [DllImport("__Internal")]
@@ -30,14 +27,14 @@ public class AdYAManager : MonoBehaviour
     public void PlayAdForHP()
     {
         Debug.Log("Showing AdHP");
-        StopTimeGameForAd();
+        //StopTimeGameForAd();
         ShowRewardedVideoForHP();
     }
 
     public void PlayAdForScore()
     {
         Debug.Log("Showing AdScore");
-        StopTimeGameForAd();
+        //StopTimeGameForAd();
         ShowRewardedVideoForScore();
     }
 
@@ -45,13 +42,13 @@ public class AdYAManager : MonoBehaviour
     {
         Debug.Log("YA Ads Rewarded HP Ad Completed");
         GameController.Instance.LevelController.CurrentLevel.PlayerCharacter.GetComponent<PlayerHealth>().AddHealth(AMOUNT_HP_FOR_AD);
-        ReturnTimeGame();
+        //ReturnTimeGame();
     }
 
     public void RewardAdForScore()
     {
         Debug.Log("YA Ads Rewarded Score Ad Completed");
-        ReturnTimeGame();
+        //ReturnTimeGame();
         GameController.Instance.PlayerSession.AddScore(AMOUNT_SCORE_FOR_AD);
         GameController.Instance.EventBus.OnCoinCollected(AMOUNT_SCORE_FOR_AD);
     }
@@ -66,9 +63,9 @@ public class AdYAManager : MonoBehaviour
         Time.timeScale = GameController.Instance.LevelController.CurrentLevel.SpeedLevel;
     }
 
-    public void StartShowFullscreenAdv()
-    {
-        StopTimeGameForAd();
-        ShowFullscreenAdv();
-    }
+    //public void StartShowFullscreenAdv()
+    //{
+    //    StopTimeGameForAd();
+    //    ShowFullscreenAdv();
+    //}
 }
