@@ -11,11 +11,7 @@ public class GameController : MonoBehaviour
 
     [SerializeField] private ScreenController _screenController;
     [SerializeField] private SoundController _soundController;
-    [SerializeField] private PlayerProfile _playerProfile;
-    
-    [SerializeField] private AdManager _adManager;
-
-    public AdManager AdManager => _adManager;
+    [SerializeField] private PlayerProfile _playerProfile;    
     public PlayerProfile PlayerProfile => _playerProfile;
 
     private EventBus _eventBus;
@@ -24,6 +20,17 @@ public class GameController : MonoBehaviour
     public ScreenController ScreenController { get => _screenController; set => value = _screenController; }
     public SoundController SoundController { get => _soundController; set => value = _soundController; }
     public EventBus EventBus => _eventBus;
+
+    // For Unity ADS
+    //[Header("Unity ADS")]
+    //[SerializeField] private AdManager _adManager;
+
+    //public AdManager AdManager => _adManager;
+
+    //For Yandex Game ADS
+    [Header("Yandex ADS")]
+    [SerializeField] private AdYAManager _adYAManager;
+    public AdYAManager AdYAManager => _adYAManager;
 
     private void Awake()
     {

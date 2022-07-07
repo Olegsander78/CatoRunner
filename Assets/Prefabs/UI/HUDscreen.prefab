@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4700066813649199382}
   - component: {fileID: 3153756762176013552}
   - component: {fileID: 5991227415512819700}
-  - component: {fileID: 7376091101725008057}
+  - component: {fileID: 6494933814170532327}
   m_Layer: 5
   m_Name: AddHealthBtn
   m_TagString: Untagged
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &7376091101725008057
+--- !u!114 &6494933814170532327
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   View: {fileID: 6199981336267634439}
-  TextView: +1 Health (Watch ADS)
+  TextView: Watch Ad , Get  +1 HP
 --- !u!1 &2125494023894704247
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 7387105934931775833}
   - component: {fileID: 802292180404890528}
   - component: {fileID: 537678348016053557}
-  - component: {fileID: 4742967588027122197}
+  - component: {fileID: 93387560045422581}
   m_Layer: 5
   m_Name: AddScoreBtn
   m_TagString: Untagged
@@ -392,7 +392,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &4742967588027122197
+--- !u!114 &93387560045422581
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -405,7 +405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   View: {fileID: 6199981336267634439}
-  TextView: +500 Score (Watch Ads)
+  TextView: Watch Ad , Get  +500 Score
 --- !u!1 &2890556873645821384
 GameObject:
   m_ObjectHideFlags: 0

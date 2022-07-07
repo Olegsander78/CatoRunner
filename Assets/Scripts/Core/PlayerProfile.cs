@@ -26,7 +26,7 @@ public class PlayerProfile : MonoBehaviour
         using (System.IO.MemoryStream stream = new System.IO.MemoryStream())
         {
             ps.Serialize(stream, _playerProfile);
-            SaveData("profile.save", stream);
+            SaveData("/profile.save", stream);
             Debug.Log("In Save AfterStartSave - " + _playerProfile.LastUnlockLevel);
             Debug.Log(new System.IO.FileInfo("profile.save").FullName);
         }        
@@ -35,8 +35,9 @@ public class PlayerProfile : MonoBehaviour
     [ContextMenu("SaveData")]
     private void SaveData(string fileName, System.IO.MemoryStream stream)
     {
-        System.IO.File.Delete(fileName);
-        var fileStream = System.IO.File.OpenWrite(fileName);
+        var allDeviceFileName = Application.persistentDataPath + fileName;
+        System.IO.File.Delete(allDeviceFileName);
+        var fileStream = System.IO.File.OpenWrite(allDeviceFileName);
         try
         {
             stream.WriteTo(fileStream);
@@ -60,7 +61,7 @@ public class PlayerProfile : MonoBehaviour
     private profile.PlayerProfile Load()
     {
         profile.PlayerProfile profile = null;
-        var saveGameFileName = "profile.save";
+        var saveGameFileName = Application.persistentDataPath +"/profile.save";
         var fs = LoadFileStream(saveGameFileName);
 
         Debug.Log("In Load BeforeStartLoad - " + _playerProfile.LastUnlockLevel);

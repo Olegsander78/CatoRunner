@@ -70,12 +70,14 @@ public class HUDScreen : Screen
 
     public void OnClickAdHPBtn()
     {        
-        GameController.Instance.AdManager.PlayAdForHP();
+        //GameController.Instance.AdManager.PlayAdForHP();
+        GameController.Instance.AdYAManager.PlayAdForHP();
     }
 
     public void OnClickAdScoreBtn()
     {
-        GameController.Instance.AdManager.PlayAdForScore();
+        //GameController.Instance.AdManager.PlayAdForScore();
+        GameController.Instance.AdYAManager.PlayAdForScore();
     }
 
     public void UpdateScoreText(int currentScore)
