@@ -208,7 +208,7 @@ public class Level : MonoBehaviour
             GameController.Instance.ScreenController.PushScreen<WinScreen>();
             GameController.Instance.SoundController.PlaySound(SFX.SFXTypeEvents.WinLevel);
             GameController.Instance.LevelController.CompleteLevel(GameController.Instance.LevelController.CurrentLevel);
-            //GameController.Instance.AdYAManager.StartShowFullscreenAdv();
+            GameController.Instance.AdYAManager.StartShowFullScreenAds();
         }
     }
 

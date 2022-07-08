@@ -4,14 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class PlayerController : MonoBehaviour, IPointerDownHandler
+public class PlayerController : MonoBehaviour
 {
     [SerializeField] private PlayerMove _playerMove;
-
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        Debug.Log(eventData.position);
-    }
 
     private void OnMouseDown()
     {

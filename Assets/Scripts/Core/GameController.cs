@@ -30,7 +30,7 @@ public class GameController : MonoBehaviour
     //For Yandex Game ADS
     [Header("Yandex ADS")]
     [SerializeField] private AdYAManager _adYAManager;
-    public AdYAManager AdYAManager => _adYAManager;
+    public AdYAManager AdYAManager { get => _adYAManager; set => value = _adYAManager; }
 
     private void Awake()
     {

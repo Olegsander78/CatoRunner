@@ -9,14 +9,17 @@ public class AdYAManager : MonoBehaviour
     private const int AMOUNT_HP_FOR_AD = 1;
     private const int AMOUNT_SCORE_FOR_AD = 500;
 
-    [DllImport("__Internal")]
-    private static extern void TestLog();
+    //[DllImport("__Internal")]
+    //private static extern void TestLog();
 
     [DllImport("__Internal")]
     private static extern void ShowRewardedVideoForHP();
 
     [DllImport("__Internal")]
     private static extern void ShowRewardedVideoForScore();
+    
+    [DllImport("__Internal")]
+    private static extern void ShowFullscreenAdv();
 
 
     private void Awake()
@@ -24,44 +27,58 @@ public class AdYAManager : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
+    //private void Update()
+    //{
+        
+    //    if (Input.GetKeyDown(KeyCode.T))
+    //    {
+    //        TestLog();
+    //    }
+    //}
+
+    public void StartShowFullScreenAds()
+    {
+        ShowFullscreenAdv();
+    }
+
     public void PlayAdForHP()
     {
-        Debug.Log("Showing AdHP");
+        //Debug.Log("Showing AdHP");
         //StopTimeGameForAd();
         ShowRewardedVideoForHP();
     }
 
     public void PlayAdForScore()
     {
-        Debug.Log("Showing AdScore");
+        //Debug.Log("Showing AdScore");
         //StopTimeGameForAd();
         ShowRewardedVideoForScore();
     }
 
     public void RewardAdForHP()
     {
-        Debug.Log("YA Ads Rewarded HP Ad Completed");
+       // Debug.Log("YA Ads Rewarded HP Ad Completed");
         GameController.Instance.LevelController.CurrentLevel.PlayerCharacter.GetComponent<PlayerHealth>().AddHealth(AMOUNT_HP_FOR_AD);
         //ReturnTimeGame();
     }
 
     public void RewardAdForScore()
     {
-        Debug.Log("YA Ads Rewarded Score Ad Completed");
+        //Debug.Log("YA Ads Rewarded Score Ad Completed");
         //ReturnTimeGame();
         GameController.Instance.PlayerSession.AddScore(AMOUNT_SCORE_FOR_AD);
         GameController.Instance.EventBus.OnCoinCollected(AMOUNT_SCORE_FOR_AD);
     }
 
-    public void StopTimeGameForAd()
-    {
-        Time.timeScale = 0f;
-    }
+    //public void StopTimeGameForAd()
+    //{
+    //    Time.timeScale = 0f;
+    //}
 
-    public void ReturnTimeGame()
-    {
-        Time.timeScale = GameController.Instance.LevelController.CurrentLevel.SpeedLevel;
-    }
+    //public void ReturnTimeGame()
+    //{
+    //    Time.timeScale = GameController.Instance.LevelController.CurrentLevel.SpeedLevel;
+    //}
 
     //public void StartShowFullscreenAdv()
     //{

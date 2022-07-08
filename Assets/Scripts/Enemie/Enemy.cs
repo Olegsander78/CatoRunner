@@ -31,6 +31,14 @@ public class Enemy : MonoBehaviour
 
     public void DieEnemy(int scorePerEnemy)
     {
+        if (TryGetComponent(out Collider2D collider))
+        {
+            collider.enabled = false;
+        }
+        else if (GetComponentInChildren<Collider2D>() != null)
+        {
+            GetComponentInChildren<Collider2D>().enabled = false;
+        }
         //Extra scores for defeat Enemy
         GameController.Instance.PlayerSession.AddScore(scorePerEnemy);
         GameController.Instance.EventBus.OnCoinCollected(scorePerEnemy);
@@ -39,6 +47,7 @@ public class Enemy : MonoBehaviour
         GameController.Instance.EventBus.OnEnemydefeated(this);        
         
         Animator.SetTrigger("Death");
+
         Destroy(gameObject, 1f);
     }
 }

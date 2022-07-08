@@ -12,19 +12,53 @@ public class MakeDamageOnCollision : MonoBehaviour
         {
             if (collision.rigidbody.GetComponent<PlayerHealth>())
             {
-                if (!GetComponent<Enemy>().IsUnstumtable)
-                {
-                    float dot = Vector2.Dot(collision.contacts[0].normal, Vector2.down);
+                var playerChar = collision.rigidbody.GetComponent<PlayerCharacter>();
 
-                    if (dot < 0.4f)
+                for (int i = 0; i < collision.contacts.Length; i++)
+                {
+                    if (collision.contacts[i].rigidbody.GetComponent<PlayerCharacter>() == playerChar)
                     {
-                        collision.rigidbody.GetComponent<PlayerHealth>().TakeDamage(_damageToPlayer);
+                        float dot = Vector2.Dot(collision.contacts[i].normal, Vector2.up);
+
+                        if (GetComponent<Enemy>().IsUnstumtable && dot < -0.2f)
+                        {
+                            collision.rigidbody.GetComponent<PlayerHealth>().TakeDamage(_damageToPlayer);
+                        }
+                        else if (!GetComponent<Enemy>().IsUnstumtable && (dot < 0.4f && dot >= -0.2f))
+                        {
+                            collision.rigidbody.GetComponent<PlayerHealth>().TakeDamage(_damageToPlayer);
+                        }
                     }
                 }
-                else
-                {
-                    collision.rigidbody.GetComponent<PlayerHealth>().TakeDamage(_damageToPlayer);
-                }
+
+
+
+
+                //float dot = Vector2.Dot(collision.contacts[0].normal, Vector2.up);
+
+                //if (GetComponent<Enemy>().IsUnstumtable && dot >= 0f)
+                //{
+                //    collision.rigidbody.GetComponent<PlayerHealth>().TakeDamage(_damageToPlayer);
+                //}
+                //else if (!GetComponent<Enemy>().IsUnstumtable && (dot < 0.4f && dot >= 0f))
+                //{
+                //    collision.rigidbody.GetComponent<PlayerHealth>().TakeDamage(_damageToPlayer);
+                //}
+
+
+                //if (!GetComponent<Enemy>().IsUnstumtable)
+                //{
+                //    float dot = Vector2.Dot(collision.contacts[0].normal, Vector2.down);
+
+                //    if (dot < 0.4f)
+                //    {
+                //        collision.rigidbody.GetComponent<PlayerHealth>().TakeDamage(_damageToPlayer);
+                //    }
+                //}
+                //else
+                //{
+                //    collision.rigidbody.GetComponent<PlayerHealth>().TakeDamage(_damageToPlayer);
+                //}
             }
         }
     }

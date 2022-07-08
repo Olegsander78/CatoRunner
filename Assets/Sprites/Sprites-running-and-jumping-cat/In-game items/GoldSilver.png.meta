@@ -66,6 +66,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -448,6 +449,21 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      GoldSilver_3: -7991819512904236938
+      GoldSilver_12: -5209264256865979576
+      GoldSilver_2: 4344156665802532224
+      GoldSilver_7: -592902316924709517
+      GoldSilver_1: -4217273149090912144
+      GoldSilver_6: -2549681571173584710
+      GoldSilver_4: 4515659230432323014
+      GoldSilver_9: -9133492231213060743
+      GoldSilver_8: 4145173861365052450
+      GoldSilver_10: -176292381998367839
+      GoldSilver_0: -6435560498109515643
+      GoldSilver_5: -4936654872408886654
+      GoldSilver_11: 1924664080944703181
+      GoldSilver_13: 4096838581628237790
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

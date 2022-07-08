@@ -5,6 +5,19 @@ mergeInto(LibraryManager.library, {
     GLctx.bindTexture(GLctx.TEXTURE_2D, GL.textures[texture]);
   },
 
+    ShowFullscreenAdv: function(){
+    ysdk.adv.showFullscreenAdv({
+          callbacks: {
+          onClose: function(wasShown) {
+            //myGameInstance.SendMessage('AdYAManager', 'ReturnTimeGame');
+        },
+          onError: function(error) {
+            //myGameInstance.SendMessage('AdYAManager', 'ReturnTimeGame');
+        }
+      }
+    })
+  },
+
   ShowRewardedVideoForHP: function(){
     ysdk.adv.showRewardedVideo({
           callbacks: {
