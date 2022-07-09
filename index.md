@@ -5,6 +5,7 @@
 EN
 - Casual game in 2D endless runner style
 - Working title – “CatoRunner”
+
 RU
 - Казуальная игра в стиле бесконечный 2D раннер
 - Рабочее название – “CatoRunner”
@@ -21,6 +22,7 @@ EN
 - Jump on top of the enemy
 - Displacement by obstacles of the player to the left side of the screen in the danger zone, and the return of the player to the starting position if the obstacle is jumped over
 - Collect coins and crystals
+
 RU
 - Бесконечная смена сегментов уровня 
 - Прыжок сверху на врага
@@ -32,6 +34,7 @@ RU
 ### Game Loop:
 EN
 - The level is endless, in order to win you must complete the task described at the beginning of the level.
+
 RU
 - Уровень бесконечен, чтобы выиграть необходимо выполнить задание, описанное в начале уровня. 
 
