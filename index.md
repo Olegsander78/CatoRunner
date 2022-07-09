@@ -2,6 +2,9 @@
 # Mini Game Design Document
 
 ### Theme and name game:
+- Casual game in 2D endless runner style
+- Working title – “CatoRunner”
+
 - Казуальная игра в стиле бесконечный 2D раннер
 - Рабочее название – “CatoRunner”
 - Game Demo Video <a href="https://youtu.be/3SAvv4GZ6Hc" target="_blank"> YouTube Link</a>
@@ -12,6 +15,11 @@
 - Relax
 
 ### Core Mechanic:
+- Endless change of level segments
+- Jump on top of the enemy
+- Displacement by obstacles of the player to the left side of the screen in the danger zone, and the return of the player to the starting position if the obstacle is jumped over
+- Collect coins and crystals
+
 - Бесконечная смена сегментов уровня 
 - Прыжок сверху на врага
 - Смещение препятствиями игрока в левую часть экрана в опасную зону, и возврат игрока на исходную позицию если перепрыгнуть препятствие
@@ -20,6 +28,8 @@
 ![изображение](https://user-images.githubusercontent.com/79563332/177524260-5ddfbae6-d6f6-4456-bc34-f7dabdad7bd8.png)
 
 ### Game Loop:
+- The level is endless, in order to win you must complete the task described at the beginning of the level.
+
 - Уровень бесконечен, чтобы выиграть необходимо выполнить задание, описанное в начале уровня. 
 
 ![изображение](https://user-images.githubusercontent.com/79563332/177523965-80b9e4a6-9a7f-45e5-893d-1cd7488faa28.png)
