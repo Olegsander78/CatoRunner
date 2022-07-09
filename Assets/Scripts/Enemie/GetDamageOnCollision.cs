@@ -20,11 +20,11 @@ public class GetDamageOnCollision : MonoBehaviour
                     {
                         float dot = Vector2.Dot(collision.contacts[i].normal, Vector2.up);
 
-                        if (GetComponent<Enemy>().IsUnstumtable && dot > 0.3f)
+                        if (GetComponent<Enemy>().IsUnstumtable && dot > 0.4f)
                         {
                             GetComponent<Enemy>().GetDamage(_damageToEnemy);
                         } 
-                        else if (!GetComponent<Enemy>().IsUnstumtable && (dot > 0.3f || dot < -0.3f))
+                        else if (!GetComponent<Enemy>().IsUnstumtable && (dot > 0.4f || dot < -0.3f))
                         {
                             GetComponent<Enemy>().GetDamage(_damageToEnemy);
                         }
