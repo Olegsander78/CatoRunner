@@ -74,7 +74,9 @@ public class HUDScreen : Screen
         //GameController.Instance.AdManager.PlayAdForHP();
 
         //For Yandex Ad
-        GameController.Instance.AdYAManager.PlayAdForHP();
+        
+        ClickPause();
+        GameController.Instance.YandexSDK.PlayAdForHP();
     }
 
     public void OnClickAdScoreBtn()
@@ -83,7 +85,9 @@ public class HUDScreen : Screen
         //GameController.Instance.AdManager.PlayAdForScore();
 
         //For Yandex Ad
-        GameController.Instance.AdYAManager.PlayAdForScore();
+        
+        ClickPause();
+        GameController.Instance.YandexSDK.PlayAdForScore();
     }
 
     public void UpdateScoreText(int currentScore)

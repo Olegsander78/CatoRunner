@@ -32,5 +32,10 @@ public class GameOverScreen : Screen
         //GameController.Instance.ScreenController.PushScreen<MainMenuScreen>();
         //GameController.Instance.SoundController.PlayBGMusic(BGMusic.MusicType.MainMenu);
     }
+    private void OnEnable()
+    {
+        if (GameObject.Find("_Player"))
+            GameObject.Find("_Player").GetComponentInChildren<PlayerController>().enabled = false;
+    }
 
 }

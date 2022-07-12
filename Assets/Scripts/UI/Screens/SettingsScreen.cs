@@ -22,7 +22,17 @@ public class SettingsScreen : Screen
         _volumeMusicSld.value = valueMusic;
         _audioMixer.GetFloat(_nameGroupSFXAudioMixer, out var valueSFX);
         _volumeSoundSld.value = valueSFX;
-        
+
+        if (PlayerPrefs.HasKey("VolumeMusic"))
+        {
+            _volumeMusicSld.value = LoadMusicVolume();
+        }
+
+        if (PlayerPrefs.HasKey("VolumeSound"))
+        {
+            _volumeSoundSld.value = LoadSoundVolume();
+        }
+
         _volumeMusicSld.onValueChanged.AddListener(ChangeVolumeMusic);
         _volumeSoundSld.onValueChanged.AddListener(ChangeVolumeSound);
 
@@ -45,6 +55,9 @@ public class SettingsScreen : Screen
     public void GoBackMainMenu()
     {
         GameController.Instance.SoundController.PlaySound(SFX.SFXTypeUI.ClickButton);
+        SaveMusicVolume(_volumeMusicSld.value);
+        SaveSoundVolume(_volumeSoundSld.value);
+
         if (SceneManager.GetActiveScene().buildIndex == _indexMainMenuScene)
         {
             GameController.Instance.ScreenController.PushScreen<MainMenuScreen>();
@@ -61,6 +74,53 @@ public class SettingsScreen : Screen
                 GameController.Instance.ScreenController.PopScreen();
                 GameController.Instance.ScreenController.PushScreen<MainMenuScreen>();
             }
-        }                
+        }         
+    }
+    public void SaveMusicVolume(float volumeMusic)
+    {
+        PlayerPrefs.SetFloat("VolumeMusic", volumeMusic);
+        PlayerPrefs.Save();
+        Debug.Log("Save Music and Sound is done!");
+    }
+
+    public void SaveSoundVolume(float volumeSound)
+    {
+        PlayerPrefs.SetFloat("VolumeSound", volumeSound);
+        PlayerPrefs.Save();
+        Debug.Log("Save Sound and Sound is done!");
+    }
+
+    public float LoadMusicVolume()
+    {
+        if (PlayerPrefs.HasKey("VolumeMusic"))
+        {
+            Debug.Log("Music volume loaded from PlayerPref! " + PlayerPrefs.GetFloat("VolumeMusic"));
+            return PlayerPrefs.GetFloat("VolumeMusic");
+        }
+        else
+        {
+            Debug.LogError("PlayerPref hasn't save data!");
+            return 0;
+        }
+    }
+
+    public float LoadSoundVolume()
+    {
+        if (PlayerPrefs.HasKey("VolumeSound"))
+        {
+            Debug.Log("Sound volume loaded from PlayerPref! " + PlayerPrefs.GetFloat("VolumeSound"));
+            return PlayerPrefs.GetFloat("VolumeSound");
+        }
+        else
+        {
+            Debug.LogError("PlayerPref hasn't save data!");
+            return 0;
+        }
+    }
+
+    private void OnEnable()
+    {
+        if (GameObject.Find("_Player"))
+            GameObject.Find("_Player").GetComponentInChildren<PlayerController>().enabled = false;
     }
 }

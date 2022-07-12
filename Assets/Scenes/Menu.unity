@@ -154,7 +154,6 @@ GameObject:
   - component: {fileID: 376146646}
   - component: {fileID: 376146645}
   - component: {fileID: 376146649}
-  - component: {fileID: 376146650}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -225,7 +224,7 @@ MonoBehaviour:
   _screenController: {fileID: 1228660431}
   _soundController: {fileID: 1661511790}
   _playerProfile: {fileID: 376146649}
-  _adYAManager: {fileID: 376146650}
+  _yandexSDK: {fileID: 899221712}
 --- !u!4 &376146648
 Transform:
   m_ObjectHideFlags: 0
@@ -251,18 +250,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 737b77ad2e437734d97a5ea43b8fceab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &376146650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 376146644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54d9a2ba61221a8419610b9c4fa36ff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &423028335
@@ -542,6 +529,7 @@ GameObject:
   - component: {fileID: 501084488}
   - component: {fileID: 501084487}
   - component: {fileID: 501084486}
+  - component: {fileID: 501084489}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -615,6 +603,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &501084489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501084485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf1b53eb7f0fba46aa25557acc03928, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &574471316 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5835355994751689997, guid: 0b2f8fa6204b53e4787efb9baeae784b,
@@ -1125,6 +1125,50 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &899221711
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 899221713}
+  - component: {fileID: 899221712}
+  m_Layer: 0
+  m_Name: YandexSDK
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &899221712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899221711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54d9a2ba61221a8419610b9c4fa36ff9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &899221713
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899221711}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &987177258 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6286759164489067773, guid: 8f386a1de1602dd4d944c50e5c6b054c,
@@ -1901,26 +1945,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5835355994817982288, guid: 0b2f8fa6204b53e4787efb9baeae784b,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5835355994817982288, guid: 0b2f8fa6204b53e4787efb9baeae784b,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5835355994817982288, guid: 0b2f8fa6204b53e4787efb9baeae784b,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 5835355994817982288, guid: 0b2f8fa6204b53e4787efb9baeae784b,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -160
       objectReference: {fileID: 0}
     - target: {fileID: 5835355995198820901, guid: 0b2f8fa6204b53e4787efb9baeae784b,
         type: 3}
@@ -2770,6 +2794,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 754148381985989203, guid: 588c06b62d27edd43857714e6ecb9949,
+        type: 3}
+      propertyPath: TextView
+      value: 'Collect 10000 scores '
+      objectReference: {fileID: 0}
     - target: {fileID: 848287117981918279, guid: 588c06b62d27edd43857714e6ecb9949,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -2789,6 +2818,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686446452283340064, guid: 588c06b62d27edd43857714e6ecb9949,
+        type: 3}
+      propertyPath: TextView
+      value: Collect 5000 scores
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128630495597108064, guid: 588c06b62d27edd43857714e6ecb9949,
+        type: 3}
+      propertyPath: TextView
+      value: Collect 12500 scores
       objectReference: {fileID: 0}
     - target: {fileID: 6426817218911093027, guid: 588c06b62d27edd43857714e6ecb9949,
         type: 3}
@@ -2830,6 +2869,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 6734857675278181771, guid: 588c06b62d27edd43857714e6ecb9949,
+        type: 3}
+      propertyPath: TextView
+      value: Collect 7500 scores
+      objectReference: {fileID: 0}
     - target: {fileID: 7634598384362316085, guid: 588c06b62d27edd43857714e6ecb9949,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -2849,6 +2893,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7674106631389460127, guid: 588c06b62d27edd43857714e6ecb9949,
+        type: 3}
+      propertyPath: TextView
+      value: Collect 2500 scores
       objectReference: {fileID: 0}
     - target: {fileID: 7836714515252825260, guid: 588c06b62d27edd43857714e6ecb9949,
         type: 3}

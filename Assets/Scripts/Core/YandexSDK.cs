@@ -4,67 +4,64 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AdYAManager : MonoBehaviour
+public class YandexSDK : MonoBehaviour
 {
     private const int AMOUNT_HP_FOR_AD = 1;
     private const int AMOUNT_SCORE_FOR_AD = 500;
 
-    //[DllImport("__Internal")]
-    //private static extern void TestLog();
+    [DllImport("__Internal")]
+    private static extern void ShowPlayAdForHP();
 
     [DllImport("__Internal")]
-    private static extern void ShowRewardedVideoForHP();
-
-    [DllImport("__Internal")]
-    private static extern void ShowRewardedVideoForScore();
+    private static extern void ShowPlayAdForScore();
     
     [DllImport("__Internal")]
-    private static extern void ShowFullscreenAdv();
-
+    private static extern void StartShowFullScreenAds();
+    public static YandexSDK Instance;
 
     private void Awake()
     {
-        DontDestroyOnLoad(this);
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        DontDestroyOnLoad(gameObject);
     }
 
-    //private void Update()
-    //{
-        
-    //    if (Input.GetKeyDown(KeyCode.T))
-    //    {
-    //        TestLog();
-    //    }
-    //}
-
-    public void StartShowFullScreenAds()
+    public void StartShowFullScreenADV()
     {
-        ShowFullscreenAdv();
+        StartShowFullScreenAds();
     }
 
     public void PlayAdForHP()
     {
         //Debug.Log("Showing AdHP");
         //StopTimeGameForAd();
-        ShowRewardedVideoForHP();
+        ShowPlayAdForHP();
     }
 
     public void PlayAdForScore()
     {
         //Debug.Log("Showing AdScore");
         //StopTimeGameForAd();
-        ShowRewardedVideoForScore();
+        ShowPlayAdForScore();
     }
 
     public void RewardAdForHP()
     {
-       // Debug.Log("YA Ads Rewarded HP Ad Completed");
+        Debug.Log("YA Ads Rewarded HP Ad Completed");
         GameController.Instance.LevelController.CurrentLevel.PlayerCharacter.GetComponent<PlayerHealth>().AddHealth(AMOUNT_HP_FOR_AD);
         //ReturnTimeGame();
     }
 
     public void RewardAdForScore()
     {
-        //Debug.Log("YA Ads Rewarded Score Ad Completed");
+        Debug.Log("YA Ads Rewarded Score Ad Completed");
         //ReturnTimeGame();
         GameController.Instance.PlayerSession.AddScore(AMOUNT_SCORE_FOR_AD);
         GameController.Instance.EventBus.OnCoinCollected(AMOUNT_SCORE_FOR_AD);
@@ -72,7 +69,7 @@ public class AdYAManager : MonoBehaviour
 
     //public void StopTimeGameForAd()
     //{
-    //    Time.timeScale = 0f;
+    //    Time.timeScale = 0.1f;
     //}
 
     //public void ReturnTimeGame()
@@ -80,9 +77,8 @@ public class AdYAManager : MonoBehaviour
     //    Time.timeScale = GameController.Instance.LevelController.CurrentLevel.SpeedLevel;
     //}
 
-    //public void StartShowFullscreenAdv()
-    //{
-    //    StopTimeGameForAd();
-    //    ShowFullscreenAdv();
-    //}
+    public void StartFullscreenAdv()
+    {        
+        StartShowFullScreenADV();
+    }
 }

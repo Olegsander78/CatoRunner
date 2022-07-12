@@ -86,6 +86,8 @@ public class SelectLevelsScreen : Screen
     private void OnEnable()
     {        
         UpdateUISelectLevels();
+        if (SceneManager.GetActiveScene().buildIndex != 0 && SceneManager.GetActiveScene().buildIndex != 1)
+            GameObject.Find("_Player").GetComponentInChildren<PlayerController>().enabled = false;
     }
 
     public void UpdateUISelectLevels()
@@ -125,6 +127,12 @@ public class SelectLevelsScreen : Screen
                 UILevelsList[i].UnLockImage.gameObject.SetActive(!GameController.Instance.LevelController.LevelsNoteList[i].Locked);
             }
         }
-
     }
+
+    private void OnDisable()
+    {
+        if (SceneManager.GetActiveScene().buildIndex != 0 && SceneManager.GetActiveScene().buildIndex != 1)
+            GameObject.Find("_Player").GetComponentInChildren<PlayerController>().enabled = true;
+    }
+
 }

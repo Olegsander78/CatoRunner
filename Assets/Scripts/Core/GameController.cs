@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
@@ -29,8 +30,8 @@ public class GameController : MonoBehaviour
 
     //For Yandex Game ADS
     [Header("Yandex ADS")]
-    [SerializeField] private AdYAManager _adYAManager;
-    public AdYAManager AdYAManager { get => _adYAManager; set => value = _adYAManager; }
+    [SerializeField] private YandexSDK _yandexSDK;
+    public YandexSDK YandexSDK { get => _yandexSDK; set => value = _yandexSDK; }
 
     private void Awake()
     {

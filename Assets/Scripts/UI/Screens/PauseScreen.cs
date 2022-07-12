@@ -48,4 +48,16 @@ public class PauseScreen : Screen
         SceneManager.LoadScene("Menu");
         //GameController.Instance.ScreenController.PushScreen<MainMenuScreen>();        
     }
+
+    private void OnEnable()
+    {
+        if (SceneManager.GetActiveScene().buildIndex != 0 && SceneManager.GetActiveScene().buildIndex != 1)
+            GameObject.Find("_Player").GetComponentInChildren<PlayerController>().enabled = false;
+    }
+
+    private void OnDisable()
+    {
+        if (SceneManager.GetActiveScene().buildIndex != 0 && SceneManager.GetActiveScene().buildIndex != 1)
+            GameObject.Find("_Player").GetComponentInChildren<PlayerController>().enabled = true;
+    }
 }

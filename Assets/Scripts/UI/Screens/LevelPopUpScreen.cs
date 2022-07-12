@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class LevelPopUpScreen : Screen
 {
@@ -25,5 +26,17 @@ public class LevelPopUpScreen : Screen
     public void SetText(string Text)
     {
         TextLevelPopUp.text = Text;
+    }
+
+    private void OnEnable()
+    {
+        if (SceneManager.GetActiveScene().buildIndex != 0 && SceneManager.GetActiveScene().buildIndex != 1)
+            GameObject.Find("_Player").GetComponentInChildren<PlayerController>().enabled = false;
+    }
+
+    private void OnDisable()
+    {
+        if (SceneManager.GetActiveScene().buildIndex != 0 && SceneManager.GetActiveScene().buildIndex != 1)
+            GameObject.Find("_Player").GetComponentInChildren<PlayerController>().enabled = true;
     }
 }
