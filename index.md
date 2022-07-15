@@ -42,7 +42,9 @@ RU
 
 
 ### Game platform:
-- PC, Android, WebGL 
+- PC
+- Android  https://play.google.com/store/apps/details?id=com.ONKotovDev.Catorunner
+- WebGL 
 
 ### Game Asset:
 -	Game Asset - Running and Jumping Cat Sprite Sheets 
