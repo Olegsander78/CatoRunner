@@ -43,7 +43,7 @@ RU
 
 ### Game platform:
 - PC
-- Android  https://play.google.com/store/apps/details?id=com.ONKotovDev.Catorunner
+- Android  <a href = "https://play.google.com/store/apps/details?id=com.ONKotovDev.Catorunner" target="_blank">Google Play market</a>
 - WebGL 
 
 ### Game Asset:
