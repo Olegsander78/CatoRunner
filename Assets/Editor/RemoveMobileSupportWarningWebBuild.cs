@@ -8,7 +8,7 @@
 // </author>
 // --------------------------------------------------------------------------------------------------------------------
 
-#if !UNITY_2020_1_OR_NEWER //Not needed anymore in 2020 and above
+//#if !UNITY_2020_1_OR_NEWER //Not needed anymore in 2020 and above
 using System.IO;
 using UnityEditor;
 using UnityEditor.Callbacks;
@@ -46,4 +46,4 @@ namespace Supyrb
 		}
 	}
 }
-#endif
+//#endif

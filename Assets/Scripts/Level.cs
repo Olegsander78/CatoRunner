@@ -209,7 +209,7 @@ public class Level : MonoBehaviour
             GameController.Instance.SoundController.PlaySound(SFX.SFXTypeEvents.WinLevel);
             GameController.Instance.LevelController.CompleteLevel(GameController.Instance.LevelController.CurrentLevel);
 
-            GameController.Instance.YandexSDK.StartFullscreenAdv();
+            GameController.Instance.YandexSDK.StartShowFullScreenADV();
         }
     }
 

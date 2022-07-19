@@ -74,7 +74,8 @@ public class HUDScreen : Screen
         //GameController.Instance.AdManager.PlayAdForHP();
 
         //For Yandex Ad
-        
+
+        GameController.Instance.SoundController.MuteBGMusic();
         ClickPause();
         GameController.Instance.YandexSDK.PlayAdForHP();
     }
@@ -85,7 +86,8 @@ public class HUDScreen : Screen
         //GameController.Instance.AdManager.PlayAdForScore();
 
         //For Yandex Ad
-        
+
+        GameController.Instance.SoundController.MuteBGMusic();
         ClickPause();
         GameController.Instance.YandexSDK.PlayAdForScore();
     }
