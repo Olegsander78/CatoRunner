@@ -44,7 +44,7 @@ RU
 ### Game platform:
 - PC
 - Android  <a href = "https://play.google.com/store/apps/details?id=com.ONKotovDev.Catorunner" target="_blank">Google Play market</a>
-- WebGL 
+- WebGL <a href = "https://yandex.ru/games/app/191999" target="_blank">Games.yandex</a>
 
 ### Game Asset:
 -	Game Asset - Running and Jumping Cat Sprite Sheets 
