@@ -20,6 +20,8 @@ public class YandexSDK : MonoBehaviour
 
     public static YandexSDK Instance;
 
+    public bool IsMusicMutedForAds { get; private set; }
+
     private void Awake()
     {
         if (Instance == null)
@@ -36,22 +38,31 @@ public class YandexSDK : MonoBehaviour
 
     public void StartShowFullScreenADV()
     {
-        GameController.Instance.SoundController.MuteBGMusic();
-        StartShowFullScreenAds();
-        GameController.Instance.SoundController.MuteBGMusic();
+        if (GameController.Instance.SoundController.GetStatusMuteMusic() == false)
+        {
+            GameController.Instance.SoundController.MuteBGMusic();
+            StartShowFullScreenAds();
+            GameController.Instance.SoundController.MuteBGMusic();
+        }
+        else
+        {
+            StartShowFullScreenAds();
+        }
     }
 
-    public void PlayAdForHP()
+    public void PlayAdForHP(bool isMusicMuted)
     {
         //Debug.Log("Showing AdHP");
         //StopTimeGameForAd();
+        IsMusicMutedForAds = isMusicMuted;
         ShowPlayAdForHP();
     }
 
-    public void PlayAdForScore()
+    public void PlayAdForScore(bool isMusicMuted)
     {
         //Debug.Log("Showing AdScore");
         //StopTimeGameForAd();
+        IsMusicMutedForAds = isMusicMuted;
         ShowPlayAdForScore();
     }
 
@@ -59,8 +70,9 @@ public class YandexSDK : MonoBehaviour
     {
         Debug.Log("YA Ads Rewarded HP Ad Completed");
         GameController.Instance.LevelController.CurrentLevel.PlayerCharacter.GetComponent<PlayerHealth>().AddHealth(AMOUNT_HP_FOR_AD);
-        GameController.Instance.SoundController.MuteBGMusic();
-        //ReturnTimeGame();
+        
+        if (IsMusicMutedForAds == false)
+            GameController.Instance.SoundController.MuteBGMusic();
     }
 
     public void RewardAdForScore()
@@ -69,7 +81,9 @@ public class YandexSDK : MonoBehaviour
         //ReturnTimeGame();
         GameController.Instance.PlayerSession.AddScore(AMOUNT_SCORE_FOR_AD);
         GameController.Instance.EventBus.OnCoinCollected(AMOUNT_SCORE_FOR_AD);
-        GameController.Instance.SoundController.MuteBGMusic();
+
+        if (IsMusicMutedForAds == false)
+            GameController.Instance.SoundController.MuteBGMusic();
     }
 
     //public void StopTimeGameForAd()

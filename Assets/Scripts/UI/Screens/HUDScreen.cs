@@ -10,6 +10,8 @@ public class HUDScreen : Screen
     [SerializeField] private Button _musicBtn;
     [SerializeField] private Button _soundBtn;
 
+    [SerializeField] private Button _jumpBtn;
+
     [SerializeField] private Button _adsHPBtn;
     [SerializeField] private Button _adsScoreBtn;
 
@@ -21,14 +23,25 @@ public class HUDScreen : Screen
     public TextMeshProUGUI ScoreText;
     public TextMeshProUGUI PlayerHealthText;
 
+    public bool IsMusicMutedBeforeAds { get; private set; }
+
     private void Start()
     {
         _pauseBtn.onClick.AddListener(ClickPause);
         _musicBtn.onClick.AddListener(OnMusicMute);
         _soundBtn.onClick.AddListener(OnSoundMute);
 
+        _jumpBtn.onClick.AddListener(OnJump);
+
         _adsHPBtn.onClick.AddListener(OnClickAdHPBtn);
         _adsScoreBtn.onClick.AddListener(OnClickAdScoreBtn);
+    }
+
+    public void OnJump()
+    {
+        PlayerMove playerMove = FindObjectOfType<PlayerMove>();
+        if (playerMove != null)
+            playerMove.TryJump(playerMove.JumpForce);
     }
 
     public void ClickPause()
@@ -75,9 +88,18 @@ public class HUDScreen : Screen
 
         //For Yandex Ad
 
-        GameController.Instance.SoundController.MuteBGMusic();
+        if (GameController.Instance.SoundController.GetStatusMuteMusic() == false)
+        {
+            GameController.Instance.SoundController.MuteBGMusic();
+            IsMusicMutedBeforeAds = false;
+        }
+        else
+        {
+            IsMusicMutedBeforeAds = true;
+        }
+
         ClickPause();
-        GameController.Instance.YandexSDK.PlayAdForHP();
+        GameController.Instance.YandexSDK.PlayAdForHP(IsMusicMutedBeforeAds);
     }
 
     public void OnClickAdScoreBtn()
@@ -86,10 +108,18 @@ public class HUDScreen : Screen
         //GameController.Instance.AdManager.PlayAdForScore();
 
         //For Yandex Ad
+        if (GameController.Instance.SoundController.GetStatusMuteMusic() == false)
+        {
+            GameController.Instance.SoundController.MuteBGMusic();
+            IsMusicMutedBeforeAds = false;
+        }
+        else
+        {
+            IsMusicMutedBeforeAds = true;
+        }
 
-        GameController.Instance.SoundController.MuteBGMusic();
         ClickPause();
-        GameController.Instance.YandexSDK.PlayAdForScore();
+        GameController.Instance.YandexSDK.PlayAdForScore(IsMusicMutedBeforeAds);
     }
 
     public void UpdateScoreText(int currentScore)
@@ -107,6 +137,8 @@ public class HUDScreen : Screen
         _pauseBtn.onClick.RemoveAllListeners();
         _musicBtn.onClick.RemoveAllListeners();
         _soundBtn.onClick.RemoveAllListeners();
+
+        _jumpBtn.onClick.RemoveAllListeners();
 
         _adsHPBtn.onClick.RemoveAllListeners();
         _adsScoreBtn.onClick.RemoveAllListeners();

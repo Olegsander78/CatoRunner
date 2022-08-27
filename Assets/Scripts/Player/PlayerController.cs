@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Jump"))
         {
             Debug.Log("Space");
             _playerMove.TryJump(_playerMove.JumpForce);
@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
 
         if (Application.platform != RuntimePlatform.Android)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Jump"))
             {
                 int cameraWidth = Camera.main.scaledPixelWidth;
                 int cameraHeght = Camera.main.scaledPixelHeight;

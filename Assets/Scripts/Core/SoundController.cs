@@ -52,7 +52,12 @@ public class SoundController : MonoBehaviour
     public void MuteBGMusic()
     {
         _bgMusic.MuteMusic();
-    }    
+    }
+    
+    public bool GetStatusMuteMusic()
+    {
+        return _bgMusic.GetStatusMuteMusic();
+    }
 
     public void PlaySound(SFX.SFXTypeItems sound)
     {

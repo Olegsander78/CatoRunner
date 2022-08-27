@@ -44,6 +44,11 @@ public class BGMusic : Sounds
         _audioSource.mute = !_audioSource.mute;
     }
 
+    public bool GetStatusMuteMusic()
+    {
+        return _audioSource.mute;
+    }
+
     public void StopMusic()
     {
         _audioSource.Stop();
