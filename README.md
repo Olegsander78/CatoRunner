@@ -1,5 +1,8 @@
 # Pet-project "CatoRunner"
  Казуальная игра в стиле раннер
+ Публикации:
+ https://play.google.com/store/apps/details?id=com.ONKotovDev.Catorunner
+ https://yandex.ru/games/developer?name=ONKotovDev
  
 ![SchemeCatoRunner](https://user-images.githubusercontent.com/79563332/170462359-e99eb987-3ff0-41b4-829f-88d292d55bbe.png)
 
