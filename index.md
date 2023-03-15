@@ -1,5 +1,5 @@
 
-# Mini Game Design Document
+# Game Concept Document
 
 ### Theme and name game:
 EN
